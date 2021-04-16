@@ -1,0 +1,19 @@
+:host {
+  display: inline-flex;
+}
+
+.svg-button-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: rgba(229, 231, 235, 1); // Gray 200
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.svg-button-wrapper:hover {
+  background-color: rgba(209, 213, 219, 1); // Gray 300
+}

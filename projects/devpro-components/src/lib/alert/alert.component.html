@@ -1,0 +1,17 @@
+<div class="alert-wrapper">
+  <div class="alert-icon">
+    <dp-svg iconName="check" class="check" size="xl" *ngIf="type === 'success'"></dp-svg>
+    <dp-svg iconName="info" class="info" size="xl" *ngIf="type === 'info'"></dp-svg>
+    <dp-svg iconName="exclamation" class="warning" size="xl" *ngIf="type === 'warning'"></dp-svg>
+    <dp-svg iconName="times" class="danger" size="xl" *ngIf="type === 'danger'"></dp-svg>
+  </div>
+
+  <div class="alert-text">
+    <div class="alert-message">{{ message }}</div>
+    <div class="alert-details" *ngIf="details">{{ details }}</div>
+  </div>
+
+  <div class="alert-dismiss">
+    <dp-svg iconName="times" (click)="onClose()"></dp-svg>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Radio Buttons</div>
+  <div class="demo-border">
+    <dp-radio-group [formControl]="formControl">
+      <dp-radio-button label="One" value="ONE"></dp-radio-button>
+      <dp-radio-button label="Two" value="TWO"></dp-radio-button>
+      <dp-radio-button label="Three" value="THREE"></dp-radio-button>
+    </dp-radio-group>
+    <div class="demo-errors" *ngIf="errors">{{ errors }}</div>
+
+    <div style="margin-top: 1rem; margin-bottom: 1rem;">
+      <button class="btn btn-blue" *ngIf="this.formControl.disabled" (click)="enable()">Enable</button>
+      <button class="btn btn-blue" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</button>
+      <button class="btn btn-red" (click)="error()">Error</button>
+    </div>
+
+    <div class="demo-value">
+      Value: {{ formControl.value }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+.slide-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.styling {
+  position: relative;
+}
+
+.toggle-path {
+  background-color: rgba(229, 231, 235, 1); // Gray 200
+  width: 2rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); // Shadow-inner
+
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+}
+
+input:checked ~ .toggle-path {
+  background-color: rgba(59, 130, 246, 1); // Blue 500
+}
+
+.toggle-button {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: white;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); // Shadow
+  bottom: 0px;
+  top: 0.25rem;
+  left: 0.25rem;
+
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+input:checked ~ .toggle-button {
+  transform: translateX(100%);
+}
+
+.toggle-label {
+  margin-left: 0.5rem;
+}
+
+//// ALTERNATE STYLING CLASS ////
+// Provides an entirely different visual style of slide toggle if the alternateStyling flag is set to true.
+.tw-slide-toggle-alt-styling {
+  .slide-toggle {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    height: 16rem;
+    margin-right: 2rem;
+  }
+
+  .styling {
+    width: 2rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggle-path {
+    height: 1.25rem;
+    background-color: rgba(209, 213, 219, 1); // Gray 300
+    border-radius: 9999px;
+  }
+
+  input:checked ~ .toggle-path {
+    background-color: rgba(147, 197, 253, 1); // Blue 300
+  }
+
+  .toggle-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: white;
+    border-color: rgba(209, 213, 219, 1); // Gray 300
+    margin-left: -0.75rem;
+    margin-top: 1px;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0px;
+
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  input:checked ~ .toggle-button {
+    background-color: rgba(59, 130, 246, 1); // Blue 500
+    transform: translateX(100%);
+  }
+
+  .toggle-label {
+    margin-left: 1rem;
+  }
+}
+
+//// DISABLE ////
+:host[disabled='true'] {
+  color: rgba(75, 85, 99, 1); // Gray 600
+  pointer-events: none;
+
+  .toggle-button {
+    background-color: rgba(107, 114, 128, 1); // Gray 500
+  }
+
+  input:checked ~ .toggle-path {
+    background-color: rgba(209, 213, 219, 1); // Gray 300
+  }
+
+  input:checked ~ .toggle-button {
+    background-color: rgba(107, 114, 128, 1); // Gray 500
+  }
+
+  .toggle-label {
+    background-color: rgba(229, 231, 235, 1); // Gray 200
+  }
+}
+
+//// ERROR ////
+:host[error='true'] {
+  .toggle-path {
+    background-color: rgba(254, 202, 202, 1); // Red 200
+  }
+
+  .toggle-button {
+    background-color: rgba(239, 68, 68, 1); // Red 500
+  }
+
+  input:checked ~ .toggle-path {
+    background-color: rgba(254, 202, 202, 1); // Red 200
+  }
+
+  input:checked ~ .toggle-button {
+    background-color: rgba(239, 68, 68, 1); // Red 500
+  }
+}

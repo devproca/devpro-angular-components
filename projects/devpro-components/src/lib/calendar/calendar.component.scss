@@ -1,0 +1,171 @@
+.calendar {
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding: 0.75rem;
+  overflow-x: hidden;
+  width: 17.5rem;
+  box-sizing: content-box;
+
+  .calendar-nav {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+    }
+
+    > div > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .month,
+    .year {
+      text-align: center;
+      width: 2.5rem;
+    }
+
+    button {
+      border-style: none;
+      background-color: white;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 0px;
+      cursor: pointer;
+      color: rgba(59, 130, 246, 1); // Blue 500
+
+      &:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+    }
+
+    button.today {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    button.chevron {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      height: 1.5rem;
+      width: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .calendar-weekdays {
+    width: 100%;
+    display: flex;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-top: 0.5rem;
+
+    div {
+      width: 2.5rem;
+      text-align: center;
+      color: rgba(55, 65, 81, 1); // Gray 700
+    }
+  }
+
+  .calendar-cells {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+    > div {
+      text-align: center;
+
+      &.disabled {
+        cursor: auto;
+
+        > div {
+          color: rgba(156, 163, 175, 1); // Gray 400
+
+          &:hover {
+            border-width: 2px;
+            border-style: solid;
+            border-color: white;
+            color: rgba(156, 163, 175, 1); // Gray 400
+          }
+        }
+      }
+
+      &.today {
+        > div {
+          color: rgba(59, 130, 246, 1); // Blue 500
+        }
+      }
+
+      &.selected {
+        > div {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgba(191, 219, 254, 1); // Blue 200
+          background-color: rgba(59, 130, 246, 1); // Blue 500
+          color: white;
+        }
+      }
+
+      &.selected-error {
+        > div {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgba(254, 202, 202, 1); // Red 200
+          background-color: rgba(252, 165, 165, 1); // Red 300
+          color: white;
+        }
+      }
+
+      > .day {
+        border-radius: 9999px;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+
+        &:hover {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgba(147, 197, 253, 1); // Blue 300
+          background-color: white;
+          color: black;
+          transition: all .2s;
+        }
+      }
+
+      > .day-error {
+        border-radius: 9999px;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: white;
+
+        &:hover {
+          border-width: 2px;
+          border-style: solid;
+          border-color: rgba(252, 165, 165, 1); // Red 300
+          background-color: white;
+          color: black;
+          transition: all .2s;
+        }
+      }
+    }
+  }
+}

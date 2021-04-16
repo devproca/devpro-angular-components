@@ -1,0 +1,88 @@
+:host {
+  display: block;
+}
+
+:host[type='success'] .alert-wrapper {
+  border-color: rgba(16, 185, 129, 1); // Green 500
+  background-color: rgba(209, 250, 229, 1); // Green 100
+  color: rgba(6, 78, 59, 1); // Green 900
+}
+
+:host[type='info'] .alert-wrapper {
+  border-color: rgba(59, 130, 246, 1); // Blue 500
+  background-color: rgba(219, 234, 254, 1); // Blue 100
+  color: rgba(30, 58, 138, 1); // Blue 900
+}
+
+:host[type='warning'] .alert-wrapper {
+  border-color: rgba(245, 158, 11, 1); // Yellow 500
+  background-color: rgba(254, 243, 199, 1); // Yellow 100
+  color: rgba(120, 53, 15, 1); // Yellow 900
+}
+
+:host[type='danger'] .alert-wrapper {
+  border-color: rgba(239, 68, 68, 1); // Red 500
+  background-color: rgba(254, 226, 226, 1); // Red 100
+  color: rgba(127, 29, 29, 1); // Red 900
+}
+
+.alert-wrapper {
+  display: flex;
+  align-items: center;
+  border-top-width: 4px;
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.alert-text {
+  flex-grow: 1;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.alert-message {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.alert-details {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(55, 65, 81, 1);
+}
+
+.alert-dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(107, 114, 128, 1);
+  cursor: pointer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.check {
+  color: rgba(16, 185, 129, 1); // Green 500
+}
+
+.info {
+  color: rgba(59, 130, 246, 1); // Blue 500
+}
+
+.warning {
+  color: rgba(245, 158, 11, 1); // Yellow 500
+}
+
+.danger {
+  color: rgba(239, 68, 68, 1); // Red 500
+  padding-left: 0.25rem;
+  padding-right: 0.5rem;
+}

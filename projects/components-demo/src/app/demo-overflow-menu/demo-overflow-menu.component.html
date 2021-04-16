@@ -1,0 +1,25 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Overflow Menu</div>
+  <div class="demo-border">
+    <dp-overflow-menu [options]="options"></dp-overflow-menu>
+  </div>
+</div>
+
+
+<div class="demo-wrapper">
+  <div class="demo-title">Overflow Menu - Using Template</div>
+  <div class="demo-border">
+    <dp-overflow-menu [options]="options" [template]="itemTemplate"></dp-overflow-menu>
+  </div>
+</div>
+
+<ng-template #itemTemplate let-option>
+  <div>
+    <div>
+      {{option.label}}
+    </div>
+    <div class="demo-template">
+      This could be how selects and autocompletes template their rows
+    </div>
+  </div>
+</ng-template>

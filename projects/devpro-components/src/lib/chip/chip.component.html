@@ -1,0 +1,5 @@
+<div class="chip-wrapper"
+     [class.disabled]="disabled">
+  <div class="chip-label">{{label}}</div>
+  <dp-svg-button iconName="times" (click)="onClose()" *ngIf="!disabled"></dp-svg-button>
+</div>

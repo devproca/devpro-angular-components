@@ -1,0 +1,54 @@
+input[type="radio"] {
+  display: none;
+}
+
+:host[disabled='true'] {
+  color: rgba(75, 85, 99, 1); // Gray 600
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: rgba(229, 231, 235, 1); // Gray 200
+  pointer-events: none;
+}
+
+:host[disabled='true'] .button-label {
+    background-color: rgba(229, 231, 235, 1); // Gray 200
+}
+
+:host[disabled='true'] input[type="radio"] + label .radio-button {
+  background-color: rgba(107, 114, 128, 1); // Gray 500
+  border-color: rgba(107, 114, 128, 1); // Gray 500
+  box-shadow: 0px 0px 0px 0px white inset;
+}
+
+:host[error='true'] input[type="radio"] + label .radio-button {
+  border-color: rgba(239, 68, 68, 1); // Red 500
+}
+
+:host[error='true'] input[type="radio"]:checked + label .radio-button {
+  background-color: rgba(239, 68, 68, 1); // Red 500
+  border-color: rgba(239, 68, 68, 1); // Red 500
+  box-shadow: 0px 0px 0px 3px white inset;
+}
+
+.radio-button {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: rgba(107, 114, 128, 1); // Gray 500
+  transition: all ease-in-out 200ms;
+}
+
+input[type="radio"]:checked + label .radio-button {
+  background-color: rgba(59, 130, 246, 1); // Blue 500
+  border-color: rgba(59, 130, 246, 1); // Blue 500
+  box-shadow: 0px 0px 0px 3px white inset;
+}
+
+.label-wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}

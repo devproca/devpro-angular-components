@@ -1,0 +1,47 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Checkboxes</div>
+  <div class="demo-border">
+    <div style="display: flex">
+      <div style="flex: 1 1 0%">
+        <div class="demo-subtitle">Checkbox Group</div>
+        <dp-checkbox-group [formControl]="formControlGroup">
+          <dp-checkbox label="One" value="ONE"></dp-checkbox>
+          <dp-checkbox label="Two" value="TWO"></dp-checkbox>
+          <dp-checkbox label="Three" value="THREE"></dp-checkbox>
+        </dp-checkbox-group>
+        <div class="demo-errors" *ngIf="errorsGroup">{{ errorsGroup }}</div>
+
+        <div class="demo-value">
+          Value: {{ formControlGroup.value }}
+        </div>
+
+        <div style="margin-top: 1rem; margin-bottom: 1rem;">
+          <button class="btn btn-blue" *ngIf="this.formControlGroup.disabled" (click)="enableGroup()">Enable</button>
+          <button class="btn btn-blue" *ngIf="!this.formControlGroup.disabled" (click)="disableGroup()">Disable</button>
+          <button class="btn btn-red" (click)="errorGroup()">Error</button>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div style="flex: 1 1 0%">
+        <div class="demo-subtitle">Single Checkbox</div>
+        <dp-checkbox [formControl]="formControlSingle"
+                     label="I accept the terms of use."
+                     value="ACCEPTED"
+                     class="block"></dp-checkbox>
+        <div class="demo-errors" *ngIf="errorsSingle">{{ errorsSingle }}</div>
+
+        <div class="demo-value">
+          Value: {{ formControlSingle.value }}
+        </div>
+
+        <div style="margin-top: 1rem; margin-bottom: 1rem;">
+          <button class="btn btn-blue" *ngIf="this.formControlSingle.disabled" (click)="enableSingle()">Enable</button>
+          <button class="btn btn-blue" *ngIf="!this.formControlSingle.disabled" (click)="disableSingle()">Disable</button>
+          <button class="btn btn-red" (click)="errorSingle()">Error</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

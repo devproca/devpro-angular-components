@@ -1,0 +1,51 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Slide Toggles</div>
+  <div class="demo-border">
+    <div style="display: flex">
+      <div style="flex: 1 1 0%">
+        <div class="demo-subtitle">Slide Toggle Group</div>
+        <dp-slide-group [formControl]="formControlGroup">
+          <dp-slide-toggle label="One" value="ONE"></dp-slide-toggle>
+          <dp-slide-toggle label="Two" value="TWO"></dp-slide-toggle>
+          <dp-slide-toggle label="Three" value="THREE"></dp-slide-toggle>
+        </dp-slide-group>
+        <div class="demo-errors" *ngIf="errorsGroup">{{ errorsGroup }}</div>
+
+        <div class="demo-value">
+          Value: {{ formControlGroup.value }}
+        </div>
+
+        <div style="margin-top: 1rem; margin-bottom: 1rem;">
+          <button class="btn btn-blue" *ngIf="this.formControlGroup.disabled" (click)="enableGroup()">Enable
+          </button>
+          <button class="btn btn-blue" *ngIf="!this.formControlGroup.disabled" (click)="disableGroup()">Disable
+          </button>
+          <button class="btn btn-red" (click)="errorGroup()">Error</button>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div style="flex: 1 1 0%">
+        <div class="demo-subtitle">Single Slide Toggle (w/ Alternate Styling Enabled)</div>
+        <dp-slide-toggle [formControl]="formControlSingle"
+                         label="Toggle"
+                         value="ON"
+                         alternateStyling="true"></dp-slide-toggle>
+        <div class="demo-errors" *ngIf="errorsSingle">{{ errorsSingle }}</div>
+
+        <div class="demo-value">
+          Value: {{ formControlSingle.value }}
+        </div>
+
+        <div style="margin-top: 1rem; margin-bottom: 1rem;">
+          <button class="btn btn-blue" *ngIf="this.formControlSingle.disabled" (click)="enableSingle()">Enable
+          </button>
+          <button class="btn btn-blue" *ngIf="!this.formControlSingle.disabled" (click)="disableSingle()">Disable
+          </button>
+          <button class="btn btn-red" (click)="errorSingle()">Error</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

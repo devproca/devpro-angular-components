@@ -1,0 +1,20 @@
+<div class="input-wrapper"
+     [class.tw-input]="true"
+     [class.tw-input-disabled]="disabled"
+     [class.tw-input-error]="error"
+     [class.tw-input-focus]="focused">
+  <input #ref
+         (focusin)="handleFocus()"
+         (focusout)="handleUnfocus()"
+         (input)="handleInput($event)"
+         [value]="value ? value : ''"
+         [placeholder]="placeholder ? placeholder : ''"
+         [disabled]="disabled">
+  <dp-popper>
+    <dp-svg iconName="calendar"></dp-svg>
+    <dp-calendar [value]="value"
+                 [minDate]="minDate"
+                 [maxDate]="maxDate"
+                 (change)="handleCalendarChange($event)"></dp-calendar>
+  </dp-popper>
+</div>

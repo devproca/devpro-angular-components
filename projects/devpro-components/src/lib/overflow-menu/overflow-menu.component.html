@@ -1,0 +1,15 @@
+<dp-popper [hideOnClick]="true">
+  <div class="menu-wrapper"
+       [class.active]="popper?.open">
+    <dp-svg iconName="ellipsisVertical"></dp-svg>
+  </div>
+  <div class="item-wrapper">
+    <div class="item" *ngFor="let option of options" (click)="option.click()">
+      <ng-container *ngTemplateOutlet="template ? template : defaultTemplate; context: {$implicit: option}"></ng-container>
+    </div>
+  </div>
+</dp-popper>
+
+<ng-template #defaultTemplate let-option>
+  {{option.label}}
+</ng-template>

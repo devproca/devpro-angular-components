@@ -1,0 +1,24 @@
+.chip-wrapper {
+  display: inline-flex;
+  border-radius: 9999px;
+  height: 1.5rem;
+  align-items: center;
+  background-color: rgba(229, 231, 235, 1); // Gray 200
+}
+
+.chip-label {
+  color: rgba(55, 65, 81, 1); // Gray 700
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.25rem;
+}
+
+.chip-wrapper.disabled {
+  background-color: rgba(209, 213, 219, 1); // Gray 300
+
+  > .chip-label {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}

@@ -1,0 +1,9 @@
+<input type="radio"
+       [value]="[value]"
+       [checked]="isChecked"
+       [disabled]="disabled">
+
+<label class="label-wrapper" (click)="onChecked()">
+  <span class="radio-button"></span>
+  <span class="button-label">{{ label }}</span>
+</label>

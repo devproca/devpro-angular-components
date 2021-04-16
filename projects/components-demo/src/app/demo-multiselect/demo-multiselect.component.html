@@ -1,0 +1,19 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Multiselect</div>
+
+  <div class="demo-border">
+    <label class="demo-subtitle">Numbers</label>
+    <dp-select placeholder="Please select" [formControl]="formControl" [options]="options" [multiselect]="true"></dp-select>
+    <div class="demo-errors" *ngIf="errors">{{errors}}</div>
+
+    <div class="my-4">
+      <button class="btn btn-blue" *ngIf="this.formControl.disabled" (click)="enable()">Enable</button>
+      <button class="btn btn-blue" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</button>
+      <button class="btn btn-red" (click)="error()">Error</button>
+    </div>
+
+    <div class="demo-value">
+      Value: {{formControl.value}}
+    </div>
+  </div>
+</div>

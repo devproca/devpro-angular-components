@@ -1,0 +1,19 @@
+<div class="demo-wrapper">
+  <div class="demo-title">Select</div>
+
+  <div class="demo-border">
+    <label class="demo-subtitle">Numbers</label>
+    <dp-select placeholder="Please select" [formControl]="formControl" [options]="options"></dp-select>
+    <div class="demo-errors" *ngIf="errors">{{errors}}</div>
+
+    <div style="margin-top: 1rem; margin-bottom: 1rem;">
+      <button class="mr-2 btn btn-blue" *ngIf="this.formControl.disabled" (click)="enable()">Enable</button>
+      <button class="mr-2 btn btn-blue" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</button>
+      <button class="mr-2 btn btn-red" (click)="error()">Error</button>
+    </div>
+
+    <div class="demo-value">
+      Value: {{formControl.value}}
+    </div>
+  </div>
+</div>
