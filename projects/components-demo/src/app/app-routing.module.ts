@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule, ExtraOptions} from '@angular/router';
-import {DemoTabsComponent} from './demo-tabs/demo-tabs.component';
-import {DemoCheckboxComponent} from './demo-checkbox/demo-checkbox.component';
-import {DemoAlertComponent} from './demo-alert/demo-alert.component';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -10,11 +8,7 @@ const routerOptions: ExtraOptions = {
   scrollOffset: [0, 64]
 };
 
-const routes: Routes = [
-  { path: 'alerts', component: DemoAlertComponent },
-  { path: 'checkboxes', component: DemoCheckboxComponent },
-  { path: 'tabs', component: DemoTabsComponent }
-];
+const routes: Routes = [ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],
