@@ -7,7 +7,7 @@
   right: 0;
 
   .sidenav-overlay {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
   }
@@ -20,11 +20,27 @@
     display: flex;
     flex-direction: column;
 
-    .sidenav-close {
-      display: inline-block;
-      color: rgba(156, 163, 175, 1); // Gray 400
-      margin: 1.5rem 0 0 1.5rem;
-      cursor: pointer;
+    .sidenav-header {
+      display: flex;
+      background-color: rgba(37, 99, 235, 1); // Blue 600
+      height: 4rem;
+      padding: 1rem;
+      align-items: center;
+      cursor: default;
+
+      .sidenav-title {
+        flex: 1;
+        justify-content: flex-start;
+        color: white;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+
+      .sidenav-close {
+        color: white;
+        justify-content: flex-end;
+        cursor: pointer;
+      }
     }
   }
 

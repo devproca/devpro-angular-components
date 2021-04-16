@@ -7,10 +7,13 @@
   <div class="sidenav-menu"
        [ngStyle]="getSideNavBarStyle((isHidden | async))">
 
-    <dp-svg class="sidenav-close"
-            iconName="times"
-            size="lg"
-            (click)="onSideNavClose()"></dp-svg>
+    <div class="sidenav-header">
+      <div class="sidenav-title">{{ sideNavTitle }}</div>
+      <dp-svg class="sidenav-close"
+              iconName="menu"
+              size="lg"
+              (click)="onSideNavClose()"></dp-svg>
+    </div>
 
     <div class="sidenav-content">
       <ng-container *ngTemplateOutlet="sideNavRef"></ng-container>

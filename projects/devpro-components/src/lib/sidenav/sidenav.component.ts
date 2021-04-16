@@ -1,9 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import {Observable, Subscription} from 'rxjs';
+import { Observable } from 'rxjs';
 
-import {SideNavDirection} from './sidenav-direction';
-import {SidenavService} from './sidenav.service';
+import { SideNavDirection } from './sidenav-direction';
+import { SidenavService } from './sidenav.service';
 
 
 @Component({
@@ -15,6 +15,7 @@ export class SidenavComponent implements OnInit {
 
   isHidden: Observable<boolean>;
 
+  @Input() sideNavTitle: string;
   @Input() sideNavRef: any;
   @Input() sideNavWidth: number = window.innerWidth;
   @Input() openDirection: SideNavDirection = SideNavDirection.Left;
