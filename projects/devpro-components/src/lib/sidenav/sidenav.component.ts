@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 
 import { Observable } from 'rxjs';
 
@@ -18,8 +18,8 @@ export class SidenavComponent implements OnInit {
   @Input() sideNavTitle: string;
   @Input() sideNavRef: any;
   @Input() sideNavWidth: number = window.innerWidth;
-  @Input() openDirection: SideNavDirection = SideNavDirection.Left;
   @Input() duration = 0.25;
+  @HostBinding('attr.dir') @Input() openDirection: SideNavDirection = SideNavDirection.Left;
 
   constructor(private navService: SidenavService) { }
 

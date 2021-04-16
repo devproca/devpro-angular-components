@@ -1,3 +1,21 @@
+:host[dir='left'] .sidenav-title {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+:host[dir='left'] .sidenav-close {
+  justify-content: flex-end;
+}
+
+:host[dir='right'] .sidenav-title {
+  justify-content: flex-end;
+}
+
+:host[dir='right'] .sidenav-close {
+  flex: 1;
+  justify-content: flex-start;
+}
+
 .sidenav-wrapper {
   position: fixed;
   z-index: 1001;
@@ -27,18 +45,14 @@
       padding: 1rem;
       align-items: center;
       cursor: default;
+      color: white;
 
       .sidenav-title {
-        flex: 1;
-        justify-content: flex-start;
-        color: white;
         font-size: 1.25rem;
         line-height: 1.75rem;
       }
 
       .sidenav-close {
-        color: white;
-        justify-content: flex-end;
         cursor: pointer;
       }
     }
