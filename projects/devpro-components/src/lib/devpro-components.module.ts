@@ -26,6 +26,9 @@ import { SvgButtonComponent } from './svg-button/svg-button.component';
 import { SvgComponent } from './svg/svg.component';
 import { TabComponent } from './tab/tab.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavHeaderComponent } from './sidenav/sidenav-header/sidenav-header.component';
+import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-content.component';
 
 
 @NgModule({
@@ -53,7 +56,10 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
     SvgButtonComponent,
     SvgComponent,
     TabComponent,
-    TabGroupComponent
+    TabGroupComponent,
+    SidenavComponent,
+    SidenavHeaderComponent,
+    SidenavContentComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +89,10 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
     SvgButtonComponent,
     SvgComponent,
     TabComponent,
-    TabGroupComponent
+    TabGroupComponent,
+    SidenavComponent,
+    SidenavHeaderComponent,
+    SidenavContentComponent
   ]
 })
 export class DevproComponentsModule { }

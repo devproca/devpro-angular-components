@@ -10,7 +10,8 @@ const SVGS = {
   ellipsisVertical: require('!!raw-loader?!../assets/svg/ellipsis-vertical.svg'),
   times: require('!!raw-loader?!../assets/svg/times.svg'),
   info: require('!!raw-loader?!../assets/svg/info.svg'),
-  exclamation: require('!!raw-loader?!../assets/svg/exclamation.svg')
+  exclamation: require('!!raw-loader?!../assets/svg/exclamation.svg'),
+  menu: require('!!raw-loader?!../assets/svg/menu.svg')
 };
 
 @Component({

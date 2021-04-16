@@ -1,0 +1,8 @@
+<div class="sidenav-content-wrapper">
+  <ul class="sidenav-menu">
+    <li *ngFor="let navItem of navItems" (click)="handleNavSelection(navItem)">
+      {{ navItem.label }}
+      <dp-svg iconName="angleRight"></dp-svg>
+    </li>
+  </ul>
+</div>

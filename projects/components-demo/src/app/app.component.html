@@ -1,17 +1,27 @@
+<dp-sidenav [sideNavRef]="navContent"
+            [sideNavWidth]="280" [sideNavTitle]="'Side Navigation'"
+            [openDirection]="'left'"
+            [duration]="0.5"></dp-sidenav>
+
 <div class="header-wrapper">
+  <dp-sidenav-header class="nav-menu"></dp-sidenav-header>
   <img src="assets/images/DevPro-Logo.png">
   <h1>DevPro Web Components</h1>
 </div>
 
-<dp-demo-alert></dp-demo-alert>
-<dp-demo-checkbox></dp-demo-checkbox>
-<dp-demo-chip></dp-demo-chip>
-<dp-demo-date-picker></dp-demo-date-picker>
-<dp-demo-dialog></dp-demo-dialog>
-<dp-demo-multiselect></dp-demo-multiselect>
-<dp-demo-overflow-menu></dp-demo-overflow-menu>
-<dp-demo-radio-button></dp-demo-radio-button>
-<dp-demo-select></dp-demo-select>
-<dp-demo-slide-toggle></dp-demo-slide-toggle>
-<dp-demo-spinner></dp-demo-spinner>
-<dp-demo-tabs></dp-demo-tabs>
+<dp-demo-alert id="alerts"></dp-demo-alert>
+<dp-demo-checkbox id="checkboxes"></dp-demo-checkbox>
+<dp-demo-chip id="chip"></dp-demo-chip>
+<dp-demo-date-picker id="date-picker"></dp-demo-date-picker>
+<dp-demo-dialog id="dialog"></dp-demo-dialog>
+<dp-demo-multiselect id="multiselect"></dp-demo-multiselect>
+<dp-demo-overflow-menu id="overflow-menu"></dp-demo-overflow-menu>
+<dp-demo-radio-button id="radio-button"></dp-demo-radio-button>
+<dp-demo-select id="select"></dp-demo-select>
+<dp-demo-slide-toggle id="slide-toggle"></dp-demo-slide-toggle>
+<dp-demo-spinner id="spinner"></dp-demo-spinner>
+<dp-demo-tabs id="tabs"></dp-demo-tabs>
+
+<ng-template #navContent>
+  <dp-sidenav-content [navItems]="navItems"></dp-sidenav-content>
+</ng-template>
