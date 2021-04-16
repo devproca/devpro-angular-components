@@ -22,14 +22,14 @@
 
     .sidenav-close {
       display: inline-block;
-      font-size: 2.5em;
-      margin: 24px 0px 0px 24px;
+      color: rgba(156, 163, 175, 1); // Gray 400
+      margin: 1.5rem 0 0 1.5rem;
       cursor: pointer;
     }
   }
 
   .sidenav-content {
-    padding: 32px;
+    padding: 2rem;
   }
 }
 

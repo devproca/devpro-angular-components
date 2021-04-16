@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 
 import {SideNavDirection} from './sidenav-direction';
 import {SidenavService} from './sidenav.service';
@@ -16,10 +16,9 @@ export class SidenavComponent implements OnInit {
   isHidden: Observable<boolean>;
 
   @Input() sideNavRef: any;
+  @Input() sideNavWidth: number = window.innerWidth;
   @Input() openDirection: SideNavDirection = SideNavDirection.Left;
-
-  @Input() duration: number = 0.25;
-  @Input() navWidth: number = window.innerWidth;
+  @Input() duration = 0.25;
 
   constructor(private navService: SidenavService) { }
 
@@ -35,8 +34,8 @@ export class SidenavComponent implements OnInit {
     const navBarStyle: any = {};
 
     navBarStyle.transition = this.openDirection + ' ' + this.duration + 's, visibility ' + this.duration + 's';
-    navBarStyle.width = this.navWidth + 'px';
-    navBarStyle[this.openDirection] = (showNav ? 0 : (this.navWidth * -1)) + 'px';
+    navBarStyle.width = this.sideNavWidth + 'px';
+    navBarStyle[this.openDirection] = (showNav ? 0 : (this.sideNavWidth * -1)) + 'px';
 
     return navBarStyle;
   }
