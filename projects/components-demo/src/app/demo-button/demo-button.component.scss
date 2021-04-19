@@ -1,3 +1,16 @@
+table {
+  border-collapse: collapse;
+  width: 30%;
+}
+
+th, td {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
 .btn-group {
   margin-top: 1rem;
 
@@ -48,23 +61,10 @@
 }
 
 .raised {
-  text-shadow: 1px 1px rgba(156, 163, 175, 1);
+  text-shadow: 1px 1px rgba(156, 163, 175, 1); // Gray 400
 }
 
 .stroked {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: white;
-}
-
-table {
-  border-collapse: collapse;
-  width: 30%;
-}
-
-th, td {
-  font-weight: bold;
-  font-size: x-large;
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
 }
