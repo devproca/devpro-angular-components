@@ -2,74 +2,55 @@
   <div class="demo-title">Buttons</div>
   <div class="demo-border">
 
-    <div class="demo-wrapper">
-      <div class="btn-group">
-        <div class="demo-subtitle">Blue Buttons</div>
-        <div class="btn-example">
-          <dp-button color="blue">Blue Example</dp-button>
-          <dp-button color="blue" disabled="true">Disabled Example</dp-button>
-        </div>
-      </div>
+    <table>
+      <tr>
+        <th><!-- PLACEHOLDER --></th>
+        <th>Basic</th>
+        <th>Primary</th>
+        <th>Secondary</th>
+        <th>Disabled</th>
+      </tr>
 
+      <tr>
+        <td>Raised</td>
+        <td> <dp-button raised="true">Basic</dp-button> </td>
+        <td> <dp-button raised="true" color="primary">Primary</dp-button> </td>
+        <td> <dp-button raised="true" color="secondary">Secondary</dp-button> </td>
+        <td> <dp-button raised="true" disabled="true">Disabled</dp-button> </td>
+      </tr>
 
-      <div class="btn-group">
-        <div class="demo-subtitle">Red Buttons</div>
-        <div class="btn-example">
-          <dp-button color="red">Red Example</dp-button>
-          <dp-button color="red" disabled="true">Disabled Example</dp-button>
-        </div>
-      </div>
+      <tr>
+        <td>Flat</td>
+        <td> <dp-button>Basic</dp-button> </td>
+        <td> <dp-button color="primary">Primary</dp-button> </td>
+        <td> <dp-button color="secondary">Secondary</dp-button> </td>
+        <td> <dp-button disabled="true" color="primary">Disabled</dp-button> </td>
+      </tr>
 
-
-      <div class="btn-group">
-        <div class="demo-subtitle">SVGs Within Buttons</div>
-        <div class="btn-example">
-          <dp-button>
-            <dp-svg class="svg-example" iconName="info"></dp-svg>
-          </dp-button>
-
-          <dp-button>
-            <div class="svg-text-example">
-              <dp-svg iconName="menu"></dp-svg>
-              <div>SVG and Text</div>
-            </div>
-          </dp-button>
-        </div>
-      </div>
-
-
-      <div class="btn-group">
-        <div class="demo-subtitle">Stroke</div>
-        <div class="btn-example">
-          <dp-button color="blue" stroked="true">Blue Example</dp-button>
-          <dp-button color="blue" stroked="true" disabled="true">Disabled Example</dp-button>
-        </div>
-      </div>
-
-      <div style="margin: 0.5rem;"></div> <!-- Spacer -->
-
-      <div class="btn-example">
-        <dp-button color="red" stroked="true">Red Example</dp-button>
-        <dp-button color="red" stroked="true" disabled="true">Disabled Example</dp-button>
-      </div>
-    </div>
-
+      <tr>
+        <td>Stroked</td>
+        <td> <dp-button stroked="true">Basic</dp-button> </td>
+        <td> <dp-button stroked="true" color="primary">Primary</dp-button>
+        </td>
+        <td> <dp-button stroked="true" color="secondary">Secondary</dp-button> </td>
+        <td> <dp-button stroked="true" disabled="true" color="secondary">Disabled</dp-button> </td>
+      </tr>
+    </table>
 
     <div class="btn-group">
-      <div class="demo-subtitle">Raised</div>
+      <div class="demo-subtitle">SVGs Within Buttons</div>
       <div class="btn-example">
-        <dp-button color="blue" raised="true">Blue Example</dp-button>
-        <dp-button color="blue" raised="true" stroked="true" disabled="true">Disabled Example</dp-button>
+        <dp-button color="primary">
+          <dp-svg class="svg-example" iconName="info"></dp-svg>
+        </dp-button>
+
+        <dp-button color="primary">
+          <div class="svg-text-example">
+            <dp-svg iconName="menu"></dp-svg>
+            <div>SVG and Text</div>
+          </div>
+        </dp-button>
       </div>
     </div>
-
-    <div style="margin: 0.5rem;"></div> <!-- Spacer -->
-
-    <div class="btn-example">
-      <dp-button color="red" raised="true">Red Example</dp-button>
-      <dp-button color="red" raised="true" stroked="true" disabled="true">Disabled Example</dp-button>
-    </div>
   </div>
-
-
-  </div>
+</div>
