@@ -1,0 +1,44 @@
+dp-button {
+  display: block;
+  //margin-top: 1rem;
+}
+
+.demo-wrapper {
+  display: block;
+}
+
+.btn-group {
+  margin-top: 1rem;
+
+  .demo-subtitle {
+    margin-bottom: 0;
+  }
+}
+
+.btn-example {
+  display: inline-flex;
+
+  dp-button + dp-button {
+    margin-left: 0.5rem;
+  }
+}
+
+.svg-example {
+  display: flex;
+  align-content: center;
+}
+
+.svg-text-example {
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+
+  div {
+    margin-left: 0.75rem;
+    margin-top: 0.1rem;
+  }
+
+  dp-svg {
+    padding-top: 0.2rem;
+  }
+}
