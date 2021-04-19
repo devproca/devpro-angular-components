@@ -50,6 +50,12 @@ export { RadioButtonService } from './lib/radio-button/radio-button.service';
 export * from './lib/select/select.component';
 export { ScrollToActiveDirective } from './lib/select/scroll-to-active.directive';
 
+// Side Navigation
+export { SidenavComponent } from './lib/sidenav/sidenav.component';
+export { SidenavService } from './lib/sidenav/sidenav.service';
+export { SidenavHeaderComponent } from './lib/sidenav/sidenav-header/sidenav-header.component';
+export { SidenavContentComponent } from './lib/sidenav/sidenav-content/sidenav-content.component';
+
 // Slide Toggle
 export { SlideToggleComponent } from './lib/slide-toggle/slide-toggle.component';
 export { SlideGroupComponent } from './lib/slide-toggle/slide-group/slide-group.component';
@@ -65,9 +71,3 @@ export { SvgButtonComponent } from './lib/svg-button/svg-button.component';
 // Tabs
 export { TabComponent } from './lib/tab/tab.component';
 export { TabGroupComponent } from './lib/tab/tab-group/tab-group.component';
-
-// Side Navigation
-export { SidenavComponent } from './lib/sidenav/sidenav.component';
-export { SidenavService } from './lib/sidenav/sidenav.service';
-export { SidenavHeaderComponent } from './lib/sidenav/sidenav-header/sidenav-header.component';
-export { SidenavContentComponent } from './lib/sidenav/sidenav-content/sidenav-content.component';

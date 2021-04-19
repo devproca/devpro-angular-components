@@ -42,7 +42,6 @@ import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../util/dat
 })
 export class DatePickerComponent implements OnDestroy, ControlValueAccessor, Validator, DoCheck {
 
-  // Localize throws error.
   private readonly maxDateError = $localize`:@@dp.datePicker.maxDateError:The date is greater than the allowed maximum.`;
   private readonly minDateError = $localize`:@@dp.datePicker.minDateError:The date is smaller than the allowed minimum.`;
   private readonly invalidError = $localize`:@@dp.datePicker.invalidError:The date is invalid.`;

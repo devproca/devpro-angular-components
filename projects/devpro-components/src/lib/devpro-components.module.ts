@@ -19,6 +19,9 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { RadioGroupComponent } from './radio-button/radio-group/radio-group.component';
 import { ScrollToActiveDirective } from './select/scroll-to-active.directive';
 import { SelectComponent } from './select/select.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-content.component';
+import { SidenavHeaderComponent } from './sidenav/sidenav-header/sidenav-header.component';
 import { SlideGroupComponent } from './slide-toggle/slide-group/slide-group.component';
 import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 import { SpinnerComponent } from './spinner/spinner.component';
@@ -26,9 +29,6 @@ import { SvgButtonComponent } from './svg-button/svg-button.component';
 import { SvgComponent } from './svg/svg.component';
 import { TabComponent } from './tab/tab.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { SidenavHeaderComponent } from './sidenav/sidenav-header/sidenav-header.component';
-import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-content.component';
 
 
 @NgModule({
@@ -50,6 +50,9 @@ import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-conte
     RadioGroupComponent,
     ScrollToActiveDirective,
     SelectComponent,
+    SidenavComponent,
+    SidenavContentComponent,
+    SidenavHeaderComponent,
     SlideGroupComponent,
     SlideToggleComponent,
     SpinnerComponent,
@@ -57,9 +60,6 @@ import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-conte
     SvgComponent,
     TabComponent,
     TabGroupComponent,
-    SidenavComponent,
-    SidenavHeaderComponent,
-    SidenavContentComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +83,9 @@ import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-conte
     RadioGroupComponent,
     ScrollToActiveDirective,
     SelectComponent,
+    SidenavComponent,
+    SidenavContentComponent,
+    SidenavHeaderComponent,
     SlideGroupComponent,
     SlideToggleComponent,
     SpinnerComponent,
@@ -90,9 +93,6 @@ import { SidenavContentComponent } from './sidenav/sidenav-content/sidenav-conte
     SvgComponent,
     TabComponent,
     TabGroupComponent,
-    SidenavComponent,
-    SidenavHeaderComponent,
-    SidenavContentComponent
   ]
 })
 export class DevproComponentsModule { }

@@ -1,4 +1,4 @@
-import {DateTime} from 'luxon'; // Throws error.
+import {DateTime} from 'luxon';
 
 export function formatDate(dateString: string): string {
   return !dateString ? '' : dateString
