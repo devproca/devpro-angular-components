@@ -29,6 +29,7 @@ import { SvgButtonComponent } from './svg-button/svg-button.component';
 import { SvgComponent } from './svg/svg.component';
 import { TabComponent } from './tab/tab.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
+import { ButtonComponent } from './button/button.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
     SvgComponent,
     TabComponent,
     TabGroupComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,6 +95,7 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
     SvgComponent,
     TabComponent,
     TabGroupComponent,
+    ButtonComponent
   ]
 })
 export class DevproComponentsModule { }

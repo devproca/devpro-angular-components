@@ -11,6 +11,10 @@ export { AlertComponent } from './lib/alert/alert.component';
 export { AlertsComponent } from './lib/alert/alerts/alerts.component';
 export { AlertService } from './lib/alert/alert.service';
 
+// Button
+export { ButtonComponent } from './lib/button/button.component';
+
+
 // Calendar
 export { CalendarComponent } from './lib/calendar/calendar.component';
 
