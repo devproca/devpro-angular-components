@@ -25,7 +25,6 @@
 :host[color='blue'] .button-wrapper {
   background-color: rgba(59, 130, 246, 1); // Blue 500
   color: white;
-  //box-shadow: inset 0px 0px 6px 0px #3182ce;
 }
 
 :host[color='blue'] .button-wrapper:hover,
@@ -37,15 +36,24 @@
   background-color: rgba(29, 78, 216, 1); // Blue 700
 }
 
-:host[color='blue'][inverted='true'] .button-wrapper {
+:host[color='blue'][stroked='true'] .button-wrapper {
   color: rgba(59, 130, 246, 1); // Blue 500;
+  border-color: rgba(59, 130, 246, 1); // Blue 500;
+}
+
+:host[color='blue'][stroked='true'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(191, 219, 254, 1); // Blue 200
+}
+
+:host[color='blue'][stroked='true'] .button-wrapper:active {
+  background-color: rgba(147, 197, 253, 1); // Blue 300
 }
 
 // Red Styling //
 :host[color='red'] .button-wrapper {
   background-color: rgba(239, 68, 68, 1); // Red 500
   color: white;
-  //box-shadow: inset 0px 0px 6px 0px #e53e3e;
 }
 
 :host[color='red'] .button-wrapper:hover,
@@ -57,22 +65,38 @@
   background-color: rgba(185, 28, 28, 1); // Red 700
 }
 
-:host[color='red'][inverted='true'] .button-wrapper {
+:host[color='red'][stroked='true'] .button-wrapper {
   color: rgba(239, 68, 68, 1); // Red 500
+  border-color: rgba(239, 68, 68, 1); // Red 500
 }
 
-:host[inverted='true'] .button-wrapper {
+:host[color='red'][stroked='true'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(254, 202, 202, 1); // Red 200
+}
+
+:host[color='red'][stroked='true'] .button-wrapper:active {
+  background-color: rgba(252, 165, 165, 1); // Red 300
+}
+
+// Stroke //
+:host[stroked='true'] .button-wrapper {
   background-color: white;
   border-width: 1px;
-  border-color: rgba(156, 163, 175, 1); // Gray 400
   border-style: solid;
 }
 
-:host[inverted='true'] .button-wrapper:hover,
-.button-wrapper:focus {
-  background-color: rgba(229, 231, 235, 1); // Gray 200
+// Raised //
+:host[raised='true'] .button-wrapper {
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.14);
 }
 
-:host[inverted='true'] .button-wrapper:active {
-  background-color: rgba(209, 213, 219, 1); // Gray 300
+:host[raised='true'] .button-wrapper:active {
+  box-shadow:
+    0 2.5px 3px rgba(0, 0, 0, 0.25),
+    inset 0 -2.5px 3px rgba(0, 0, 0, 0.14);
+  transition: all .2s ease-in-out;
+  transform: scale(0.98);
 }
