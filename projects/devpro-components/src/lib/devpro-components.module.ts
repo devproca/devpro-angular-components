@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AlertComponent } from './alert/alert.component';
 import { AlertsComponent } from './alert/alerts/alerts.component';
+import { ButtonComponent } from './button/button.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './checkbox/checkbox-group/checkbox-group.component';
@@ -35,6 +36,7 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
   declarations: [
     AlertComponent,
     AlertsComponent,
+    ButtonComponent,
     CalendarComponent,
     CheckboxComponent,
     CheckboxGroupComponent,
@@ -68,6 +70,7 @@ import { TabGroupComponent } from './tab/tab-group/tab-group.component';
   exports: [
     AlertComponent,
     AlertsComponent,
+    ButtonComponent,
     CalendarComponent,
     CheckboxComponent,
     CheckboxGroupComponent,

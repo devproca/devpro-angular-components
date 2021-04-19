@@ -9,9 +9,9 @@
     <div class="demo-errors" *ngIf="errors">{{ errors }}</div>
 
     <div style="margin-top: 1rem; margin-bottom: 1rem;">
-      <button class="btn btn-blue" *ngIf="this.formControl.disabled" (click)="enable()">Enable</button>
-      <button class="btn btn-blue" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</button>
-      <button class="btn btn-red" (click)="error()">Error</button>
+      <dp-button color="primary" *ngIf="this.formControl.disabled" (click)="enable()">Enable</dp-button>
+      <dp-button color="primary" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</dp-button>
+      <dp-button color="secondary" (click)="error()">Error</dp-button>
     </div>
 
     <div class="demo-value">

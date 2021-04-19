@@ -11,6 +11,7 @@ export class AppComponent {
 
   navItems = [
     { label: 'Alerts', route: '', fragment: 'alerts' },
+    { label: 'Buttons', route: '', fragment: 'buttons' },
     { label: 'Checkboxes', route: '', fragment: 'checkboxes' },
     { label: 'Chip', route: '', fragment: 'chip' },
     { label: 'Date Picker', route: '', fragment: 'date-picker' },
