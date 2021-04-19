@@ -34,3 +34,37 @@
     padding-top: 0.2rem;
   }
 }
+
+.primary {
+  color: rgba(59, 130, 246, 1); // Blue 500;
+}
+
+.secondary {
+  color: rgba(239, 68, 68, 1); // Red 500
+}
+
+.disabled {
+  color: rgba(156, 163, 175, 1); // Gray 400
+}
+
+.raised {
+  text-shadow: 1px 1px rgba(156, 163, 175, 1);
+}
+
+.stroked {
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 30%;
+}
+
+th, td {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
