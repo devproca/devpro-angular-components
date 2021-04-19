@@ -82,7 +82,7 @@
 
 // Stroke //
 :host[stroked='true'] .button-wrapper {
-  background-color: white;
+  background-color: transparent;
   border-width: 1px;
   border-style: solid;
 }
