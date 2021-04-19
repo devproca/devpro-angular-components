@@ -9,4 +9,5 @@ import { Component, HostBinding, Input } from '@angular/core';
 export class ButtonComponent {
   @HostBinding('attr.color') @Input() color: 'blue' | 'red' = 'blue';
   @HostBinding('attr.disabled') @Input() disabled = false;
+  @HostBinding('attr.inverted') @Input() inverted = false;
 }
