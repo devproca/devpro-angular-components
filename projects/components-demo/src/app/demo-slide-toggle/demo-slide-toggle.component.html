@@ -16,11 +16,9 @@
         </div>
 
         <div style="margin-top: 1rem; margin-bottom: 1rem;">
-          <button class="btn btn-blue" *ngIf="this.formControlGroup.disabled" (click)="enableGroup()">Enable
-          </button>
-          <button class="btn btn-blue" *ngIf="!this.formControlGroup.disabled" (click)="disableGroup()">Disable
-          </button>
-          <button class="btn btn-red" (click)="errorGroup()">Error</button>
+          <dp-button *ngIf="this.formControlGroup.disabled" (click)="enableGroup()">Enable</dp-button>
+          <dp-button *ngIf="!this.formControlGroup.disabled" (click)="disableGroup()">Disable</dp-button>
+          <dp-button color="red" (click)="errorGroup()">Error</dp-button>
         </div>
       </div>
 
@@ -39,11 +37,9 @@
         </div>
 
         <div style="margin-top: 1rem; margin-bottom: 1rem;">
-          <button class="btn btn-blue" *ngIf="this.formControlSingle.disabled" (click)="enableSingle()">Enable
-          </button>
-          <button class="btn btn-blue" *ngIf="!this.formControlSingle.disabled" (click)="disableSingle()">Disable
-          </button>
-          <button class="btn btn-red" (click)="errorSingle()">Error</button>
+          <dp-button *ngIf="this.formControlSingle.disabled" (click)="enableSingle()">Enable</dp-button>
+          <dp-button *ngIf="!this.formControlSingle.disabled" (click)="disableSingle()">Disable</dp-button>
+          <dp-button color="red" (click)="errorSingle()">Error</dp-button>
         </div>
       </div>
     </div>
