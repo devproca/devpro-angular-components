@@ -30,8 +30,6 @@ overflow: hidden;
   }
 }
 
-
-
 .logo {
   display: flex;
   flex-shrink: 0;
@@ -44,16 +42,13 @@ overflow: hidden;
     font-size: 1.25rem;
     line-height: 1.75rem;
     letter-spacing: -0.025em;
+    cursor: default;
   }
 
   img {
     width: 3rem;
     height: 3rem;
     margin-right: 0.5rem;
-  }
-
-  dp-sidenav-header {
-    color: white;
   }
 }
 

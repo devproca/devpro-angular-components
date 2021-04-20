@@ -24,6 +24,7 @@ import { RandomComponentComponent } from './random-component/random-component.co
 import { NavigationComponent } from './navigation/navigation.component';
 import { SetupComponent } from './setup/setup.component';
 import { CodeblockComponent } from './codeblock/codeblock.component';
+import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { CodeblockComponent } from './codeblock/codeblock.component';
     NavigationComponent,
     SetupComponent,
     CodeblockComponent,
+    SidenavComponent,
   ],
   imports: [
     AppRoutingModule,
