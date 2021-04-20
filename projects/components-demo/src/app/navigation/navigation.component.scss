@@ -23,16 +23,12 @@ overflow: hidden;
   margin-top: 1rem;
   margin-right: 1rem;
   color: rgba(147, 197, 253, 1); // Blue 200
+  text-decoration: none;
 
   &:hover {
     color: white;
   }
 }
-
-
-
-
-
 
 
 
@@ -54,6 +50,10 @@ overflow: hidden;
     width: 3rem;
     height: 3rem;
     margin-right: 0.5rem;
+  }
+
+  dp-sidenav-header {
+    color: white;
   }
 }
 

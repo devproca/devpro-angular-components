@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
+import { SetupComponent } from './setup/setup.component';
+
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -8,7 +10,10 @@ const routerOptions: ExtraOptions = {
   scrollOffset: [0, 64]
 };
 
-const routes: Routes = [ ];
+const routes: Routes = [
+  { path: '', redirectTo: '/setup', pathMatch: 'full' },
+  { path: 'setup', component: SetupComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],

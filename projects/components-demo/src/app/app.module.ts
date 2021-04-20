@@ -22,6 +22,8 @@ import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
 import { RandomComponentComponent } from './random-component/random-component.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SetupComponent } from './setup/setup.component';
+import { CodeblockComponent } from './codeblock/codeblock.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     DemoTabsComponent,
     RandomComponentComponent,
     NavigationComponent,
+    SetupComponent,
+    CodeblockComponent,
   ],
   imports: [
     AppRoutingModule,
