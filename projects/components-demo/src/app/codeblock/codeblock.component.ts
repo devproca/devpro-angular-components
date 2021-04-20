@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
   preserveWhitespaces: true
 })
 export class CodeblockComponent implements OnInit {
-
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

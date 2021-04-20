@@ -15,6 +15,7 @@ import { DemoSlideToggleComponent } from './demo-slide-toggle/demo-slide-toggle.
 import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
 import { SetupComponent } from './setup/setup.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 const routerOptions: ExtraOptions = {
@@ -42,7 +43,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes, routerOptions) ],
+  exports: [ RouterModule ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ]
 })
 export class AppRoutingModule { }

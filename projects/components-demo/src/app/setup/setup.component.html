@@ -3,37 +3,62 @@
 
   <div>
     <h2>Download</h2>
-    DevPro components are available through NPM, once your application is setup run the following commands to install
-    the library into your project:
-    <app-codeblock>
-        npm install devpro-components --save
-    </app-codeblock>
+    <p class="desc">
+      DevPro components are available through NPM, once your application is setup run the following commands to install
+      the library into your project:
+    </p>
+    <app-codeblock>{{ codeInstall }}</app-codeblock>
   </div>
 
   <div>
     <h2>Import</h2>
-    All components are currently exported by the DevproComponentsModule and can be imported by adding the following line
-    in your app.module.ts file.
-    <app-codeblock>
-        import {{"{"}} DevproComponentsModule } from 'devpro-components';
-    </app-codeblock>
+    <p class="desc">
+      All components are currently exported by the <code>DevproComponentsModule</code> and can be imported by adding the following
+      line in your <code>app.module.ts</code> file.
+    </p>
+    <app-codeblock>{{ codeImport }}</app-codeblock>
   </div>
 
   <div>
     <h2>Styles</h2>
-    The library utilizes two css dependencies. First, <code>base.scss</code> which contains the base styling for all
-    components. Second, <code>input.scss</code> which is utilized in the co
-    CODEBLOCK
+    <p class="desc">The library requires a base css dependency.
+      Import the <code>base.scss</code> file into your projects angular.json:
+    </p>
+    <app-codeblock>{{ codeStyles }}</app-codeblock>
   </div>
 
   <div>
     <h2>Animations</h2>
-    EXPLANATION
-    CODEBLOCK
+    <p class="desc">
+      Some components utilize Angular animations. Import the <code>BrowserAnimationsModule</code> into your application
+      module.
+    </p>
+    <app-codeblock>{{ codeAnimations }}</app-codeblock>
   </div>
 
   <div>
     <h2>Peer Dependencies</h2>
-    TABLE
+    <p class="desc">
+      Some components rely on third party dependencies, the following will be installed as peer dependencies when
+      installing the library.
+    </p>
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Dependency</th>
+      </tr>
+      <tr>
+        <td>Calendar / Date Picker</td>
+        <td>Luxon ^1.26.0</td>
+      </tr>
+      <tr>
+        <td>SVG</td>
+        <td>Angular Localize ^10.2.4</td>
+      </tr>
+      <tr>
+        <td>Popper</td>
+        <td>Popper.js 1.16.1</td>
+      </tr>
+    </table>
   </div>
 </div>
