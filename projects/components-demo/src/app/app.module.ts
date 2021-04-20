@@ -21,6 +21,7 @@ import { DemoSlideToggleComponent } from './demo-slide-toggle/demo-slide-toggle.
 import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
 import { RandomComponentComponent } from './random-component/random-component.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { RandomComponentComponent } from './random-component/random-component.co
     DemoSpinnerComponent,
     DemoTabsComponent,
     RandomComponentComponent,
+    NavigationComponent,
   ],
   imports: [
     AppRoutingModule,

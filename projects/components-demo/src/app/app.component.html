@@ -1,13 +1,14 @@
+<app-navigation></app-navigation>
+
+<router-outlet></router-outlet>
+
+
+
 <dp-sidenav [sideNavRef]="navContent"
             [sideNavWidth]="280" [sideNavTitle]="'Side Navigation'"
             [openDirection]="'left'"
             [duration]="0.5"></dp-sidenav>
 
-<div class="header-wrapper">
-  <dp-sidenav-header class="nav-menu"></dp-sidenav-header>
-  <img src="assets/images/DevPro-Logo.png">
-  <h1>DevPro Web Components</h1>
-</div>
 
 <dp-demo-alert id="alerts"></dp-demo-alert>
 <demo-button id="buttons"></demo-button>
