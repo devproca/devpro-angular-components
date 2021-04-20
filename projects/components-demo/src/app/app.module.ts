@@ -20,7 +20,7 @@ import { DemoSelectComponent } from './demo-select/demo-select.component';
 import { DemoSlideToggleComponent } from './demo-slide-toggle/demo-slide-toggle.component';
 import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
-import { RandomComponentComponent } from './random-component/random-component.component';
+import { RandomComponentComponent } from './demo-dialog/random-component/random-component.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SetupComponent } from './setup/setup.component';
 import { CodeblockComponent } from './codeblock/codeblock.component';

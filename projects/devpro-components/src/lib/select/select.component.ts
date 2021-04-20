@@ -20,7 +20,7 @@ import {ARROW_DOWN, ARROW_UP, BACKSPACE, ENTER, ESCAPE, TAB} from '../util/keyco
 @Component({
   selector: 'dp-select',
   templateUrl: './select.component.html',
-  styleUrls: ['./select.component.scss', '../../../assets/styles/base.scss', '../../../assets/styles/input.scss'],
+  styleUrls: ['./select.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

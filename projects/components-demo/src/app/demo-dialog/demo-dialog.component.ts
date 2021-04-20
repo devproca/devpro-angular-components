@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { DialogService } from 'devpro-components';
 import { DialogConfig } from 'devpro-components';
-import { RandomComponentComponent } from '../random-component/random-component.component';
+import { RandomComponentComponent } from './random-component/random-component.component';
 
 
 @Component({

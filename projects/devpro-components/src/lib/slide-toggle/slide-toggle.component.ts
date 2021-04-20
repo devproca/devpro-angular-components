@@ -10,7 +10,7 @@ import { SlideToggleService} from './slide-toggle.service';
 @Component({
   selector: 'dp-slide-toggle',
   templateUrl: './slide-toggle.component.html',
-  styleUrls: ['./slide-toggle.component.scss', '../../../assets/styles/base.scss'],
+  styleUrls: ['./slide-toggle.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

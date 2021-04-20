@@ -26,7 +26,7 @@ import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../util/dat
 @Component({
   selector: 'dp-date-picker',
   templateUrl: './date-picker.component.html',
-  styleUrls: ['./date-picker.component.scss', '../../../assets/styles/base.scss', '../../../assets/styles/input.scss'],
+  styleUrls: ['./date-picker.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

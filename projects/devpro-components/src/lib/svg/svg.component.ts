@@ -17,7 +17,7 @@ const SVGS = {
 @Component({
   selector: 'dp-svg',
   templateUrl: './svg.component.html',
-  styleUrls: ['./svg.component.scss', '../../../assets/styles/base.scss'],
+  styleUrls: ['./svg.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SvgComponent implements OnInit {
