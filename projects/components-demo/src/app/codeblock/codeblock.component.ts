@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./codeblock.component.scss'],
   preserveWhitespaces: true
 })
-export class CodeblockComponent { }
+export class CodeblockComponent {
+  // TODO: Add Input() for fileName.
+}

@@ -7,7 +7,7 @@ import { DemoCheckboxComponent } from './demos/demo-checkbox/demo-checkbox.compo
 import { DemoChipComponent } from './demos/demo-chip/demo-chip.component';
 import { DemoDatePickerComponent } from './demos/demo-date-picker/demo-date-picker.component';
 import { DemoDialogComponent } from './demos/demo-dialog/demo-dialog.component';
-import { DemoMultiselectComponent } from './demo-multiselect/demo-multiselect.component';
+import { DemoMultiselectComponent } from './demos/demo-multiselect/demo-multiselect.component';
 import { DemoOverflowMenuComponent } from './demo-overflow-menu/demo-overflow-menu.component';
 import { DemoRadioButtonComponent } from './demo-radio-button/demo-radio-button.component';
 import { DemoSelectComponent } from './demo-select/demo-select.component';
