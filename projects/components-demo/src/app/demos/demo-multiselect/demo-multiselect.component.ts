@@ -79,7 +79,7 @@ export class DemoMultiselectComponent {
   }
 
   error(): void {
-    this.formControl.setErrors({somekey: 'this is an error'});
+    this.formControl.setErrors({somekey: 'This is an error with your selection.'});
   }
 
   get errors(): string[] {
@@ -184,7 +184,7 @@ export class DemoMultiselectComponent {
     }
 
     error(): void {
-      this.formControl.setErrors({somekey: 'this is an error'});
+      this.formControl.setErrors({somekey: 'This is an error with your selection.'});
     }
 
     get errors(): string[] {
