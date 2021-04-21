@@ -1,12 +1,12 @@
 <label class="checkbox-wrapper">
-  <div class="container">
+  <div class="checkbox-container">
     <input type="checkbox"
            (click)="onClick()"
            [value]="[value]"
            [checked]="isChecked"
            [disabled]="disabled">
-    <dp-svg class="svg-wrapper" iconName="check"></dp-svg>
+    <dp-svg class="checkbox-svg" iconName="check"></dp-svg>
   </div>
 
-  <span class="label-wrapper">{{ label }}</span>
+  <span class="checkbox-label">{{ label }}</span>
 </label>

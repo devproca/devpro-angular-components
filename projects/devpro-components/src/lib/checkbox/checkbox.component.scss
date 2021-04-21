@@ -37,7 +37,7 @@ input[type="checkbox"] {
   margin-top: 0.75rem;
 }
 
-.container {
+.checkbox-container {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -49,7 +49,7 @@ input[type="checkbox"] {
   width: 1.25rem;
 }
 
-.svg-wrapper {
+.checkbox-svg {
   opacity: 0;
   fill: currentColor;
   color: white;
@@ -58,6 +58,6 @@ input[type="checkbox"] {
   pointer-events: none;
 }
 
-.label-wrapper {
+.checkbox-label {
   margin-left: 0.5rem;
 }

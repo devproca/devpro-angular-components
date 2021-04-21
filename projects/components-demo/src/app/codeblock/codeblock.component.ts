@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-codeblock',
@@ -6,7 +7,4 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./codeblock.component.scss'],
   preserveWhitespaces: true
 })
-export class CodeblockComponent implements OnInit {
-  constructor() { }
-  ngOnInit(): void { }
-}
+export class CodeblockComponent { }
