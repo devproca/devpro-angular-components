@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
-import { DemoAlertComponent } from './demo-alert/demo-alert.component';
+import { DemoAlertComponent } from './demos/demo-alert/demo-alert.component';
 import { DemoButtonComponent } from './demo-button/demo-button.component';
-import { DemoCheckboxComponent } from './demo-checkbox/demo-checkbox.component';
-import { DemoChipComponent } from './demo-chip/demo-chip.component';
-import { DemoDatePickerComponent } from './demo-date-picker/demo-date-picker.component';
+import { DemoCheckboxComponent } from './demos/demo-checkbox/demo-checkbox.component';
+import { DemoChipComponent } from './demos/demo-chip/demo-chip.component';
+import { DemoDatePickerComponent } from './demos/demo-date-picker/demo-date-picker.component';
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
 import { DemoMultiselectComponent } from './demo-multiselect/demo-multiselect.component';
 import { DemoOverflowMenuComponent } from './demo-overflow-menu/demo-overflow-menu.component';

@@ -28,6 +28,10 @@ th, td {
   text-align: left;
 }
 
+td:first-child {
+  font-family: Consolas, "courier new";
+}
+
 .component-intro {
   margin-bottom: 2rem;
 }
