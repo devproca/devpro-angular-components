@@ -1,0 +1,124 @@
+<div class="component-intro">
+  <h1>Dialog</h1>
+  <p>
+    A modal component that displays a child window in front of the main window.
+  </p>
+</div>
+
+<div class="demo-wrapper">
+  <dp-button color="primary" (click)="openDialog()">Open Dialog Example</dp-button>
+</div>
+
+<div class="component-info">
+  <dp-tab-group>
+    <dp-tab label="Documentation">
+      <h3>Getting Started</h3>
+      <p>A dialog component can consist of <code>DialogHeaderComponent</code>, <code>DialogBodyComponent</code>, and a
+        <code>DialogFooterComponent</code> like the above example, however other components can be injected.</p>
+      <h4>Import</h4>
+      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+
+      <h3>Dialog Service</h3>
+      <p>Dialog modals can be opened through the <code>DialogService</code> by calling the open function.</p>
+      <app-codeblock>{{ codeService }}</app-codeblock>
+      <h4>Dialog Config</h4>
+      <p>The <code>DialogService</code> open function can take an optional <code>DialogConfig</code> with a data and
+        size parameter.</p>
+      <app-codeblock>{{ codeConfig }}</app-codeblock>
+
+      <h3>Properties</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td>string</td>
+          <td>null</td>
+          <td>Variable determining the size of the modal.</td>
+        </tr>
+        <tr>
+          <td>state</td>
+          <td>string</td>
+          <td>out</td>
+          <td>State for the overlays fading animation, in or out.</td>
+        </tr>
+      </table>
+
+      <h3>Styling</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Element</th>
+        </tr>
+        <tr>
+          <td>overlay</td>
+          <td>Outermost element that fades out the main window behind the modal.</td>
+        </tr>
+        <tr>
+          <td>dialog</td>
+          <td>Container element for the modals basic styling and size.</td>
+        </tr>
+      </table>
+
+      <h3>Methods</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Parameters</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>close</td>
+          <td>result: any (Optional)</td>
+          <td>Closes the modal and returns to the main window.</td>
+        </tr>
+      </table>
+
+      <h3>Service Methods</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Parameters</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>open</td>
+          <td>
+            <li>componentType: any</li>
+            <li>DialogConfig (Optional)</li>
+          </td>
+          <td>Opens the given component in a dialog window.</td>
+        </tr>
+
+        <tr>
+          <td>destroyCallback</td>
+          <td>-</td>
+          <td>Destroys the dialog component reference.</td>
+        </tr>
+      </table>
+
+      <h3>Dependencies</h3>
+      <p>None.</p>
+    </dp-tab>
+
+    <dp-tab label="Source Code">
+      <p>
+        The example consists of a random component being fed into a <code>DialogComponent</code>.
+        The <code>RandomComponent</code> is made up of a <code>DialogHeaderComponent</code>,
+        <code>DialogBodyComponent</code>, and a <code>DialogFooterComponent</code> which are all included in the
+        library.
+      </p>
+      <h4>Dialog Demo Source</h4>
+      <app-codeblock>{{ codeHTML }}</app-codeblock>
+      <app-codeblock>{{ codeTS }}</app-codeblock>
+
+      <h4>Random Component Source</h4>
+      <app-codeblock>{{ codeHTMLRandom }}</app-codeblock>
+      <app-codeblock>{{ codeTSRandom }}</app-codeblock>
+    </dp-tab>
+  </dp-tab-group>
+</div>

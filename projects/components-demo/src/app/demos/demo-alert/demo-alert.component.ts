@@ -32,7 +32,9 @@ export class DemoAlertComponent implements OnInit {
   codeHTML = `<dp-alerts></dp-alerts>
   <dp-button color="primary" (click)="clear()">Clear All</dp-button>`;
 
-  codeTS = `export class DemoAlertComponent implements OnInit {
+  codeTS = `import { AlertService } from 'devpro-components';
+  ...
+  export class DemoAlertComponent implements OnInit {
 
     constructor(private alertService: AlertService) { }
 
