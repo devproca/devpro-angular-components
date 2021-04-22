@@ -1,23 +1,5 @@
-.centered {
+dp-spinner {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.text {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 500;
-  background-color: rgba(147, 197, 253, 1);
-}
-
-.grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
-
-  border-left-width: 1px;
-  border-top-width: 1px;
-  border-color: rgba(209, 213, 219, 1); // Gray 300
 }

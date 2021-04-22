@@ -1,31 +1,113 @@
+<div class="component-intro">
+  <h1>Spinners</h1>
+  <p>Spinners are a status indicator for progress, loading, etc.</p>
+</div>
+
 <div class="demo-wrapper">
-  <div class="demo-title">Spinner</div>
-  <div class="demo-border">
-    <div class="grid">
-      <div class="text"><!-- Place Holder --></div>
+  <table>
+    <tr>
+      <th></th>
+      <th>Style 1</th>
+      <th>Style 2</th>
+      <th>Style 3</th>
+    </tr>
+    <tr>
+      <th>Extra Small</th>
+      <td><dp-spinner size="xs" spinnerStyle="style1"></dp-spinner></td>
+      <td><dp-spinner size="xs" spinnerStyle="style2"></dp-spinner></td>
+      <td><dp-spinner size="xs" spinnerStyle="style3"></dp-spinner></td>
+    </tr>
+    <tr>
+      <th>Small</th>
+      <td><dp-spinner size="sm" spinnerStyle="style1"></dp-spinner></td>
+      <td><dp-spinner size="sm" spinnerStyle="style2"></dp-spinner></td>
+      <td><dp-spinner size="sm" spinnerStyle="style3"></dp-spinner></td>
+    </tr>
+    <tr>
+      <th>Medium</th>
+      <td><dp-spinner size="md" spinnerStyle="style1"></dp-spinner></td>
+      <td><dp-spinner size="md" spinnerStyle="style2"></dp-spinner></td>
+      <td><dp-spinner size="md" spinnerStyle="style3"></dp-spinner></td>
+    </tr>
+    <tr>
+      <th>Large</th>
+      <td><dp-spinner size="lg" spinnerStyle="style1"></dp-spinner></td>
+      <td><dp-spinner size="lg" spinnerStyle="style2"></dp-spinner></td>
+      <td><dp-spinner size="lg" spinnerStyle="style3"></dp-spinner></td>
+    </tr>
+  </table>
+</div>
 
-      <div class="centered text">Extra Small</div>
-      <div class="centered text">Small</div>
-      <div class="centered text">Medium</div>
-      <div class="centered text">Large</div>
+<div class="component-info">
+  <dp-tab-group>
+    <dp-tab label="Documentation">
+      <h3>Getting Started</h3>
+      <p>The spinner component can be used in many applications. The element comes with a default configuration of blue
+        coloring, style 1, and size extra small. But can be configured in several different ways.</p>
+      <h4>Import</h4>
+      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
 
-      <div class="centered text">Style 1</div>
-      <dp-spinner class="centered" size="xs" spinnerStyle="style1"></dp-spinner>
-      <dp-spinner class="centered" size="sm" spinnerStyle="style1"></dp-spinner>
-      <dp-spinner class="centered" size="md" spinnerStyle="style1"></dp-spinner>
-      <dp-spinner class="centered" size="lg" spinnerStyle="style1"></dp-spinner>
+      <h3>Properties</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td>-</td>
+          <td>xs</td>
+          <td>Dictates how large the spinner will be.</td>
+        </tr>
+        <tr>
+          <td>spinnerStyle</td>
+          <td>-</td>
+          <td>style1</td>
+          <td>Dictates the style of the spinner.</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>-</td>
+          <td>blue</td>
+          <td>Dictates the color of the spinner.</td>
+        </tr>
+      </table>
 
-      <div class="centered text">Style 2</div>
-      <dp-spinner class="centered" size="xs" spinnerStyle="style2"></dp-spinner>
-      <dp-spinner class="centered" size="sm" spinnerStyle="style2"></dp-spinner>
-      <dp-spinner class="centered" size="md" spinnerStyle="style2"></dp-spinner>
-      <dp-spinner class="centered" size="lg" spinnerStyle="style2"></dp-spinner>
+      <h3>Styling</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Element</th>
+        </tr>
+        <tr>
+          <td>spinner-wrapper</td>
+          <td>Outermost element containing the animation, color, style, and size.</td>
+        </tr>
+      </table>
+      <h4>Style</h4>
+      <p>The style can be changed with the <code>spinnerStyle</code> attribute. Options include: <code>xs</code>,
+        <code>sm</code>, <code>md</code>, and <code>lg</code>. The default is style1.</p>
+      <app-codeblock>{{ codeStyle }}</app-codeblock>
+      <h4>Size</h4>
+      <p>The size can be changed with the <code>size</code> attribute. Options include: <code>style1</code>,
+        <code>style2</code>, and <code>style3</code>'. The default is extra small.</p>
+      <app-codeblock>{{ codeSize }}</app-codeblock>
+      <h4>Color</h4>
+      <p>The color can be changed with the <code>color</code> attribute. Options include: <code>blue</code> and
+        <code>white</code>. The default is blue.</p>
+      <app-codeblock>{{ codeColor }}</app-codeblock>
 
-      <div class="centered text">Style 3</div>
-      <dp-spinner class="centered" size="xs" spinnerStyle="style3"></dp-spinner>
-      <dp-spinner class="centered" size="sm" spinnerStyle="style3"></dp-spinner>
-      <dp-spinner class="centered" size="md" spinnerStyle="style3"></dp-spinner>
-      <dp-spinner class="centered" size="lg" spinnerStyle="style3"></dp-spinner>
-    </div>
-  </div>
+      <h3>Methods</h3>
+      <p>None.</p>
+
+      <h3>Dependencies</h3>
+      <p>None.</p>
+    </dp-tab>
+
+    <dp-tab label="Source Code">
+      <app-codeblock>{{ codeHTML }}</app-codeblock>
+    </dp-tab>
+  </dp-tab-group>
 </div>
