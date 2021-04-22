@@ -15,7 +15,7 @@ export class RadioButtonComponent implements OnInit, OnDestroy {
 
   @Output() checked = new EventEmitter<void>();
   @Input() label: string;
-  @Input() value: string;
+  @Input() value: any;
   @HostBinding('attr.disabled') @Input() disabled = false;
   @HostBinding('attr.error') error = false;
 
