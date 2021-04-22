@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { DemoAlertComponent } from './demos/demo-alert/demo-alert.component';
-import { DemoButtonComponent } from './demo-button/demo-button.component';
+import { DemoButtonComponent } from './demos/demo-button/demo-button.component';
 import { DemoCheckboxComponent } from './demos/demo-checkbox/demo-checkbox.component';
 import { DemoChipComponent } from './demos/demo-chip/demo-chip.component';
 import { DemoDatePickerComponent } from './demos/demo-date-picker/demo-date-picker.component';
@@ -12,7 +12,7 @@ import { DemoOverflowMenuComponent } from './demos/demo-overflow-menu/demo-overf
 import { DemoRadioButtonComponent } from './demos/demo-radio-button/demo-radio-button.component';
 import { DemoSelectComponent } from './demos/demo-select/demo-select.component';
 import { DemoSlideToggleComponent } from './demos/demo-slide-toggle/demo-slide-toggle.component';
-import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
+import { DemoSpinnerComponent } from './demos/demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demos/demo-tabs/demo-tabs.component';
 import { SetupComponent } from './setup/setup.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';

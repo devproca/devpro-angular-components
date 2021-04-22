@@ -1,14 +1,16 @@
-table {
-  border-collapse: collapse;
-  width: 30%;
-}
+.btn-demo {
+  table {
+    border-collapse: collapse;
+    width: 30%;
+  }
 
-th, td {
-  font-weight: bold;
-  font-size: x-large;
-  padding: 8px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+  th, td {
+    font-weight: bold;
+    font-size: x-large;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
 }
 
 .btn-group {
@@ -16,6 +18,14 @@ th, td {
 
   .demo-subtitle {
     margin-bottom: 0;
+  }
+
+  dp-button:not(:first-of-type) {
+    margin-left: 0.5rem
+  }
+
+  div:not(:first-of-type) {
+    margin-top: 0.5rem;
   }
 }
 
