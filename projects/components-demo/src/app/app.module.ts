@@ -16,7 +16,7 @@ import { DemoDialogComponent } from './demos/demo-dialog/demo-dialog.component';
 import { DemoMultiselectComponent } from './demos/demo-multiselect/demo-multiselect.component';
 import { DemoOverflowMenuComponent } from './demos/demo-overflow-menu/demo-overflow-menu.component';
 import { DemoRadioButtonComponent } from './demos/demo-radio-button/demo-radio-button.component';
-import { DemoSelectComponent } from './demo-select/demo-select.component';
+import { DemoSelectComponent } from './demos/demo-select/demo-select.component';
 import { DemoSlideToggleComponent } from './demo-slide-toggle/demo-slide-toggle.component';
 import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';

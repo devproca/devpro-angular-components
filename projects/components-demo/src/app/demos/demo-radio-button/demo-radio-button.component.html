@@ -13,7 +13,7 @@
   </dp-radio-group>
   <div class="demo-errors" *ngIf="errors">{{ errors }}</div>
 
-  <div style="margin-top: 1rem; margin-bottom: 1rem;">
+  <div class="demo-btn-group">
     <dp-button color="primary" *ngIf="this.formControl.disabled" (click)="enable()">Enable</dp-button>
     <dp-button color="primary" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</dp-button>
     <dp-button color="secondary" (click)="error()">Error</dp-button>

@@ -37,7 +37,7 @@ export class DemoRadioButtonComponent {
     <dp-radio-button label="One" value="ONE"></dp-radio-button>
     <dp-radio-button label="Two" value="TWO"></dp-radio-button>
     ...
-  </dp-radio-group>`
+  </dp-radio-group>`;
 
   codeHTML = `<dp-radio-group [formControl]="formControl">
     <dp-radio-button label="One" value="ONE"></dp-radio-button>
@@ -46,7 +46,7 @@ export class DemoRadioButtonComponent {
   </dp-radio-group>
   <div class="demo-errors" *ngIf="errors">{{ errors }}</div>
 
-  <div style="margin-top: 1rem; margin-bottom: 1rem;">
+  <div class="demo-btn-group">
     <dp-button color="primary" *ngIf="this.formControl.disabled" (click)="enable()">Enable</dp-button>
     <dp-button color="primary" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</dp-button>
     <dp-button color="secondary" (click)="error()">Error</dp-button>
