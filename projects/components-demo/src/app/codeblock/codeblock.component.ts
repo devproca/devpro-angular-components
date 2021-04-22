@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   preserveWhitespaces: true
 })
 export class CodeblockComponent {
-  // TODO: Add Input() for fileName.
+  @Input() fileName: string;
 }
