@@ -39,7 +39,7 @@
     <dp-tab label="Documentation">
       <h3>Getting Started</h3>
       <p>The checkbox component can be used as a single basic checkbox or grouped together with the
-        <code>CheckBoxGroup</code> component for multi-selection.</p>
+        <code>CheckBoxGroupComponent</code> component for multi-selection.</p>
       <h4>Import</h4>
       <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
 
@@ -47,6 +47,12 @@
       <p>Labels can be added to the checkbox as an attribute. Clicking on the label will also toggle the checkboxes
       checked state.</p>
       <app-codeblock>{{ codeLabel }}</app-codeblock>
+
+      <h3>Value and Forms</h3>
+      <p>Value can be assigned to each checkbox as an attribute. Adding a <code>FormControlDirective</code> to the
+        <code>CheckboxGroupComponent</code> or and individual <code>CheckboxComponent</code> will allow you to utilize
+        the information each checkbox is intended to provide.</p>
+      <app-codeblock>{{ codeValue }}</app-codeblock>
 
       <h3>Properties</h3>
       <table>

@@ -28,7 +28,7 @@ export class DemoCheckboxComponent {
   }
 
   errorGroup(): void {
-    this.formControlGroup.setErrors({somekey: 'this is an error'});
+    this.formControlGroup.setErrors({somekey: 'This is an error with your selection.'});
   }
 
   errorSingle(): void {
@@ -44,6 +44,13 @@ export class DemoCheckboxComponent {
   }
 
   codeLabel = `<dp-checkbox label="Value 1" value="val1"></dp-checkbox>`;
+
+  codeValue = `<dp-checkbox-group [formControl]="formControl">
+    <dp-checkbox label="One" value="ONE"></dp-checkbox>
+    <dp-checkbox label="Two" value="TWO"></dp-checkbox>
+    ...
+  </dp-checkbox-group>`;
+
   codeHTML = `<h4>Single Checkbox</h4>
   <dp-checkbox [formControl]="formControlSingle" label="I accept the terms of use." value="ACCEPTED"></dp-checkbox>
   <div class="demo-errors" *ngIf="errorsSingle">{{ errorsSingle }}</div>
@@ -93,7 +100,7 @@ export class DemoCheckboxComponent {
     }
 
     errorGroup(): void {
-      this.formControlGroup.setErrors({somekey: 'this is an error'});
+      this.formControlGroup.setErrors({somekey: 'This is an error with your selection.'});
     }
 
     errorSingle(): void {
