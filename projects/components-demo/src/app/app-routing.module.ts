@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { DemoAlertComponent } from './demos/demo-alert/demo-alert.component';
 import { DemoButtonComponent } from './demos/demo-button/demo-button.component';
@@ -11,17 +12,17 @@ import { DemoMultiselectComponent } from './demos/demo-multiselect/demo-multisel
 import { DemoOverflowMenuComponent } from './demos/demo-overflow-menu/demo-overflow-menu.component';
 import { DemoRadioButtonComponent } from './demos/demo-radio-button/demo-radio-button.component';
 import { DemoSelectComponent } from './demos/demo-select/demo-select.component';
+import { DemoSidenavComponent } from './demos/demo-sidenav/demo-sidenav.component';
 import { DemoSlideToggleComponent } from './demos/demo-slide-toggle/demo-slide-toggle.component';
 import { DemoSpinnerComponent } from './demos/demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demos/demo-tabs/demo-tabs.component';
 import { SetupComponent } from './setup/setup.component';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 64]
+  scrollOffset: [0, 140]
 };
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'overflow-menu', component: DemoOverflowMenuComponent },
   { path: 'radio-button', component: DemoRadioButtonComponent },
   { path: 'select', component: DemoSelectComponent },
+  { path: 'sidenav', component: DemoSidenavComponent },
   { path: 'slide-toggle', component: DemoSlideToggleComponent },
   { path: 'spinner', component: DemoSpinnerComponent },
   { path: 'tabs', component: DemoTabsComponent },

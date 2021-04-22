@@ -19,6 +19,7 @@ export class SidenavComponent {
     { label: 'Overflow Menus', route: 'overflow-menu' },
     { label: 'Radio Button', route: 'radio-button' },
     { label: 'Select Input', route: 'select' },
+    { label: 'Side Nav Bar', route: 'sidenav' },
     { label: 'Slide Toggle', route: 'slide-toggle' },
     { label: 'Spinner', route: 'spinner' },
     { label: 'Tabs', route: 'tabs' },
