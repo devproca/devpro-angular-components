@@ -11,9 +11,9 @@ import { DemoMultiselectComponent } from './demos/demo-multiselect/demo-multisel
 import { DemoOverflowMenuComponent } from './demos/demo-overflow-menu/demo-overflow-menu.component';
 import { DemoRadioButtonComponent } from './demos/demo-radio-button/demo-radio-button.component';
 import { DemoSelectComponent } from './demos/demo-select/demo-select.component';
-import { DemoSlideToggleComponent } from './demo-slide-toggle/demo-slide-toggle.component';
+import { DemoSlideToggleComponent } from './demos/demo-slide-toggle/demo-slide-toggle.component';
 import { DemoSpinnerComponent } from './demo-spinner/demo-spinner.component';
-import { DemoTabsComponent } from './demo-tabs/demo-tabs.component';
+import { DemoTabsComponent } from './demos/demo-tabs/demo-tabs.component';
 import { SetupComponent } from './setup/setup.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 

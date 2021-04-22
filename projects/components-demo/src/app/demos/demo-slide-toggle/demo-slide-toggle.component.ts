@@ -102,7 +102,7 @@ export class DemoSlideToggleComponent {
       disableGroup(): void {
         this.formControlGroup.disable();
       }
-    
+
       errorSingle(): void {
         this.formControlSingle.setErrors({somekey: 'This is an error with your selection.'});
       }

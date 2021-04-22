@@ -1,0 +1,102 @@
+<div class="component-intro">
+  <h1>Tabs</h1>
+  <p>Tabs are a container component to group content together into tabs. A tab can accept any form of content.</p>
+</div>
+
+<div class="demo-wrapper">
+  <dp-tab-group>
+    <dp-tab label="Tab 1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+      mollit anim id est laborum.
+    </dp-tab>
+
+    <dp-tab label="Tab 2">
+      I accept any content!
+      <dp-spinner size="sm"></dp-spinner>
+      <dp-checkbox></dp-checkbox>
+      <dp-slide-toggle></dp-slide-toggle>
+    </dp-tab>
+
+    <dp-tab label="Tab 3">Hello world!</dp-tab>
+  </dp-tab-group>
+</div>
+
+<div class="component-info">
+  <dp-tab-group>
+    <dp-tab label="Documentation">
+      <h3>Getting Started</h3>
+      <p>The tabs component does not function on its own and must be grouped together with the
+        <code>TabGroupComponent</code> so that only one tab is displayed at a time.</p>
+      <app-codeblock>{{ codeGroup }}</app-codeblock>
+      <h4>Import</h4>
+      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+
+      <h3>Label</h3>
+      <p>Labels should be added to each tab component as an attribute. The label will be displayed as each tabs header text.</p>
+      <app-codeblock>{{ codeLabel }}</app-codeblock>
+
+      <h3>Properties</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>string</td>
+          <td>null</td>
+          <td>Label for the tab header.</td>
+        </tr>
+        <tr>
+          <td>isSelected</td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Determines which tab to display.</td>
+        </tr>
+      </table>
+
+      <h3>Styling</h3>
+      <h4>Tab</h4>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Element</th>
+        </tr>
+        <tr>
+          <td>content-wrapper</td>
+          <td>Outermost element containing tabs content.</td>
+        </tr>
+      </table>
+      <h4>Tab Group</h4>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Element</th>
+        </tr>
+        <tr>
+          <td>tab-wrapper</td>
+          <td>Outermost element containing the different tabs.</td>
+        </tr>
+        <tr>
+          <td>tab</td>
+          <td>The button element that is the tab.</td>
+        </tr>
+      </table>
+
+      <h3>Methods</h3>
+      <p>None.</p>
+
+      <h3>Dependencies</h3>
+      <p>None.</p>
+    </dp-tab>
+
+    <dp-tab label="Source Code">
+      <app-codeblock>{{ codeHTML }}</app-codeblock>
+    </dp-tab>
+  </dp-tab-group>
+</div>
