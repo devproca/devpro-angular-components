@@ -9,24 +9,22 @@ export class SetupComponent {
 
   codeInstall = `npm install devpro-components --save`;
   codeImport = `import { DevproComponentsModule } from 'devpro-components';`;
-  codeStyles =
-    `"styles": [
+  codeStyles = `"styles": [
+...
+  "node_modules/devpro-components/assets/styles/base.css"
+],`;
+
+  codeAnimations = `import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
   ...
-    "node_modules/devpro-components/assets/styles/base.css"
-  ],`;
-  codeAnimations =
-    `import {BrowserModule} from '@angular/platform-browser';
-  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-    ...
-
-    @NgModule({
-      imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ...
-      ],
-    })
-  export class AppModule { }`;
-
+  @NgModule({
+    imports: [
+      BrowserModule,
+      BrowserAnimationsModule,
+      ...
+    ],
+  })
+export class AppModule { }`;
 }
