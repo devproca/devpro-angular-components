@@ -3,30 +3,30 @@ input[type="checkbox"] {
   opacity: 0;
 }
 
-:host[checked='true'] .container {
+:host[checked='true'] .checkbox-container {
   background-color: rgba(59, 130, 246, 1); // Blue 500
   border-color: rgba(147, 197, 253, 1); // Blue 300
 
-  .svg-wrapper {
+  .checkbox-svg {
     opacity: 1;
   }
 }
 
-:host[disabled='true'] .container {
+:host[disabled='true'] .checkbox-container {
   background-color: rgba(156, 163, 175, 1); // Gray 400
   border-color: rgba(209, 213, 219, 1); // Gray 300
   pointer-events: none;
 }
 
-:host[disabled='true'] .label-wrapper {
+:host[disabled='true'] .checkbox-label {
   background-color: rgba(229, 231, 235, 1); // Gray 200
 }
 
-:host[error='true'] .container {
+:host[error='true'] .checkbox-container {
   border-color: rgba(252, 165, 165, 1); // Red 300
 }
 
-:host[error='true'][checked='true'] .container {
+:host[error='true'][checked='true'] .checkbox-container {
   background-color: rgba(239, 68, 68, 1); // Red 500
 }
 
