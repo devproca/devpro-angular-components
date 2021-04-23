@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-demo-sidenav',
   templateUrl: './demo-sidenav.component.html',
@@ -14,6 +15,7 @@ export class DemoSidenavComponent {
     { label: 'Methods', route: 'sidenav', fragment: 'methods' },
     { label: 'Dependencies', route: 'sidenav', fragment: 'dependencies' }
   ];
+
 
 
   codeHeader = `<dp-sidenav-header></dp-sidenav-header>`;

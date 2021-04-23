@@ -32,6 +32,8 @@ export class DemoOverflowMenuComponent {
     }
   ];
 
+
+
   codeOptionsHTML = `<dp-overflow-menu [options]="options"></dp-overflow-menu>`;
   codeOptions = `options = [
   {

@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CodeblockComponent {
   @Input() fileName: string;
-  @Input() code;
+  @Input() code: string;
 }

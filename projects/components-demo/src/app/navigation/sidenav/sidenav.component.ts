@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
@@ -30,5 +31,4 @@ export class SidenavComponent {
   handleNavSelection(navItem: any): void {
     this.router.navigate([navItem.route]);
   }
-
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+
 @Component({
   selector: 'dp-demo-checkbox',
   templateUrl: './demo-checkbox.component.html',
@@ -42,6 +43,8 @@ export class DemoCheckboxComponent {
   get errorsSingle(): string[] {
     return this.formControlSingle.errors ? Object.values(this.formControlSingle.errors) : null;
   }
+
+
 
   codeLabel = `<dp-checkbox label="Value 1" value="val1"></dp-checkbox>`;
 

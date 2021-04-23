@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'dp-demo-chip',
   templateUrl: './demo-chip.component.html',

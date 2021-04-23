@@ -87,6 +87,7 @@ export class DemoSelectComponent {
   }
 
 
+
   codeOptionsAttr = `<dp-select [options]="options"></dp-select>`;
   codeOptions = `options = [
   {

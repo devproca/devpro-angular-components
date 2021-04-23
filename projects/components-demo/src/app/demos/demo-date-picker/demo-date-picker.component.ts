@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+
 @Component({
   selector: 'dp-demo-date-picker',
   templateUrl: './demo-date-picker.component.html',
   styleUrls: ['./demo-date-picker.component.scss']
 })
 export class DemoDatePickerComponent {
+
   formControl = new FormControl('2016-03-03');
 
   enable(): void {
@@ -24,6 +26,8 @@ export class DemoDatePickerComponent {
   get errors(): string[] {
     return this.formControl.errors ? Object.values(this.formControl.errors) : null;
   }
+
+
 
   codeGetStarted = `<dp-date-picker [formControl]="formControl"></dp-date-picker>`;
 

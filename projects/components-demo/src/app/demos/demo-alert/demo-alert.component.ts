@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AlertService } from 'devpro-components';
 
+
 @Component({
   selector: 'dp-demo-alert',
   templateUrl: './demo-alert.component.html',
@@ -22,6 +23,8 @@ export class DemoAlertComponent implements OnInit {
   clear(): void {
     this.alertService.clearAll();
   }
+
+
 
   codeServiceCall = `import { AlertService } from 'devpro-components';
 ...
@@ -51,6 +54,4 @@ export class DemoAlertComponent implements OnInit {
     this.alertService.clearAll();
   }
 }`;
-
-
 }

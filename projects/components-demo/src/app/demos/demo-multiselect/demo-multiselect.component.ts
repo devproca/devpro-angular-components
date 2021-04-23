@@ -86,6 +86,8 @@ export class DemoMultiselectComponent {
     return this.formControl.errors ? Object.values(this.formControl.errors) : null;
   }
 
+
+
   codeGetStarted = `<dp-select [formControl]="formControl" [multiselect]="true"></dp-select>`;
   codeOptionsAttr = `<dp-select [options]="options" [multiselect]="true"></dp-select>`;
   codeOptions = `options = [

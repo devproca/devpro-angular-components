@@ -44,6 +44,8 @@ export class DemoSlideToggleComponent {
     return this.formControlGroup.errors ? Object.values(this.formControlGroup.errors) : null;
   }
 
+
+
   codeLabel = `<dp-slide-toggle label="One" value="ONE"></dp-slide-toggle>`;
 
   codeValue = `<dp-slide-group [formControl]="formControl">
