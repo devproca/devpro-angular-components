@@ -5,7 +5,7 @@ import {isValidDate, isValidForMax, isValidForMin} from '../util/date.util';
 @Component({
   selector: 'dp-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss', '../../../assets/styles/base.scss']
+  styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit, OnChanges {
 

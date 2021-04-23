@@ -8,14 +8,14 @@ import { RadioButtonService } from './radio-button.service';
 @Component({
   selector: 'dp-radio-button',
   templateUrl: './radio-button.component.html',
-  styleUrls: ['./radio-button.component.scss', '../../../assets/styles/base.scss']
+  styleUrls: ['./radio-button.component.scss']
 })
 export class RadioButtonComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
 
   @Output() checked = new EventEmitter<void>();
   @Input() label: string;
-  @Input() value: string;
+  @Input() value: any;
   @HostBinding('attr.disabled') @Input() disabled = false;
   @HostBinding('attr.error') error = false;
 

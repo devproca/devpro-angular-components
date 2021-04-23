@@ -11,13 +11,16 @@ const SVGS = {
   times: require('!!raw-loader?!../assets/svg/times.svg'),
   info: require('!!raw-loader?!../assets/svg/info.svg'),
   exclamation: require('!!raw-loader?!../assets/svg/exclamation.svg'),
-  menu: require('!!raw-loader?!../assets/svg/menu.svg')
+  menu: require('!!raw-loader?!../assets/svg/menu.svg'),
+  github: require('!!raw-loader?!../assets/svg/github.svg'),
+  linkedin: require('!!raw-loader?!../assets/svg/linkedin.svg'),
+  twitter: require('!!raw-loader?!../assets/svg/twitter.svg')
 };
 
 @Component({
   selector: 'dp-svg',
   templateUrl: './svg.component.html',
-  styleUrls: ['./svg.component.scss', '../../../assets/styles/base.scss'],
+  styleUrls: ['./svg.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SvgComponent implements OnInit {

@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 @Component({
   selector: 'dp-chip',
   templateUrl: './chip.component.html',
-  styleUrls: ['./chip.component.scss', '../../../assets/styles/base.scss']
+  styleUrls: ['./chip.component.scss']
 })
 export class ChipComponent {
 

@@ -6,7 +6,7 @@ import { TabComponent } from '../tab.component';
 @Component({
   selector: 'dp-tab-group',
   templateUrl: './tab-group.component.html',
-  styleUrls: ['./tab-group.component.scss', '../../../../assets/styles/base.scss']
+  styleUrls: ['./tab-group.component.scss']
 })
 export class TabGroupComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;

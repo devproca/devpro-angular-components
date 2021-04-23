@@ -21,7 +21,7 @@ import { CheckboxService } from './checkbox.service';
 @Component({
   selector: 'dp-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss', '../../../assets/styles/base.scss'],
+  styleUrls: ['./checkbox.component.scss'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => CheckboxComponent),

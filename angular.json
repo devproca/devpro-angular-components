@@ -68,7 +68,8 @@
               "projects/components-demo/src/assets"
             ],
             "styles": [
-              "projects/components-demo/src/styles.scss"
+              "projects/components-demo/src/styles.scss",
+              "dist/devpro-components/assets/styles/base.css"
             ],
             "scripts": []
           },

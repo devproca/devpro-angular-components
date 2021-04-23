@@ -1,0 +1,136 @@
+<div class="component-intro">
+  <h1>Checkbox</h1>
+  <p>
+    An extension of the standard checkbox input type with custom styling and <code>ControlValueAccessor</code> support.
+  </p>
+</div>
+
+<div class="demo-wrapper">
+  <h4>Single Checkbox</h4>
+  <dp-checkbox [formControl]="formControlSingle" label="I accept the terms of use." value="ACCEPTED"></dp-checkbox>
+  <div class="demo-errors" *ngIf="errorsSingle">{{ errorsSingle }}</div>
+  <div class="demo-value">Value: {{ formControlSingle.value }}</div>
+
+  <div class="demo-btn-group">
+    <dp-button color="primary" *ngIf="this.formControlSingle.disabled" (click)="enableSingle()">Enable</dp-button>
+    <dp-button color="primary" *ngIf="!this.formControlSingle.disabled" (click)="disableSingle()">Disable</dp-button>
+    <dp-button color="secondary" (click)="errorSingle()">Error</dp-button>
+  </div>
+
+  <h4>Checkbox Group</h4>
+  <dp-checkbox-group [formControl]="formControlGroup">
+    <dp-checkbox label="One" value="ONE"></dp-checkbox>
+    <dp-checkbox label="Two" value="TWO"></dp-checkbox>
+    <dp-checkbox label="Three" value="THREE"></dp-checkbox>
+  </dp-checkbox-group>
+  <div class="demo-errors" *ngIf="errorsGroup">{{ errorsGroup }}</div>
+
+  <div class="demo-value">Value: {{ formControlGroup.value }}</div>
+
+  <div class="demo-btn-group">
+    <dp-button color="primary" *ngIf="this.formControlGroup.disabled" (click)="enableGroup()">Enable</dp-button>
+    <dp-button color="primary" *ngIf="!this.formControlGroup.disabled" (click)="disableGroup()">Disable</dp-button>
+    <dp-button color="secondary" (click)="errorGroup()">Error</dp-button>
+  </div>
+</div>
+
+<div class="component-info">
+  <dp-tab-group>
+    <dp-tab label="Documentation">
+      <h3>Getting Started</h3>
+      <p>The checkbox component can be used as a single basic checkbox or grouped together with the
+        <code>CheckBoxGroupComponent</code> component for multi-selection.</p>
+      <h4>Import</h4>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
+
+      <h3>Label</h3>
+      <p>Labels can be added to the checkbox as an attribute. Clicking on the label will also toggle the checkboxes
+      checked state.</p>
+      <app-codeblock code="{{ codeLabel }}"></app-codeblock>
+
+      <h3>Value and Forms</h3>
+      <p>Value can be assigned to each checkbox as an attribute. Adding a <code>FormControlDirective</code> to the
+        <code>CheckboxGroupComponent</code> or and individual <code>CheckboxComponent</code> will allow you to utilize
+        the information each checkbox is intended to provide.</p>
+      <app-codeblock code="{{ codeValue }}"></app-codeblock>
+
+      <h3>Properties</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>string</td>
+          <td>null</td>
+          <td>Label for the checkbox.</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>any</td>
+          <td>null</td>
+          <td>Value of the checkbox.</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Disabled attribute of the checkbox, when true it will visibly change the checkbox and make it un-clickable.</td>
+        </tr>
+      </table>
+
+      <h3>Events</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Parameters</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>OnClick</td>
+          <td>isChecked: Boolean value set by event emitters dictating the state of the checkbox.</td>
+          <td>Notifies changes to the <code>CheckboxService</code> on the checked status.</td>
+        </tr>
+      </table>
+
+      <h3>Styling</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Element</th>
+        </tr>
+        <tr>
+          <td>checkbox-wrapper</td>
+          <td>Outermost element containing the input and label.</td>
+        </tr>
+        <tr>
+          <td>checkbox-container</td>
+          <td>Container element for the custom checkbox input.</td>
+        </tr>
+        <tr>
+          <td>checkbox-svg</td>
+          <td>SVG Element for the 'check' in the checkbox.</td>
+        </tr>
+        <tr>
+          <td>checkbox-label</td>
+          <td>Label element for the checkbox.</td>
+        </tr>
+      </table>
+
+      <h3>Methods</h3>
+      <p>None.</p>
+
+      <h3>Dependencies</h3>
+      <p>None.</p>
+    </dp-tab>
+
+    <dp-tab label="Source Code">
+      <app-codeblock fileName="demo-checkbox.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-checkbox.component.ts" code="{{ codeTS }}"></app-codeblock>
+    </dp-tab>
+  </dp-tab-group>
+</div>

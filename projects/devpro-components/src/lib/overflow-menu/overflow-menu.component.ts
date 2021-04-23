@@ -4,7 +4,7 @@ import {PopperComponent} from '../popper/popper.component';
 @Component({
   selector: 'dp-overflow-menu',
   templateUrl: './overflow-menu.component.html',
-  styleUrls: ['./overflow-menu.component.scss', '../../../assets/styles/base.scss']
+  styleUrls: ['./overflow-menu.component.scss']
 })
 export class OverflowMenuComponent implements OnDestroy, AfterViewInit {
 

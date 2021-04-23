@@ -19,7 +19,7 @@ const ANIMATION_DURATION = 200;
 @Component({
   selector: 'dp-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss', '../../../assets/styles/base.scss'],
+  styleUrls: ['./dialog.component.scss'],
   animations: [
     trigger('fadeInOut', [
       state('in', style({})),

@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'dp-spinner',
   templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.scss' , '../../../assets/styles/base.scss']
+  styleUrls: ['./spinner.component.scss']
 })
 export class SpinnerComponent {
   @Input() size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';

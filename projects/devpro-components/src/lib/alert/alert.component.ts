@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/co
 @Component({
   selector: 'dp-alert',
   templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.scss', '../../../assets/styles/base.scss']
+  styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent {
   @HostBinding('attr.type') @Input() type: 'success' | 'info' | 'warning' | 'danger' = 'success';
