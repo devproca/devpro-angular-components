@@ -27,7 +27,9 @@ export class DemoAlertComponent implements OnInit {
 ...
 constructor(private alertService: AlertService) { ... }
 ...
-this.alertService.success('Message', 'Details');`;
+someFunction() {
+  this.alertService.success('Message', 'Details');
+}`;
 
   codeHTML = `<dp-alerts></dp-alerts>
 <dp-button color="primary" (click)="clear()">Clear All</dp-button>`;

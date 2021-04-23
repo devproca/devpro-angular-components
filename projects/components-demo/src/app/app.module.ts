@@ -3,9 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-
 import { DevproComponentsModule } from 'devpro-components';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -24,11 +23,11 @@ import { DemoSidenavComponent } from './demos/demo-sidenav/demo-sidenav.componen
 import { DemoSlideToggleComponent } from './demos/demo-slide-toggle/demo-slide-toggle.component';
 import { DemoSpinnerComponent } from './demos/demo-spinner/demo-spinner.component';
 import { DemoTabsComponent } from './demos/demo-tabs/demo-tabs.component';
+import { FooterComponent } from './navigation/footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RandomComponentComponent } from './demos/demo-dialog/random-component/random-component.component';
 import { SetupComponent } from './setup/setup.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
-import { FooterComponent } from './navigation/footer/footer.component';
 import { SocialsComponent } from './navigation/socials/socials.component';
 
 
@@ -50,11 +49,11 @@ import { SocialsComponent } from './navigation/socials/socials.component';
     DemoSlideToggleComponent,
     DemoSpinnerComponent,
     DemoTabsComponent,
+    FooterComponent,
     NavigationComponent,
     RandomComponentComponent,
     SetupComponent,
     SidenavComponent,
-    FooterComponent,
     SocialsComponent,
   ],
   imports: [
@@ -62,13 +61,12 @@ import { SocialsComponent } from './navigation/socials/socials.component';
     BrowserAnimationsModule,
     BrowserModule,
     DevproComponentsModule,
-    ReactiveFormsModule,
     HighlightModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      // useValue: { fullLibraryLoader: () => import('highlight.js') } // All Languages
       useValue: {
         coreLibraryLoader: () => import('highlight.js/lib/core'),
         languages: {

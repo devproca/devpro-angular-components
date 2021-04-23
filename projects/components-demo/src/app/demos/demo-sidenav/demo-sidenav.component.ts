@@ -39,7 +39,11 @@ codeContentTS = `navItems = [
 
 <ng-template #navContent>
   <dp-sidenav-content [navItems]="navItems"></dp-sidenav-content>
-</ng-template>`;
+</ng-template>
+
+...
+
+<h3 id="getStart">Getting Started</h3>`;
 
   codeTS = `export class DemoSidenavComponent {
 
