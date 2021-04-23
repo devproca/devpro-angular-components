@@ -11,4 +11,13 @@ export class DemoChipComponent {
   codeHTML = `<dp-chip label="Disabled Chip" [disabled]="true"></dp-chip>
 <dp-chip label="FirstName LastName"></dp-chip>
 <dp-chip label="Value"></dp-chip>`;
+
+  codeCSS = `dp-chip {
+  display: block;
+}
+
+dp-chip + dp-chip {
+  margin-top: 1rem;
+}
+`;
 }
