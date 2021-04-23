@@ -28,18 +28,19 @@
         These options can consist of a simple label and <code>click()</code> method or multiple attributes that can be
         organized inside of the optionally provided <code>ng-template</code> element.</p>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
 
       <h3>Options</h3>
       <p>An array of options can be provided to the component through its <code>options</code> attribute. These options
       at a minimum should provide a label to display in the menu and something to be done on clicking the option.</p>
-      <app-codeblock>{{ codeOptionsHTML }}</app-codeblock>
-      <app-codeblock>{{ codeOptions }}</app-codeblock>
+      <app-codeblock code="{{ codeOptionsHTML }}"></app-codeblock>
+      <app-codeblock code="{{ codeOptions }}"></app-codeblock>
       <h4>Templated Options</h4>
       <p>When using a templated menu, these options can be expanded to include additional details for each option that
         can be utilized in your <code>ng-template</code> element.</p>
-      <app-codeblock>{{ codeOptionsTemplatedHTML }}</app-codeblock>
-      <app-codeblock>{{ codeOptionsTemplated }}</app-codeblock>
+      <app-codeblock code="{{ codeOptionsTemplatedHTML }}"></app-codeblock>
+      <app-codeblock code="{{ codeOptionsTemplated }}"></app-codeblock>
 
       <h3>Properties</h3>
       <table>
@@ -92,9 +93,9 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-overflow-menu.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-overflow-menu.component.ts">{{ codeTS }}</app-codeblock>
-      <app-codeblock fileName="demo-overflow-menu.component.scss">{{ codeCSS }}</app-codeblock>
+      <app-codeblock fileName="demo-overflow-menu.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-overflow-menu.component.ts" code="{{ codeTS }}"></app-codeblock>
+      <app-codeblock fileName="demo-overflow-menu.component.scss" code="{{ codeCSS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

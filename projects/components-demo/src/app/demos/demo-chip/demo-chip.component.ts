@@ -9,6 +9,6 @@ export class DemoChipComponent {
   codeLabel = `<dp-chip label="Value"></dp-chip>`;
 
   codeHTML = `<dp-chip label="Disabled Chip" [disabled]="true"></dp-chip>
-  <dp-chip label="FirstName LastName"></dp-chip>
-  <dp-chip label="Value"></dp-chip>`;
+<dp-chip label="FirstName LastName"></dp-chip>
+<dp-chip label="Value"></dp-chip>`;
 }

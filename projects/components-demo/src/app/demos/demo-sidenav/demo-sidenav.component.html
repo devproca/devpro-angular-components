@@ -28,23 +28,27 @@
         and a <code>SideNavComponent</code>.
 </p>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
+
       <h4>Header</h4>
       <p>The <code>SidenavHeaderComponent</code> is a button that you would add into your application in an accessible
         location such as the navigation bar, header, etc. The button can be sized and styled and clicking it will open
         the side bar.</p>
-      <app-codeblock>{{ codeHeader }}</app-codeblock>
+      <app-codeblock code="{{ codeHeader }}"></app-codeblock>
+
       <h4>Content</h4>
       <p>The <code>SideNavContentComponent</code> is contained in a <code>ng-template</code> and is the list of navigation
         items populating the body of the side bar. These items should be defined in a typescript file with a label, route,
         and optionally a fragment to navigate too when clicked. These items should match any router paths set in your
         <code>app-routing.module.ts</code> file to function properly.</p>
-      <app-codeblock>{{ codeContent }}</app-codeblock>
-      <app-codeblock>{{ codeContentTS }}</app-codeblock>
+      <app-codeblock code="{{ codeContent }}"></app-codeblock>
+      <app-codeblock code="{{ codeContentTS }}"></app-codeblock>
+
       <h4>SideNav</h4>
       <p>The <code>SideNavComponent</code> is the body of the side bar and sets its styling details for template reference,
         width, title, animation duration, and open direction. These details can be set in the elements attributes.</p>
-      <app-codeblock>{{ codeBody }}</app-codeblock>
+      <app-codeblock code="{{ codeBody }}"></app-codeblock>
 
       <h3 id="properties">Properties</h3>
       <table>
@@ -139,8 +143,8 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-sidenav.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-sidenav.component.ts">{{ codeTS }}</app-codeblock>
+      <app-codeblock fileName="demo-sidenav.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-sidenav.component.ts" code="{{ codeTS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

@@ -41,18 +41,19 @@
       <p>The checkbox component can be used as a single basic checkbox or grouped together with the
         <code>CheckBoxGroupComponent</code> component for multi-selection.</p>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
 
       <h3>Label</h3>
       <p>Labels can be added to the checkbox as an attribute. Clicking on the label will also toggle the checkboxes
       checked state.</p>
-      <app-codeblock>{{ codeLabel }}</app-codeblock>
+      <app-codeblock code="{{ codeLabel }}"></app-codeblock>
 
       <h3>Value and Forms</h3>
       <p>Value can be assigned to each checkbox as an attribute. Adding a <code>FormControlDirective</code> to the
         <code>CheckboxGroupComponent</code> or and individual <code>CheckboxComponent</code> will allow you to utilize
         the information each checkbox is intended to provide.</p>
-      <app-codeblock>{{ codeValue }}</app-codeblock>
+      <app-codeblock code="{{ codeValue }}"></app-codeblock>
 
       <h3>Properties</h3>
       <table>
@@ -128,8 +129,8 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-checkbox.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-checkbox.component.ts">{{ codeTS }}</app-codeblock>
+      <app-codeblock fileName="demo-checkbox.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-checkbox.component.ts" code="{{ codeTS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

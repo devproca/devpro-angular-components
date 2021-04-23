@@ -30,13 +30,14 @@
         details can be found in the <a routerLink="/multi-select">Multiselect Input</a> demo.
       </p>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
 
       <h3>Options</h3>
       <p>The values contained the <code>SelectComponent</code>'s drop down can be easily passed in with the <code>options</code>
         attribute. The options can be defined in a typescript file.</p>
-      <app-codeblock>{{ codeOptionsAttr }}</app-codeblock>
-      <app-codeblock>{{ codeOptions }}</app-codeblock>
+      <app-codeblock code="{{ codeOptionsAttr }}"></app-codeblock>
+      <app-codeblock code="{{ codeOptions }}"></app-codeblock>
 
       <h3>Properties</h3>
       <table>
@@ -125,8 +126,8 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-select.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-select.component.ts">{{ codeTS }}</app-codeblock>
+      <app-codeblock fileName="demo-select.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-select.component.ts" code="{{ codeTS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

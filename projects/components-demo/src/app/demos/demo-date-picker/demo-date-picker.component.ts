@@ -30,36 +30,37 @@ export class DemoDatePickerComponent {
   codeMinMax = `<dp-date-picker minDate="2015-01-01" maxDate="2021-12-31"></dp-date-picker>`;
 
   codeHTML = `<h4>Date:</h4>
-  <dp-date-picker placeholder="YYYY-MM-DD"
-                  minDate="2015-01-01"
-                  [formControl]="formControl"></dp-date-picker>
-  <div class="demo-errors" *ngIf="errors">{{ errors }}</div>
+<dp-date-picker placeholder="YYYY-MM-DD"
+                minDate="2015-01-01"
+                [formControl]="formControl"></dp-date-picker>
+<div class="demo-errors" *ngIf="errors">{{ errors }}</div>
 
-  <div class="demo-btn-group">
-    <dp-button color="primary" *ngIf="this.formControl.disabled" (click)="enable()">Enable</dp-button>
-    <dp-button color="primary" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</dp-button>
-    <dp-button color="secondary" (click)="error()">Error</dp-button>
-  </div>
+<div class="demo-btn-group">
+  <dp-button color="primary" *ngIf="this.formControl.disabled" (click)="enable()">Enable</dp-button>
+  <dp-button color="primary" *ngIf="!this.formControl.disabled" (click)="disable()">Disable</dp-button>
+  <dp-button color="secondary" (click)="error()">Error</dp-button>
+</div>
 
-  <div class="demo-value">Value: {{ formControl.value }}</div>`;
+<div class="demo-value">Value: {{ formControl.value }}</div>`;
 
   codeTS = `export class DemoDatePickerComponent {
-    formControl = new FormControl('2016-03-03');
 
-    enable(): void {
-      this.formControl.enable();
-    }
+  formControl = new FormControl('2016-03-03');
 
-    disable(): void {
-      this.formControl.disable();
-    }
+  enable(): void {
+    this.formControl.enable();
+  }
 
-    error(): void {
-      this.formControl.setErrors({somekey: 'This is an error with your input date.'});
-    }
+  disable(): void {
+    this.formControl.disable();
+  }
 
-    get errors(): string[] {
-      return this.formControl.errors ? Object.values(this.formControl.errors) : null;
-    }
-  }`;
+  error(): void {
+    this.formControl.setErrors({somekey: 'This is an error with your input date.'});
+  }
+
+  get errors(): string[] {
+    return this.formControl.errors ? Object.values(this.formControl.errors) : null;
+  }
+}`;
 }

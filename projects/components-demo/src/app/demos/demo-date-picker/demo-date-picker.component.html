@@ -27,14 +27,15 @@
     <dp-tab label="Documentation">
       <h3>Getting Started</h3>
       <p>The date picker component can be used with Angular Form Control.</p>
-      <app-codeblock>{{ codeGetStarted }}</app-codeblock>
+      <app-codeblock code="{{ codeGetStarted }}"></app-codeblock>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
 
       <h3>Minimum & Maximum Date Range</h3>
       <p>A minimum and/or maximum date can be set to limit which dates can be input into the field to prevent things
         like scheduling a date in the past.</p>
-      <app-codeblock>{{ codeMinMax }}</app-codeblock>
+      <app-codeblock code="{{ codeMinMax }}"></app-codeblock>
 
       <h3>Properties</h3>
       <table>
@@ -112,8 +113,8 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-date-picker.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-date-picker.component.ts">{{ codeTS }}</app-codeblock>
+      <app-codeblock fileName="demo-date-picker.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-date-picker.component.ts" code="{{ codeTS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

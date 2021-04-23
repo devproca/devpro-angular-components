@@ -28,19 +28,20 @@
       <h3>Getting Started</h3>
       <p>The radio button component does not function on its own and must be grouped together with the
         <code>RadioGroupComponent</code> so that only one button can be selected at a time.</p>
-      <app-codeblock>{{ codeGroup }}</app-codeblock>
+      <app-codeblock code="{{ codeGroup }}"></app-codeblock>
       <h4>Import</h4>
-      <app-codeblock>Currently everything is imported by DevproComponentsModule.</app-codeblock>
+      <p>Currently everything is imported by <code>DevproComponentsModule</code>.</p>
+      <!--      <app-codeblock code="{{ codeImport }}"></app-codeblock>-->
 
       <h3>Label</h3>
       <p>Labels can be added to the radio button as an attribute. Clicking on the label will also toggle the buttons
         checked state.</p>
-      <app-codeblock>{{ codeLabel }}</app-codeblock>
+      <app-codeblock code="{{ codeLabel }}"></app-codeblock>
 
       <h3>Value and Forms</h3>
       <p>Value can be assigned to each button as an attribute. Adding a <code>FormControlDirective</code> to the
       <code>RadioGroupComponent</code> will allow you to utilize the information each button is intended to provide.</p>
-      <app-codeblock>{{ codeValue }}</app-codeblock>
+      <app-codeblock code="{{ codeValue }}"></app-codeblock>
 
       <h3>Properties</h3>
       <table>
@@ -113,8 +114,8 @@
     </dp-tab>
 
     <dp-tab label="Source Code">
-      <app-codeblock fileName="demo-radio-button.component.html">{{ codeHTML }}</app-codeblock>
-      <app-codeblock fileName="demo-radio-button.component.ts">{{ codeTS }}</app-codeblock>
+      <app-codeblock fileName="demo-radio-button.component.html" code="{{ codeHTML }}"></app-codeblock>
+      <app-codeblock fileName="demo-radio-button.component.ts" code="{{ codeTS }}"></app-codeblock>
     </dp-tab>
   </dp-tab-group>
 </div>

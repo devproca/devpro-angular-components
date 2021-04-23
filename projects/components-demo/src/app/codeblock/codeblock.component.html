@@ -1,5 +1,5 @@
 <div class="noNameSpacer" *ngIf="!fileName"></div>
 <div class="fileName" *ngIf="fileName">{{ fileName }}</div>
 <div class="code-wrapper">
-  <ng-content></ng-content>
+  <code [highlight]="code"></code>
 </div>
