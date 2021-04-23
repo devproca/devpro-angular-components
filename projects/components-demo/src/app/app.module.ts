@@ -26,6 +26,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RandomComponentComponent } from './demos/demo-dialog/random-component/random-component.component';
 import { SetupComponent } from './setup/setup.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import { FooterComponent } from './navigation/footer/footer.component';
+import { SocialsComponent } from './navigation/socials/socials.component';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     RandomComponentComponent,
     SetupComponent,
     SidenavComponent,
+    FooterComponent,
+    SocialsComponent,
   ],
   imports: [
     AppRoutingModule,
