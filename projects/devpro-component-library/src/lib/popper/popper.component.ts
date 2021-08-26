@@ -1,5 +1,5 @@
-import {AfterContentInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import Popper, {Placement} from 'popper.js';
+import {AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild} from '@angular/core';
+import { createPopper, Instance, Placement } from '@popperjs/core';
 import {fromEvent, Subscription} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';
 
@@ -8,7 +8,9 @@ import {debounceTime} from 'rxjs/operators';
   templateUrl: './popper.component.html',
   styleUrls: ['./popper.component.scss']
 })
-export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
+export class PopperComponent implements OnInit, OnDestroy, AfterViewInit {
+
+  @ViewChild('wrapper') wrapper: ElementRef;
 
   @Input() placement: Placement = 'top';
   @Input() hideOnClick = false;
@@ -20,9 +22,9 @@ export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
   private reference: HTMLElement;
   private content: HTMLElement;
   private subscriptions: Subscription[] = [];
-  private popperInstance: Popper;
+  private popperInstance: Instance;
 
-  constructor(private el: ElementRef) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -36,9 +38,9 @@ export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
     this.popperInstance?.destroy();
   }
 
-  ngAfterContentInit(): void {
-    this.reference = this.el.nativeElement.firstElementChild as HTMLElement;
-    this.content = this.el.nativeElement.lastElementChild as HTMLElement;
+  ngAfterViewInit(): void {
+    this.reference = this.wrapper.nativeElement.firstElementChild as HTMLElement;
+    this.content = this.wrapper.nativeElement.lastElementChild as HTMLElement;
     this.setContentStyleDisplay('none');
   }
 
@@ -63,12 +65,12 @@ export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
     this.open = true;
     this.setContentStyleDisplay('block');
     this.updateContentWidth();
-    this.popperInstance.scheduleUpdate();
+    this.update();
 
   }
 
   update(): void {
-    this.popperInstance?.scheduleUpdate();
+    this.popperInstance?.update();
   }
 
   private subscribeToWindowClick(): void {
@@ -125,7 +127,7 @@ export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
     if (this.matchWidth && this.content) {
       const width = this.reference.getBoundingClientRect().width;
       this.css(this.content, {minWidth: `${width}px`});
-      this.popperInstance?.scheduleUpdate();
+      this.update();
     }
   }
 
@@ -134,16 +136,8 @@ export class PopperComponent implements OnInit, OnDestroy, AfterContentInit {
   }
 
   private initializePopper(): void {
-    this.popperInstance = new Popper(this.reference, this.content, {
-      placement: this.placement,
-      modifiers: {
-        preventOverflow: {
-          enabled: true
-        },
-        computeStyle: {
-          gpuAcceleration: false
-        }
-      }
+    this.popperInstance = createPopper(this.reference, this.content, {
+      placement: this.placement
     });
   }
 

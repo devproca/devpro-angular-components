@@ -7,8 +7,8 @@
     </div>
     <div class="flex-shrink-0">v</div>
   </div>
-  <div class="bg-white shadow-md rounded-md">
-    <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" *ngFor="let option of options"
+  <div class="min-w-full bg-white shadow-md rounded-md">
+    <div class="px-4 py-2 hover:bg-gray-50 duration-150 cursor-pointer text-sm text-gray-800" *ngFor="let option of options"
       (click)="setValue(option)">
       {{option.label}}
     </div>
