@@ -24,11 +24,12 @@ export class FeaturePreviewComponent implements OnChanges {
   ngOnChanges() {
     const observables: Observable<DemoCodeResource>[] = [];
     if(this.assetName) observables.push(this.demoCodeService.getResource(this.assetName));
-    this.optionalAssetName
-      ? observables.push(this.demoCodeService.getResource(this.optionalAssetName))
-      : observables.push(of(null) as any);
+    // this.optionalAssetName
+    //   ? observables.push(this.demoCodeService.getResource(this.optionalAssetName))
+    //   : observables.push(of(null) as any);
 
     forkJoin(observables).subscribe(([primary, secondary]) => {
+      console.log(primary);
       if(primary) {
         this.html = primary.html;
         this.typescript = primary.typescript;

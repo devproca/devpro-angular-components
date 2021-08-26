@@ -11,9 +11,9 @@ export class DemosComponent {
   title: string;
 
   constructor(private route: ActivatedRoute) {
-    console.log(this.route.snapshot.data['title']);
+    // console.log(this.route.snapshot.data['title']);
     this.title = this.route.snapshot.data['title'];
-    console.log(this.title);
+    // console.log(this.title);
   }
 
 }

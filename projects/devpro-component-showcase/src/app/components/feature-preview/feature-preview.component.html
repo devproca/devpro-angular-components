@@ -1,4 +1,30 @@
-<fac-card class="mt-4 mb-10 text-gray-800" type="outline">
+<div>
+  HTML
+  <div>
+    <pre class="language-html rounded-b"
+    [ngStyle]="{margin: '0'}"><code [innerHTML]="this.html | prism:'html' | safeHtml"></code></pre>
+  </div>
+</div>
+
+<div>
+  Typescript
+  <div>
+    <pre class="language-html rounded-b"
+    [ngStyle]="{margin: '0'}"><code [innerHTML]="this.typescript | prism:'javascript'"></code></pre>
+  </div>
+</div>
+
+<div>
+  Preview
+  <ng-template #preview>
+    <div class="p-4">
+      <ng-content></ng-content>
+    </div>
+  </ng-template>
+</div>
+
+
+<!-- <fac-card class="mt-4 mb-10 text-gray-800" type="outline">
     <fac-card-header>
       <div class="flex items-center justify-between">
         <div class="text-gray-600 font-normal">{{featureTitle ? featureTitle : "Example"}}</div>
@@ -71,4 +97,4 @@
     <div class="p-4">
       <ng-content></ng-content>
     </div>
-  </ng-template>
+  </ng-template> -->

@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-input-demo',
-  templateUrl: './input-demo.component.html',
-  styleUrls: ['./input-demo.component.scss']
+  selector: 'app-input-demo-basic',
+  templateUrl: './input-demo-basic.component.html'
 })
-export class InputDemoComponent {
-
+export class InputDemoBasicComponent {
+  
   formControl = new FormControl('');
 
   constructor() { }

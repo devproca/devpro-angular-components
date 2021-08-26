@@ -8,8 +8,7 @@ import {map} from 'rxjs/operators';
 })
 export class DemoCodeService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getResource(resourceName: string): Observable<DemoCodeResource> {
     return forkJoin([
@@ -27,7 +26,9 @@ export class DemoCodeService {
 
   private getContent(resourceName: string, resourceSuffix: string): Observable<string> {
     const folder = resourceName.replace(/-demo.*/, '');
-    return this.http.get<string>(`app/components/demos/${folder}/${resourceName}.component.${resourceSuffix}`, {responseType: 'text' as 'json'});
+    console.log(folder);
+    console.log(`src/app/components/demos/${folder}/${resourceName}.component.${resourceSuffix}`)
+    return this.http.get<string>(`./src/app/components/demos/${folder}/${resourceName}.component.${resourceSuffix}`, {responseType: 'text' as 'json'});
   }
 }
 

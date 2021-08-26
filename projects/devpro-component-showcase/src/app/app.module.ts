@@ -7,32 +7,39 @@ import { AppComponent } from './app.component';
 import { ButtonDemoComponent } from './components/demos/button-demo/button-demo.component';
 import { CardDemoComponent } from './components/demos/card-demo/card-demo.component';
 import { DemosComponent } from './components/demos/demos.component';
-import { InputDemoComponent } from './components/demos/input-demo/input-demo.component';
+import { InputDemoComponent } from './components/demos/input/input-demo.component';
 import { SelectDemoComponent } from './components/demos/select-demo/select-demo.component';
 import { FeaturePreviewComponent } from './components/feature-preview/feature-preview.component';
 import { HomeComponent } from './components/home/home.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { PrismPipe } from './pipes/prism.pipe';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { InputDemoBasicComponent } from './components/demos/input/input-demo-basic.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
   SelectDemoComponent,
   DemosComponent,
   CardDemoComponent,
-  ButtonDemoComponent
+  ButtonDemoComponent,
+  InputDemoBasicComponent
 ];
-
 @NgModule({
   declarations: [
+    DEMO_COMPONENTS,
     AppComponent,
     SideNavComponent,
     HomeComponent,
     TopNavComponent,
-    DEMO_COMPONENTS,
-    FeaturePreviewComponent
+    FeaturePreviewComponent,
+    PrismPipe,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
