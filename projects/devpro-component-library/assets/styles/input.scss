@@ -1,0 +1,35 @@
+.dp-input {
+  @apply bg-white border border-gray-300 relative rounded-md shadow-sm overflow-hidden text-sm;
+
+  input {
+    @apply bg-white h-10 w-full appearance-none outline-none placeholder-gray-500;
+  }
+}
+
+.dp-input-focus {
+  @apply border-blue-500 ring-1 ring-blue-500;
+}
+
+.dp-input-error {
+  @apply border-red-500 ring-1 ring-red-500;
+}
+
+.dp-input-disabled {
+  @apply bg-gray-200 text-gray-600 outline-none;
+  pointer-events: none;
+
+  * {
+    @apply bg-gray-200;
+  }
+}
+
+.dp-input.disabled {
+  @apply dp-input-disabled;
+}
+
+.dp-input.focus {
+  @apply dp-input-focus;
+}
+.dp-input.error {
+  @apply dp-input-error;
+}

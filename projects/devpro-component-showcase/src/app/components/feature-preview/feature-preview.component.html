@@ -1,0 +1,74 @@
+<fac-card class="mt-4 mb-10 text-gray-800" type="outline">
+    <fac-card-header>
+      <div class="flex items-center justify-between">
+        <div class="text-gray-600 font-normal">{{featureTitle ? featureTitle : "Example"}}</div>
+        <div class="flex items-center">
+          <fwc-icon-link class="flex items-center" name="code" (click)="toggleCode()"></fwc-icon-link>
+        </div>
+      </div>
+    </fac-card-header>
+    <ng-container *ngIf="showCode; else preview">
+      <fac-tabset class="w-full" color="gray" size="sm">
+        <fac-tab label="Preview" [styleOptions]="{padded:false}">
+          <ng-template *ngTemplateOutlet="preview"></ng-template>
+        </fac-tab>
+        <fac-tab label="HTML" [styleOptions]="{padded:false}">
+          <ng-template>
+            <div class="relative">
+              <fac-copy [content]="this.html" class="absolute"
+                        [ngStyle]="{right: '2.5rem'}">
+                <button class="absolute opacity-50 text-xs text-white">Copy
+                </button>
+              </fac-copy>
+              <pre class="language-html rounded-b"
+                [ngStyle]="{margin: '0'}"><code [innerHTML]="this.html | prism:'html' | safeHtml: 'html'"></code></pre>
+            </div>
+          </ng-template>
+        </fac-tab>
+        <fac-tab label="TS" [styleOptions]="{padded:false}">
+          <div class="relative">
+            <fac-copy [content]="this.typescript" class="absolute"
+                      [ngStyle]="{right: '2.5rem'}">
+              <button class="absolute opacity-50 text-xs text-white">Copy
+              </button>
+            </fac-copy>
+            <pre class="language-html rounded-b"
+              [ngStyle]="{margin: '0'}"><code [innerHTML]="this.typescript | prism:'javascript'"></code></pre>
+          </div>
+        </fac-tab>
+        <div *ngIf="optionalAssetName">
+          <fac-tab label="{{optionalLabel}} HTML" [styleOptions]="{padded:false}">
+            <ng-template>
+              <div class="relative">
+                <fac-copy [content]="this.optionalHtml" class="absolute"
+                          [ngStyle]="{right: '2.5rem'}">
+                  <button class="absolute opacity-50 text-xs text-white">Copy
+                  </button>
+                </fac-copy>
+                <pre class="language-html rounded-b"
+                     [ngStyle]="{margin: '0'}"><code [innerHTML]="this.optionalHtml | prism:'html' | safeHtml: 'html'"></code></pre>
+              </div>
+            </ng-template>
+          </fac-tab>
+          <fac-tab label="{{optionalLabel}} TS" [styleOptions]="{padded:false}">
+            <div class="relative">
+              <fac-copy [content]="this.optionalTypescript" class="absolute"
+                        [ngStyle]="{right: '2.5rem'}">
+                <button class="absolute opacity-50 text-xs text-white">Copy
+                </button>
+              </fac-copy>
+              <pre class="language-html rounded-b"
+                   [ngStyle]="{margin: '0'}"><code [innerHTML]="this.optionalTypescript | prism:'javascript'"></code></pre>
+            </div>
+          </fac-tab>
+        </div>
+      </fac-tabset>
+    </ng-container>
+  </fac-card>
+  
+  
+  <ng-template #preview>
+    <div class="p-4">
+      <ng-content></ng-content>
+    </div>
+  </ng-template>
