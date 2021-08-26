@@ -20,7 +20,7 @@ import {
   ValidationErrors,
   Validator
 } from '@angular/forms';
-import {PopperComponent} from '../popper/popper.component';
+import {PopperComponent} from '../../popper/popper.component';
 import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
 
 @Component({

@@ -1,5 +1,5 @@
 import {AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, TemplateRef, ViewChild} from '@angular/core';
-import {PopperComponent} from '../popper/popper.component';
+import {PopperComponent} from '../../popper/popper.component';
 
 @Component({
   selector: 'dp-overflow-menu',
