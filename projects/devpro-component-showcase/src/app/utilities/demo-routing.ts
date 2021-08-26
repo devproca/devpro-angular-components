@@ -1,6 +1,3 @@
-import { CardDemoComponent } from "../components/demos/card-demo/card-demo.component";
-import { InputDemoComponent } from "../components/demos/input/input-demo.component";
-import { SelectDemoComponent } from "../components/demos/select-demo/select-demo.component";
 import { DemoRoute } from "../models/demo-route";
 import { DemoRouteGroup } from "../models/demo-route-group";
 

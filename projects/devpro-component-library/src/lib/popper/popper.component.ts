@@ -1,7 +1,7 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild} from '@angular/core';
-import { createPopper, Instance, Placement } from '@popperjs/core';
-import {fromEvent, Subscription} from 'rxjs';
-import {debounceTime} from 'rxjs/operators';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { createPopper, Instance, Offsets, Placement } from '@popperjs/core';
+import { fromEvent, Subscription } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'dp-popper',
@@ -13,11 +13,13 @@ export class PopperComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('wrapper') wrapper: ElementRef;
 
   @Input() placement: Placement = 'top';
+  @Input() offset: Offsets = { x: 0, y: 0 };
   @Input() hideOnClick = false;
   @Input() matchWidth = false;
 
   @Output() closed = new EventEmitter<void>();
   @Output() opened = new EventEmitter<void>();
+
   open = false;
   private reference: HTMLElement;
   private content: HTMLElement;
@@ -126,18 +128,24 @@ export class PopperComponent implements OnInit, OnDestroy, AfterViewInit {
   private updateContentWidth(): void {
     if (this.matchWidth && this.content) {
       const width = this.reference.getBoundingClientRect().width;
-      this.css(this.content, {minWidth: `${width}px`});
+      this.css(this.content, { minWidth: `${width}px` });
       this.update();
     }
   }
 
   private setContentStyleDisplay(value: string): void {
-    this.css(this.content, {display: value});
+    this.css(this.content, { display: value });
   }
 
   private initializePopper(): void {
     this.popperInstance = createPopper(this.reference, this.content, {
-      placement: this.placement
+      placement: this.placement,
+      modifiers: [{
+        name: 'offset',
+        options: {
+          offset: [this.offset.x, this.offset.y],
+        },
+      }]
     });
   }
 

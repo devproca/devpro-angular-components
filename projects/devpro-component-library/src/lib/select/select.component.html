@@ -1,4 +1,4 @@
-<dp-popper placement="bottom">
+<dp-popper placement="bottom" [offset]="{x:0, y:4}">
   <div class="dp-input px-4 h-10 flex items-center hover:bg-gray-50 duration-150 cursor-pointer" [class.disabled]="disabled" [class.error]="error">
     <div class="flex-shrink-0" *ngIf="iconBefore"></div>
     <div class="flex-grow">
@@ -7,7 +7,7 @@
     </div>
     <div class="flex-shrink-0">v</div>
   </div>
-  <div class="min-w-full bg-white shadow-md rounded-md">
+  <div class="min-w-full bg-white shadow-lg max-h-56 py-1 text-base ring-1 ring-black ring-opacity-5 rounded-md overflow-hidden">
     <div class="px-4 py-2 hover:bg-gray-50 duration-150 cursor-pointer text-sm text-gray-800" *ngFor="let option of options"
       (click)="setValue(option)">
       {{option.label}}
