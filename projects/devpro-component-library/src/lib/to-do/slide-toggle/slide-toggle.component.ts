@@ -1,12 +1,6 @@
-import { Component, Input, Output, EventEmitter, HostBinding, Optional,
-  OnInit, DoCheck, OnDestroy, Injector, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
-
-import { Subscription} from 'rxjs';
-
-import { SlideToggleService} from './slide-toggle.service';
-
-
+import { Component, EventEmitter, forwardRef, HostBinding, Injector, Input, Optional, Output } from '@angular/core';
+import { NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'dp-slide-toggle',
   templateUrl: './slide-toggle.component.html',
@@ -19,7 +13,7 @@ import { SlideToggleService} from './slide-toggle.service';
     }
   ]
 })
-export class SlideToggleComponent implements OnInit, DoCheck, OnDestroy, ControlValueAccessor {
+export class SlideToggleComponent {
   private subscriptions: Subscription[] = [];
   private onChange: (_: string) => void;
   private onTouched: () => void;
@@ -34,17 +28,7 @@ export class SlideToggleComponent implements OnInit, DoCheck, OnDestroy, Control
 
   isChecked = false;
 
-  constructor(@Optional() private toggleService: SlideToggleService,
-              @Optional() private injector: Injector) {
-  }
-
-  ngOnInit(): void {
-    if (this.toggleService) {
-      this.toggleService.add(this);
-      this.registerToggleChanges();
-      this.registerDisableChanges();
-      this.registerErrorChanges();
-    }
+  constructor(@Optional() private injector: Injector) {
   }
 
   ngDoCheck(): void {
@@ -57,9 +41,6 @@ export class SlideToggleComponent implements OnInit, DoCheck, OnDestroy, Control
   }
 
   ngOnDestroy(): void {
-    if (this.toggleService) {
-      this.toggleService.remove(this);
-    }
     this.subscriptions.forEach(s => s.unsubscribe());
   }
 
@@ -84,33 +65,10 @@ export class SlideToggleComponent implements OnInit, DoCheck, OnDestroy, Control
     this.disabled = disabled;
   }
 
-  private registerToggleChanges(): void {
-    this.subscriptions.push(this.toggleService.toggledValue$.subscribe(toggledValues => {
-      const isChecked = toggledValues.some(value => value === this.value);
-      if (isChecked !== this.isChecked) {
-        this.isChecked = isChecked;
-      }
-    }));
-  }
-
-  private registerDisableChanges(): void {
-    this.subscriptions.push(this.toggleService.checkDisable$.subscribe(disableState => {
-      this.disabled = disableState === true;
-    }));
-  }
-
-  private registerErrorChanges(): void {
-    this.subscriptions.push(this.toggleService.checkError$.subscribe(errorState => {
-      this.error = errorState === true;
-    }));
-  }
-
   private notifyChanges(): void {
     if (this.isChecked) {
-      this.toggleService?.markToggled(this);
       this.toggled.emit();
     } else {
-      this.toggleService?.markUntoggled(this);
       this.untoggled.emit();
     }
 

@@ -5,11 +5,11 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "paths": {
-      "@devpro/devpro-component-library/*": [
+      "@dev-pro/devpro-component-library/*": [
         "projects/devpro-component-library/*",
         "projects/devpro-component-library"
       ],
-      "@devpro/devpro-component-library": [
+      "@dev-pro/devpro-component-library": [
         "dist/devpro-component-library/*",
         "dist/devpro-component-library"
       ]

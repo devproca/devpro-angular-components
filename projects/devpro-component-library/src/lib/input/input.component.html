@@ -1,4 +1,4 @@
-<div class="dp-input" [class.focus]="focused" [class.disabled]="disabled">
+<div class="dp-input" [class.focus]="focused" [class.disabled]="disabled" [class.error]="error">
     <div *ngIf="iconBefore"></div>
     <input type="text" [formControl]="formControl" (focusin)="handleFocus()" (focusout)="handleUnfocus()"
         [placeholder]="placeholder" />

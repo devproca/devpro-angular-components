@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ButtonComponent } from './button/button.component';
 import { InputComponent } from './input/input.component';
 import { PopperComponent } from './popper/popper.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
     InputComponent,
     ButtonComponent,
-    PopperComponent
+    PopperComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,8 @@ import { PopperComponent } from './popper/popper.component';
   exports: [
     InputComponent,
     ButtonComponent,
-    PopperComponent
+    PopperComponent,
+    SelectComponent
   ]
 })
 export class DevproComponentsModule { }

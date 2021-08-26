@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run tailwind && ng build && concurrently 'ng build --watch' 'ng serve'",
+    "start": "ng build && concurrently 'ng build --watch' 'ng serve'",
     "tailwind": "npx tailwindcss-cli@latest build -o ./projects/devpro-component-library/assets/styles/tailwind.scss",
     "test": "ng test"
   },
