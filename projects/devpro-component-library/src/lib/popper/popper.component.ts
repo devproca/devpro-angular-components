@@ -140,12 +140,14 @@ export class PopperComponent implements OnInit, OnDestroy, AfterViewInit {
   private initializePopper(): void {
     this.popperInstance = createPopper(this.reference, this.content, {
       placement: this.placement,
-      modifiers: [{
-        name: 'offset',
-        options: {
-          offset: [this.offset.x, this.offset.y],
-        },
-      }]
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [this.offset.x, this.offset.y],
+          }
+        }
+      ]
     });
   }
 

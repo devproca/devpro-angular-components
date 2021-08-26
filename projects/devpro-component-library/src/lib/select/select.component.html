@@ -7,7 +7,7 @@
     </div>
     <div class="flex-shrink-0">v</div>
   </div>
-  <div class="min-w-full bg-white shadow-lg max-h-56 py-1 text-base ring-1 ring-black ring-opacity-5 rounded-md overflow-hidden">
+  <div class="min-w-full bg-white shadow-lg max-h-56 py-1 text-base ring-1 ring-black ring-opacity-5 rounded-md overflow-hidden z-10 overflow-auto">
     <div class="px-4 py-2 hover:bg-gray-50 duration-150 cursor-pointer text-sm text-gray-800" *ngFor="let option of options"
       (click)="setValue(option)">
       {{option.label}}
