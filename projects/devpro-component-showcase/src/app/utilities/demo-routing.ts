@@ -17,6 +17,10 @@ export class DemoRouting {
             label: 'Select',
             link: 'select'
           },
+          {
+            label: 'Slide Toggle',
+            link: 'slide-toggle'
+          },
         ]
       },
       {

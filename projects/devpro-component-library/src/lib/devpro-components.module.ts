@@ -5,13 +5,15 @@ import { ButtonComponent } from './button/button.component';
 import { InputComponent } from './input/input.component';
 import { PopperComponent } from './popper/popper.component';
 import { SelectComponent } from './select/select.component';
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 
 @NgModule({
   declarations: [
     InputComponent,
     ButtonComponent,
     PopperComponent,
-    SelectComponent
+    SelectComponent,
+    SlideToggleComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { SelectComponent } from './select/select.component';
     InputComponent,
     ButtonComponent,
     PopperComponent,
-    SelectComponent
+    SelectComponent,
+    SlideToggleComponent
   ]
 })
 export class DevproComponentsModule { }

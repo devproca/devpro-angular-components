@@ -1,0 +1,15 @@
+<div class="slide-toggle" 
+  [class.disabled]="disabled" 
+  [class.error]="error">
+  
+    <div class="styling" (click)="onClick()">
+      <input type="checkbox"
+             [value]="[value]"
+             [checked]="isChecked">
+  
+      <div class="toggle-path"></div>
+      <div class="toggle-button"></div>
+    </div>
+  
+  </div>
+  

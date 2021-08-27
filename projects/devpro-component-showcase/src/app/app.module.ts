@@ -16,6 +16,7 @@ import { PrismPipe } from './pipes/prism.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { InputDemoBasicComponent } from './components/demos/input/input-demo-basic.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SlideToggleDemoComponent } from './components/demos/slide-toggle/slide-toggle-demo.component';
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
@@ -33,7 +34,8 @@ const DEMO_COMPONENTS = [
     TopNavComponent,
     FeaturePreviewComponent,
     PrismPipe,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    SlideToggleDemoComponent
   ],
   imports: [
     BrowserModule,
