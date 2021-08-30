@@ -1,0 +1,72 @@
+.spinner-wrapper {
+  border-radius: 9999px;
+  animation: spin 1s linear infinite; // Slow-down if needed. 1.5s?
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  transition-timing-function: linear;
+
+  //// Color ////
+  &.blue {
+    border-color: rgba(59, 130, 246, 1); // Blue 500
+
+    &.style3 {
+      border-top-color: rgba(59, 130, 246, 1); // Blue-500
+    }
+  }
+
+  &.white {
+    border-color: white;
+
+    &.style3 {
+      border-top-color: white;
+    }
+  }
+
+  //// Sizes ////
+  &.xs {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-width: 2px;
+  }
+
+  &.sm {
+    height: 3rem;
+    width: 3rem;
+    border-width: 2px;
+  }
+
+  &.md {
+    height: 6rem;
+    width: 6rem;
+    border-width: 2px;
+  }
+
+  &.lg {
+    height: 12rem;
+    width: 12rem;
+    border-width: 2px;
+  }
+
+  //// Styles ////
+  &.style1 {
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+
+  &.style2 {
+    border-top-color: transparent;
+  }
+
+  &.style3 {
+    border-width: 2px;
+    border-top-width: 2px;
+    border-color: rgba(209, 213, 219, 1); // Gray 300
+    border-top-color: rgba(59, 130, 246, 1); // Blue 500
+  }
+}

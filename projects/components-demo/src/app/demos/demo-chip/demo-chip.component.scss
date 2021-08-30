@@ -1,0 +1,7 @@
+dp-chip {
+  display: block;
+}
+
+dp-chip + dp-chip {
+  margin-top: 1rem;
+}

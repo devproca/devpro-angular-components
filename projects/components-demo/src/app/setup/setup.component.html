@@ -1,0 +1,63 @@
+<h1>Getting Started</h1>
+
+<div>
+  <h3>Download</h3>
+  <p class="desc">
+    DevPro components are available through NPM, once your application is setup run the following commands to install
+    the library into your project:
+  </p>
+  <app-codeblock code="{{ codeInstall }}"></app-codeblock>
+</div>
+
+<div>
+  <h3>Import</h3>
+  <p class="desc">
+    All components are currently exported by the <code>DevproComponentsModule</code> and can be imported by adding the
+    following
+    line in your <code>app.module.ts</code> file.
+  </p>
+  <app-codeblock code="{{ codeImport }}"></app-codeblock>
+</div>
+
+<div>
+  <h3>Styles</h3>
+  <p class="desc">The library requires a base css dependency.
+    Import the <code>base.css</code> file into your projects <code>angular.json</code> file.
+  </p>
+  <app-codeblock code="{{ codeStyles }}"></app-codeblock>
+</div>
+
+<div>
+  <h3>Animations</h3>
+  <p class="desc">
+    Some components utilize Angular animations. Import the <code>BrowserAnimationsModule</code> into your application
+    module.
+  </p>
+  <app-codeblock code="{{ codeAnimations }}"></app-codeblock>
+</div>
+
+<div>
+  <h3>Dependencies</h3>
+  <p class="desc">
+    Some components rely on third party dependencies, the following will be installed as dependencies when
+    installing the library.
+  </p>
+  <table>
+    <tr>
+      <th>Component</th>
+      <th>Dependency</th>
+    </tr>
+    <tr>
+      <td>Calendar / Date Picker</td>
+      <td>Luxon ^1.26.0</td>
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td>Angular Localize ^10.2.4</td>
+    </tr>
+    <tr>
+      <td>Popper</td>
+      <td>Popper.js 1.16.1</td>
+    </tr>
+  </table>
+</div>

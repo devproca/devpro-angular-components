@@ -1,0 +1,137 @@
+.button-wrapper {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 150ms ease-in;
+  border-style: none;
+  background-color: white;
+}
+
+.button-wrapper:focus,
+.button-wrapper:active {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-wrapper:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+// Primary Styling //
+:host[color='primary'] .button-wrapper {
+  background-color: rgba(59, 130, 246, 1); // Blue 500
+  color: white;
+}
+
+:host[color='primary'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(37, 99, 235, 1); // Blue 600
+}
+
+:host[color='primary'] .button-wrapper:active {
+  background-color: rgba(29, 78, 216, 1); // Blue 700
+}
+
+:host[color='primary'][stroked='true'] .button-wrapper {
+  color: rgba(59, 130, 246, 1); // Blue 500;
+  border-color: rgba(59, 130, 246, 1); // Blue 500;
+}
+
+:host[color='primary'][stroked='true'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(191, 219, 254, 1); // Blue 200
+}
+
+:host[color='primary'][stroked='true'] .button-wrapper:active {
+  background-color: rgba(147, 197, 253, 1); // Blue 300
+}
+
+// Secondary Styling //
+:host[color='secondary'] .button-wrapper {
+  background-color: rgba(239, 68, 68, 1); // Red 500
+  color: white;
+}
+
+:host[color='secondary'] .button-wrapper:hover,
+.btn.btn-red:focus {
+  background-color: rgba(220, 38, 38, 1); // Red 600
+}
+
+:host[color='secondary'] .button-wrapper:active {
+  background-color: rgba(185, 28, 28, 1); // Red 700
+}
+
+:host[color='secondary'][stroked='true'] .button-wrapper {
+  color: rgba(239, 68, 68, 1); // Red 500
+  border-color: rgba(239, 68, 68, 1); // Red 500
+}
+
+:host[color='secondary'][stroked='true'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(254, 202, 202, 1); // Red 200
+}
+
+:host[color='secondary'][stroked='true'] .button-wrapper:active {
+  background-color: rgba(252, 165, 165, 1); // Red 300
+}
+
+// Stroke //
+:host[stroked='true'] .button-wrapper {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+}
+
+// Basic Styling //
+:host[color='basic'] .button-wrapper {
+  border-style: solid;
+  border-width: 1.5px;
+  color: black;
+  border-color: rgba(156, 163, 175, 1); // Gray 400
+}
+
+:host[color='basic'] .button-wrapper:hover,
+.btn.btn-red:focus {
+  background-color: rgba(229, 231, 235, 1); // Gray 200
+}
+
+:host[color='basic'] .button-wrapper:active {
+  background-color: rgba(209, 213, 219, 1); // Gray 300
+}
+
+:host[color='basic'][stroked='true'] .button-wrapper {
+
+  border-color: rgba(107, 114, 128, 1); // Gray 500
+}
+
+:host[color='basic'][stroked='true'] .button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: rgba(229, 231, 235, 1); // Gray 200
+}
+
+:host[color='basic'][stroked='true'] .button-wrapper:active {
+  background-color: rgba(229, 231, 235, 1); // Gray 300
+}
+
+// Raised //
+:host[raised='true'] .button-wrapper {
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.67),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.14);
+}
+
+:host[raised='true'] .button-wrapper:active {
+  box-shadow:
+    0 2.5px 3px rgba(0, 0, 0, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.67),
+    inset 0 -2.5px 3px rgba(0, 0, 0, 0.14);
+
+  transition: all .2s ease-in-out;
+  transform: scale(0.98);
+}

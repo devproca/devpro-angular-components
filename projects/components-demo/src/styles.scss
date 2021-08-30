@@ -1,0 +1,94 @@
+@import '~highlight.js/styles/github.css';
+
+* {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1, h2, h3, h4, p {
+  color: rgba(31, 41, 55, 1);
+}
+
+h3:not(:first-of-type) {
+  margin-top: 2.5rem;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  background-color: #EEEEEE;
+  padding: 1px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+td:first-child {
+  font-family: Consolas, "courier new";
+}
+
+.component-intro {
+  margin-bottom: 2rem;
+}
+
+.component-info {
+  margin-top: 3rem;
+}
+
+.demo-wrapper {
+  margin-right: 1rem;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  border-color: rgba(229, 231, 235, 1);
+  border-style: solid;
+  box-shadow: 2px 2px 3px 0 #9999;
+
+  h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+    }
+  }
+
+  .demo-errors {
+    color: rgba(239, 68, 68, 1);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .demo-value {
+    width: 25%;
+    margin-top: 1.5rem;
+    background-color: rgba(229, 231, 235, 1);
+    color: rgba(55, 65, 81, 1);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .demo-btn-group {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+// TODO: Depreciated, remove later.
+.demo-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
