@@ -26,23 +26,28 @@ const routes: Routes = [
       },
       {
         path: 'select',
-        component: SelectDemoComponent
+        component: SelectDemoComponent,
+        data: { title: "Select" }
       },
       {
         path: 'button',
-        component: ButtonDemoComponent
+        component: ButtonDemoComponent,
+        data: { title: "Button" }
       },
       {
         path: 'icons',
-        component: IconDemoComponent
+        component: IconDemoComponent,
+        data: { title: "Icons" }
       },
       {
         path: 'spinner',
-        component: SpinnerDemoComponent
+        component: SpinnerDemoComponent,
+        data: { title: "Spinner" }
       },
       {
         path: 'date-picker',
-        component: DatePickerDemoComponent
+        component: DatePickerDemoComponent,
+        data: { title: "Date Picker" }
       },
     ]
   },

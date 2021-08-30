@@ -1,19 +1,18 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RoutesRecognized } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
 @Component({
   selector: 'app-demos',
   templateUrl: './demos.component.html',
   styleUrls: ['./demos.component.scss']
 })
-export class DemosComponent {
+export class DemosComponent{
 
   title: string;
 
-  constructor(private route: ActivatedRoute) {
-    // console.log(this.route.snapshot.data['title']);
-    this.title = this.route.snapshot.data['title'];
-    // console.log(this.title);
+  constructor(route: ActivatedRoute) {
+    route.url.subscribe(() => {
+      this.title = route.snapshot.firstChild.data?.title;
+     });
   }
-
 }

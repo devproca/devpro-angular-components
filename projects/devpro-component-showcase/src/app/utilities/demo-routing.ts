@@ -7,6 +7,7 @@ export class DemoRouting {
   public static get groups(): DemoRouteGroup[] {
     return [
       {
+        label: '',
         links: [
           {
             label: 'Introduction',
