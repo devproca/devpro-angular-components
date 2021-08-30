@@ -13,3 +13,5 @@ export { ButtonComponent } from './lib/button/button.component';
 export { PopperComponent } from './lib/popper/popper.component';
 
 export { SelectComponent } from './lib/select/select.component';
+
+export { SvgComponent } from './lib/svg/svg.component';

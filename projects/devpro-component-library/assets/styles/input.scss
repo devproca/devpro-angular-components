@@ -15,11 +15,11 @@
 }
 
 .dp-input-disabled {
-  @apply bg-gray-200 text-gray-600 outline-none;
+  @apply bg-gray-100 text-gray-600 outline-none;
   pointer-events: none;
 
   * {
-    @apply bg-gray-200;
+    @apply bg-gray-100;
   }
 }
 

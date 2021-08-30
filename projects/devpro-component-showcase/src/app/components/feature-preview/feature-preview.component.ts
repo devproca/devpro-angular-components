@@ -4,7 +4,8 @@ import { DemoCodeResource, DemoCodeService } from '../../services/demo-code.serv
 
 @Component({
   selector: 'app-feature-preview',
-  templateUrl: './feature-preview.component.html'
+  templateUrl: './feature-preview.component.html',
+  styleUrls: ['./feature-preview.component.scss']
 })
 export class FeaturePreviewComponent implements OnChanges {
   @Input() assetName: string;
@@ -23,13 +24,16 @@ export class FeaturePreviewComponent implements OnChanges {
 
   ngOnChanges() {
     const observables: Observable<DemoCodeResource>[] = [];
-    if(this.assetName) observables.push(this.demoCodeService.getResource(this.assetName));
-    // this.optionalAssetName
-    //   ? observables.push(this.demoCodeService.getResource(this.optionalAssetName))
-    //   : observables.push(of(null) as any);
+
+    if(this.assetName){
+       observables.push(this.demoCodeService.getResource(this.assetName));
+    }
+
+    this.optionalAssetName
+      ? observables.push(this.demoCodeService.getResource(this.optionalAssetName))
+      : observables.push(of(null) as any);
 
     forkJoin(observables).subscribe(([primary, secondary]) => {
-      console.log(primary);
       if(primary) {
         this.html = primary.html;
         this.typescript = primary.typescript;
@@ -41,8 +45,5 @@ export class FeaturePreviewComponent implements OnChanges {
       }
     });
 
-  }
-  toggleCode(){
-    this.showCode = !this.showCode;
   }
 }

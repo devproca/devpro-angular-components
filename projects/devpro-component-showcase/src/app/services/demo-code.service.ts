@@ -26,7 +26,6 @@ export class DemoCodeService {
 
   private getContent(resourceName: string, resourceSuffix: string): Observable<string> {
     const folder = resourceName.replace(/-demo.*/, '');
-    console.log(folder);
     return this.http.get<string>(`app/components/demos/${folder}/${resourceName}.component.${resourceSuffix}`, {responseType: 'text' as 'json'});
   }
 }

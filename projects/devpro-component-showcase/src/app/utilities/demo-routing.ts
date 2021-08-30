@@ -7,15 +7,23 @@ export class DemoRouting {
   public static get groups(): DemoRouteGroup[] {
     return [
       {
+        links: [
+          {
+            label: 'Introduction',
+            link: ''
+          },
+        ]
+      },
+      {
         label: 'Form',
         links: [
           {
             label: 'Input',
-            link: 'input'
+            link: 'components/input'
           },
           {
             label: 'Select',
-            link: 'select'
+            link: 'components/select'
           },
         ]
       },
@@ -24,14 +32,14 @@ export class DemoRouting {
         links: [
           {
             label: 'Button',
-            link: 'button'
+            link: 'components/button'
           },
           {
-            label: 'Card',
-            link: 'card'
+            label: 'Icons',
+            link: 'components/icons'
           }
         ]
-      }
+      },
     ]
   }
 

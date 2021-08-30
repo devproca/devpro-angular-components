@@ -16,13 +16,15 @@ import { PrismPipe } from './pipes/prism.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { InputDemoBasicComponent } from './components/demos/input/input-demo-basic.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
   SelectDemoComponent,
   DemosComponent,
   ButtonDemoComponent,
-  InputDemoBasicComponent
+  InputDemoBasicComponent,
+  IconDemoComponent
 ];
 @NgModule({
   declarations: [
