@@ -4,8 +4,7 @@ import { Component, HostBinding, Input } from '@angular/core';
   selector: 'dp-button',
   templateUrl: './button.component.html',
   styleUrls: [
-    './button.component.scss',
-    '../../../assets/styles/tailwind.scss'
+    './button.component.scss'
   ]
 })
 export class ButtonComponent {

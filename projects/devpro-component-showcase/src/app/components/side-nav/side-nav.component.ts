@@ -1,6 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { DemoRouting } from '../../utilities/demo-routing';
 
 @Component({
   selector: 'app-side-nav',
@@ -9,7 +8,55 @@ import { DemoRouting } from '../../utilities/demo-routing';
 })
 export class SideNavComponent implements OnInit {
 
-  nav = DemoRouting.groups;
+  nav = [
+    {
+      links: [
+        {
+          label: 'Introduction',
+          link: ''
+        },
+      ]
+    },
+    {
+      label: 'Form',
+      links: [
+        {
+          label: 'Input',
+          link: 'components/input'
+        },
+        {
+          label: 'Select',
+          link: 'components/select'
+        },
+        {
+          label: 'Date Picker',
+          link: 'components/date-picker'
+        }
+      ]
+    },
+    {
+      label: 'Layout',
+      links: [
+        {
+          label: 'Button',
+          link: 'components/button'
+        },
+        {
+          label: 'Icons',
+          link: 'components/icons'
+        }
+      ]
+    },
+    {
+      label: 'Miscellaneous',
+      links: [
+        {
+          label: 'Spinner',
+          link: 'components/spinner'
+        },
+      ]
+    }
+  ]
 
   constructor() { }
 

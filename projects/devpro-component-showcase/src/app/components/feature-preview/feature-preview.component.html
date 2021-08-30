@@ -11,19 +11,24 @@
     </div>
   </div>
 </div>
-<div *ngIf="!showCode" class="mt-3 p-6 rounded-lg border border-gray-200 shadow-sm bg-white overflow-hidden">
-  <ng-content></ng-content>
-</div>
-<div *ngIf="showCode" class="mt-3 rounded-md border border-gray-200 shadow-sm overflow-hidden">
-  <div class="bg-white p-3 shadow-sm"></div>
-  <div class="text-white bg-gray-800 text-sm">
-    <div>
-      <pre class="language-html rounded-b"
-        [ngStyle]="{margin: '0'}"><code [innerHTML]="this.html | prism:'html' | safeHtml"></code></pre>
-    </div>
-    <div>
-      <pre class="language-html rounded-b"
-        [ngStyle]="{margin: '0'}"><code [innerHTML]="this.typescript | prism:'javascript'"></code></pre>
+<ng-container *ngIf="showCode; else preview">
+  <div class="mt-3 rounded-md border border-gray-200 shadow-sm overflow-hidden">
+    <div class="bg-white p-3 shadow-sm"></div>
+    <div class="text-white bg-gray-800 text-sm">
+      <div>
+        <pre class="language-html rounded-b"
+          [ngStyle]="{margin: '0'}"><code [innerHTML]="this.html | prism:'html' | safeHtml"></code></pre>
+      </div>
+      <div>
+        <pre class="language-html rounded-b"
+          [ngStyle]="{margin: '0'}"><code [innerHTML]="this.typescript | prism:'javascript'"></code></pre>
+      </div>
     </div>
   </div>
-</div>
+</ng-container>
+
+<ng-template #preview>
+  <div class="mt-3 p-6 rounded-lg border border-gray-200 shadow-sm bg-white overflow-hidden">
+    <ng-content></ng-content>
+  </div>
+</ng-template>
