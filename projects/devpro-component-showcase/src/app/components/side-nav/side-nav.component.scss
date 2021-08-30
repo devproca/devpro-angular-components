@@ -3,7 +3,7 @@
 }
 
 .section-label{
-    @apply mb-2 text-xs text-gray-700 font-medium uppercase;
+    @apply mb-2 text-xs text-gray-500 font-medium uppercase;
 }
 
 .section {
@@ -11,9 +11,9 @@
 }
 
 .link{
-    @apply block py-1 mb-1 text-gray-500 cursor-pointer rounded font-medium text-sm hover:text-gray-900 duration-150;
+    @apply block py-1 mb-1 text-gray-800 cursor-pointer rounded font-medium text-sm hover:text-blue-500 duration-150;
 
     &.active {
-        @apply text-gray-900;
+        @apply text-blue-500;
     }
 }

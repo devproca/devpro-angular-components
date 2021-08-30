@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnChanges, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 const SVGS = {
@@ -27,7 +27,7 @@ const SVGS = {
   styleUrls: ['./svg.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class SvgComponent implements OnInit, AfterViewInit {
+export class SvgComponent implements OnChanges, AfterViewInit {
 
   @ViewChild('ref') ref: ElementRef;
 
@@ -38,15 +38,22 @@ export class SvgComponent implements OnInit, AfterViewInit {
 
   constructor(private sanitizer: DomSanitizer, private el: ElementRef) { }
 
-  ngOnInit(){
-    this.svg = this.sanitizer.bypassSecurityTrustHtml(SVGS[this.name.replace(/-./g, x => x[1].toUpperCase())].default.replace(/data:image\/svg\+xml;base64,/, ''));
+  ngOnChanges() {
+    if (this.name) {
+      const icon = SVGS[this.name];
+      icon
+        ? this.svg = this.sanitizer.bypassSecurityTrustHtml(SVGS[this.name.replace(/-./g, x => x[1].toUpperCase())].default.replace(/data:image\/svg\+xml;base64,/, ''))
+        : this.svg = null;
+    }
   }
 
   ngAfterViewInit(): void {
     const fontSize = window.getComputedStyle(this.el.nativeElement).fontSize;
     const svgElement = this.ref.nativeElement.querySelector('svg');
-    svgElement.setAttribute('preserveAspectRatio', 'xMidYMid');
-    svgElement.setAttribute('width', fontSize);
-    svgElement.setAttribute('height', fontSize);
+    if (svgElement) {
+      svgElement.setAttribute('preserveAspectRatio', 'xMidYMid');
+      svgElement.setAttribute('width', fontSize);
+      svgElement.setAttribute('height', fontSize);
+    }
   }
 }

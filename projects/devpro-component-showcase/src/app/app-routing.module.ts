@@ -21,8 +21,7 @@ const routes: Routes = [
     children: [
       {
         path: 'input',
-        component: InputDemoComponent,
-        data: { title: "Input" }
+        component: InputDemoComponent
       },
       {
         path: 'select',

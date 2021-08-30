@@ -1,5 +1,5 @@
-import {Component, Input, OnChanges} from '@angular/core';
-import {forkJoin, Observable, of} from "rxjs";
+import {Component, Input, OnChanges, OnDestroy} from '@angular/core';
+import {forkJoin, Observable, of, Subscription} from "rxjs";
 import { DemoCodeResource, DemoCodeService } from '../../services/demo-code.service';
 
 @Component({
@@ -7,11 +7,13 @@ import { DemoCodeResource, DemoCodeService } from '../../services/demo-code.serv
   templateUrl: './feature-preview.component.html',
   styleUrls: ['./feature-preview.component.scss']
 })
-export class FeaturePreviewComponent implements OnChanges {
+export class FeaturePreviewComponent implements OnChanges, OnDestroy {
   @Input() assetName: string;
   @Input() optionalAssetName: string;
   @Input() featureTitle: string;
   @Input() optionalLabel: string;
+
+  subscription = Subscription.EMPTY;
 
   html: string;
   typescript: string;
@@ -20,6 +22,10 @@ export class FeaturePreviewComponent implements OnChanges {
   showCode = false;
 
   constructor(private demoCodeService: DemoCodeService) {
+  }
+
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
 
   ngOnChanges() {
@@ -33,7 +39,7 @@ export class FeaturePreviewComponent implements OnChanges {
       ? observables.push(this.demoCodeService.getResource(this.optionalAssetName))
       : observables.push(of(null) as any);
 
-    forkJoin(observables).subscribe(([primary, secondary]) => {
+    this.subscription = forkJoin(observables).subscribe(([primary, secondary]) => {
       if(primary) {
         this.html = primary.html;
         this.typescript = primary.typescript;

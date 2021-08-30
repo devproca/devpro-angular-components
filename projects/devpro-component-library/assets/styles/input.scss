@@ -1,5 +1,13 @@
+@import '../../assets/styles/base.scss';
+
 .dp-input {
-  @apply bg-white border border-gray-300 relative rounded-md shadow-sm overflow-hidden text-sm;
+  background: white;
+  border: 1px solid $color-gray-300;
+  position: relative;
+  border-radius:$rounded-md;
+  box-shadow: $shadows-sm;
+  overflow: hidden;
+  font-size: $text-sm;
 
   input {
     @apply bg-white h-10 w-full appearance-none outline-none placeholder-gray-500;

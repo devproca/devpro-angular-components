@@ -1,4 +1,11 @@
 @import '../../../assets/styles/input.scss';
+@import '../../../assets/styles/base.scss';
+
+$gray-500: rgba(107, 114, 128);
+
+:root {
+  --gray-500: rgba(107, 114, 128);
+}
 
 .dp-input {
   display: flex;
@@ -12,6 +19,7 @@
     right:0.75rem;
     transform: translateY(-50%);
     cursor: pointer;
+    color: $gray-500; 
   }
 }
 
