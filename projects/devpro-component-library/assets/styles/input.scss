@@ -2,7 +2,7 @@
 
 .dp-input {
   background: white;
-  border: 1px solid $color-gray-300;
+  border: 1px solid $gray-300;
   position: relative;
   border-radius:$rounded-md;
   box-shadow: $shadows-sm;
@@ -10,34 +10,33 @@
   font-size: $text-sm;
 
   input {
-    @apply bg-white h-10 w-full appearance-none outline-none placeholder-gray-500;
-  }
-}
-
-.dp-input-focus {
-  @apply border-blue-500 ring-1 ring-blue-500;
-}
-
-.dp-input-error {
-  @apply border-red-500 ring-1 ring-red-500;
-}
-
-.dp-input-disabled {
-  @apply bg-gray-100 text-gray-600 outline-none;
-  pointer-events: none;
-
-  * {
-    @apply bg-gray-100;
+    width:100%;
+    background-color: $white;
+    height: $input-height;
+    appearance: none;
+    outline: none;
+    &::placeholder{
+      color: $gray-500;
+    }
   }
 }
 
 .dp-input.disabled {
-  @apply dp-input-disabled;
+  background-color: $gray-100;
+  color:$gray-600;
+  outline:none;
+  pointer-events: none;
+
+  * {
+    background-color: $gray-100;
+  }
 }
 
 .dp-input.focus {
-  @apply dp-input-focus;
+  border: 1px solid $blue-500;
+  box-shadow: $ring-1 $blue-500;
 }
 .dp-input.error {
-  @apply dp-input-error;
+  border: 1px solid $red-500;
+  box-shadow: $ring-1 $red-500;
 }

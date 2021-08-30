@@ -1,17 +1,9 @@
 @import '../../../assets/styles/input.scss';
 @import '../../../assets/styles/base.scss';
 
-$gray-500: rgba(107, 114, 128);
-
-:root {
-  --gray-500: rgba(107, 114, 128);
-}
-
 .dp-input {
-  display: flex;
-  align-item:center;
   padding-left: 0.75rem;
-  padding-right: 2.25rem;
+  padding-right: 2rem;
 
   .calendar-icon{
     position:absolute;

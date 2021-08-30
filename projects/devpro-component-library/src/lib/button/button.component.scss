@@ -1,3 +1,63 @@
+@import "../../../assets/styles/base.scss";
+
 button {
-    @apply inline-flex items-center h-10 rounded-md text-sm font-medium px-4 overflow-hidden border duration-150 focus:ring-1 border-gray-300 text-gray-700 bg-white hover:bg-gray-100 focus:ring-gray-200;
+    display: inline-flex;
+    align-items: center;
+    height: $input-height;
+    border-radius: $rounded-md;
+    font-size: $text-sm;
+    font-weight: $font-medium;
+    padding: 0 $p-4;
+    overflow: hidden;
+    border: 1px solid $gray-300;
+    transition: 0.15s all ease-in;
+
+    &.primary {
+        border-color: $blue-500;
+        color: $white;
+        font-weight: $font-semibold;
+        background-color: $blue-500;
+
+        &:hover {
+            background-color: $blue-600;
+        }
+
+        &:focus {
+            box-shadow: $ring-1 $blue-400;
+        }
+    }
+
+    &.secondary {
+        border-color: $gray-300;
+        color: $gray-700;
+        background-color: $white;
+
+        &:hover {
+            background-color: $gray-100;
+        }
+
+        &:focus {
+            box-shadow: $ring-1 $gray-200;
+        }
+    }
+
+    &.error {
+        border-color: $red-500;
+        color: $white;
+        font-weight: $font-semibold;
+        background-color: $red-500;
+
+        &:hover {
+            background-color: $red-600;
+        }
+
+        &:focus {
+            box-shadow: $ring-1 $red-400;
+        }
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 }

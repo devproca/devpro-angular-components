@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     require('tailwind-css-variables')(
       {
-        // modules
+        ring:'ring'
       },
       {
         // options

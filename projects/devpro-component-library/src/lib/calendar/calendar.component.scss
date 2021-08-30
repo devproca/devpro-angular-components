@@ -1,92 +1,150 @@
+@import '../../../assets/styles/base.scss';
+
 .calendar {
-  @apply rounded shadow-md bg-white font-sans p-3 overflow-x-hidden;
+  border-radius: $rounded-lg;
+  background-color: $white;
+  font-family: $font-sans;
+  padding: $p-3;
+  overflow-x: hidden;
+  box-shadow: $shadows-md;
+  border: 1px solid $gray-200;
   width: 17.5rem;
   box-sizing: content-box;
 
   .calendar-nav {
-    @apply w-full flex flex-grow justify-between;
+    width:100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
     > div {
-      @apply flex;
+      display: flex;
     }
 
     > div > div {
-      @apply flex items-center;
+      display: flex;
+      align-items: center;
     }
 
     .month,
     .year {
-      @apply text-center w-10;
+      text-align: center;
+      width: $w-10;
     }
 
     button {
-      @apply border-none bg-white text-base m-0 cursor-pointer text-blue-500;
+      border:0;
+      background-color: white;
+      font-weight:$text-base;
+      line-height: $text-base-line-height;
+      margin:0;
+      cursor: pointer;
+      color: $blue-500;
+
       &:focus {
-        @apply outline-none;
+        outline:none
       }
     }
 
     button.today {
-      @apply text-sm;
+      font-size:$text-sm;
+      line-height: $text-sm-line-height;
     }
 
     button.chevron {
-      @apply py-0 h-6 w-6 flex items-center justify-center;
+      height: $h-6;
+      width: $w-6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   .calendar-weekdays {
-    @apply w-full flex py-1 mt-2;
+    width:100%;
+    display: flex;
+    padding: $p-1 0;
+    margin-top: $m-2;
     div {
-      @apply w-10 text-center text-gray-700;
+      width: $w-10;
+      text-align: center;
+      color: $gray-700;
     }
   }
 
   .calendar-cells {
-    @apply w-full flex flex-wrap cursor-pointer;
+    width:100;
+    display: flex;
+    flex-wrap: wrap;
+    cursor:pointer;
+
     > div {
-      @apply text-center;
+      text-align: center;
+
       &.disabled {
-        @apply cursor-auto;
+        cursor: auto;
+        
         > div {
-          @apply text-gray-400;
+          color: $gray-400;
           &:hover {
-            @apply border-2 border-solid border-white text-gray-400;
+            border: 2px solid $white;
+            color: $gray-400;
           }
         }
       }
 
       &.today {
         > div {
-          @apply text-blue-500;
+          color: $blue-500;
         }
       }
 
       &.selected {
         > div {
-          @apply border-2 border-solid border-blue-200 bg-blue-500 text-white;
+          border: 2px solid $blue-200;
+          background-color: $blue-500;
+          color:white;
         }
       }
 
       &.selected-error {
         > div {
-          @apply border-2 border-solid border-red-200 bg-red-300 text-white;
+          border: 2px solid $red-200;
+          background-color: $red-500;
+          color:white;
         }
       }
 
       > .day {
-        @apply rounded-full h-10 w-10 flex items-center justify-center border-2 border-solid border-white;
+        border-radius: $rounded-full;
+        width: $w-10;
+        height: $h-10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $white;
 
         &:hover {
-          @apply border-2 border-solid border-blue-300 bg-white text-black;
+          border: 2px solid $blue-300;
+          background-color: $white;
+          color: $gray-900;
           transition: all .2s;
         }
       }
 
       > .day-error {
-        @apply rounded-full h-10 w-10 flex items-center justify-center border-2 border-solid border-white;
+        border-radius: $rounded-full;
+        width: $w-10;
+        height: $h-10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $white;
+
 
         &:hover {
-          @apply border-2 border-solid border-red-300 bg-white text-black;
+          border: 2px solid $red-300;
+          background-color: $white;
+          color: $gray-900;
           transition: all .2s;
         }
       }

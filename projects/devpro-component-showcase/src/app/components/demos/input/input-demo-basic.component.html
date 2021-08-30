@@ -1,9 +1,5 @@
-<div class="w-48">
-    <div>
-        <dp-input placeholder="you@example.com" [formControl]="formControl"></dp-input>
-    </div>
-    <div class="mt-6 flex space-x-4">
-        <dp-button *ngIf="disabled" type="primary" (click)="enable()">Enable</dp-button>
-        <dp-button *ngIf="!disabled" type="error" (click)="disable()">Disable</dp-button>
-    </div>
+<dp-input class="block w-48" placeholder="you@example.com" [formControl]="formControl"></dp-input>
+<div class="mt-6">
+    <dp-button [class.hidden]="!disabled" type="primary" (click)="enable()">Enable</dp-button>
+    <dp-button [class.hidden]="disabled" type="error" (click)="disable()">Disable</dp-button>
 </div>

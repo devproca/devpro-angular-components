@@ -1,12 +1,12 @@
-import { Component, EventEmitter, forwardRef, Inject, Injector, Input, LOCALE_ID, OnInit, Output } from '@angular/core';
-import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
-import {DateTime} from 'luxon';
-import {isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
+import { Component, EventEmitter, Inject, Input, LOCALE_ID, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { DateTime } from 'luxon';
+import { isValidDate, isValidForMax, isValidForMin } from '../utils/date.util';
 
 @Component({
   selector: 'dp-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+  styleUrls: ['./calendar.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class CalendarComponent implements OnInit {
 

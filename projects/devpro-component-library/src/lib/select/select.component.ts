@@ -1,5 +1,5 @@
 import {
-  Component, DoCheck, EventEmitter, forwardRef, Injector, Input, Output
+  Component, DoCheck, EventEmitter, forwardRef, Injector, Input, Output, ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -8,7 +8,6 @@ import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/for
   templateUrl: './select.component.html',
   styleUrls: [
     './select.component.scss',
-    '../../../assets/styles/input.scss',
   ],
   providers: [
     {
@@ -16,7 +15,8 @@ import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/for
       useExisting: forwardRef(() => SelectComponent),
       multi: true
     }
-  ]
+  ],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SelectComponent implements ControlValueAccessor, DoCheck {
 

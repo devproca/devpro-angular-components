@@ -9,7 +9,8 @@ import {
   Input,
   OnDestroy,
   Output,
-  ViewChild
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
 import {
   AbstractControl,
@@ -38,7 +39,8 @@ import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../utils/da
       useExisting: forwardRef(() => DatePickerComponent),
       multi: true
     }
-  ]
+  ],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class DatePickerComponent implements OnDestroy, ControlValueAccessor, Validator, DoCheck {
 

@@ -1,0 +1,61 @@
+@import "../../../assets/styles/base.scss";
+@import "../../../assets/styles/input.scss";
+
+.select-wrapper {
+    padding: 0 $p-4;
+    height: $input-height;
+    display: flex;
+    align-items: center;
+    transition: 0.15s all ease-in;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gray-50;
+    }
+
+    .placeholder {
+        color: $gray-500;
+    }
+
+    .value {
+        flex-grow: 1;
+    }
+
+    .chevron {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        color: $gray-500;
+    }
+}
+
+.popper-content {
+    min-width: $min-w-full;
+    background-color: $white;
+    box-shadow: $shadows-md;
+    padding: $p-1 0;
+    border: 1px solid $gray-200;
+    font-weight: $text-base;
+    border-radius: $rounded-md;
+    overflow: hidden;
+    z: 10;
+}
+
+.option{
+    padding: $p-2 $p-4;
+    transition: 0.15 all ease-in;
+    cursor:pointer;
+    font-size: $text-sm;
+    color: $gray-800;
+
+    &:hover{
+        background-color: $gray-50;
+    }
+}
+
+.no-results{
+    text-align: center;
+    padding: $p-4 $p-2;
+    font-size: $text-sm;
+    color:$gray-500;
+}

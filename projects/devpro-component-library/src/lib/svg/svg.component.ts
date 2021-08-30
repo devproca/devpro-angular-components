@@ -40,10 +40,11 @@ export class SvgComponent implements OnChanges, AfterViewInit {
 
   ngOnChanges() {
     if (this.name) {
-      const icon = SVGS[this.name];
+      const icon = SVGS[this.name.replace(/-./g, x => x[1].toUpperCase())];
+      console.log(icon)
       icon
-        ? this.svg = this.sanitizer.bypassSecurityTrustHtml(SVGS[this.name.replace(/-./g, x => x[1].toUpperCase())].default.replace(/data:image\/svg\+xml;base64,/, ''))
-        : this.svg = null;
+        ? this.svg = this.sanitizer.bypassSecurityTrustHtml(icon.default.replace(/data:image\/svg\+xml;base64,/, ''))
+        : this.invalidName();
     }
   }
 
@@ -55,5 +56,10 @@ export class SvgComponent implements OnChanges, AfterViewInit {
       svgElement.setAttribute('width', fontSize);
       svgElement.setAttribute('height', fontSize);
     }
+  }
+
+  private invalidName(){
+    this.svg = null;
+    console.warn(`Icon with name '${this.name}' does not exist for dp-svg.`)
   }
 }

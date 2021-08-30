@@ -1,6 +1,6 @@
 import {
   Component, EventEmitter,
-  forwardRef, Input, Output
+  forwardRef, Input, Output, ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -16,7 +16,8 @@ import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/f
       useExisting: forwardRef(() => InputComponent),
       multi: true,
     }
-  ]
+  ],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class InputComponent implements ControlValueAccessor {
 
