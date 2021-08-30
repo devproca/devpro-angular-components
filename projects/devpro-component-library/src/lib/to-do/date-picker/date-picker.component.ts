@@ -21,7 +21,7 @@ import {
   Validator
 } from '@angular/forms';
 import {PopperComponent} from '../../popper/popper.component';
-import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
+import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../../utils/date.util';
 
 @Component({
   selector: 'dp-date-picker',

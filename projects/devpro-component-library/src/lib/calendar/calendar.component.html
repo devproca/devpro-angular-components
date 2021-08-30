@@ -1,0 +1,40 @@
+<div class = "calendar"
+    [class.disabled]="disabled">
+    <div class = "calendar-header">
+        <!-- TODO add fancy arrow icons once files are in-->
+        <button class = "arrow" (click)="changeMonth(-1)">
+            &#x3c;
+        </button>
+        <div class = "header">
+            {{navigationMonthName}}
+        </div>
+        <button class = "arrow" (click)="changeMonth(1)">
+            &#x3e;
+        </button>
+
+        <button class = "arrow" (click)="changeYear(-1)">
+            &#x3c;
+        </button>
+        <div class = "header">
+            {{navigationYear}}
+        </div>
+        <button class = "arrow" (click)="changeYear(1)">
+            &#x3e;
+        </button>
+    </div>
+
+    <div class="calendar-weekdays">
+        <div *ngFor="let weekdayLabel of weekdayLabels">
+        <div><small>{{weekdayLabel}}</small>
+        </div>
+        </div>
+    </div>
+    <div class = "calendar-cells">
+        <div *ngFor="let cell of calendar"
+            (click)="selectDate(cell)" 
+            [class.today]="cell.today"
+            [class.selected]="cell.isoDate && cell.isoDate === value">
+            <div [ngClass]="cell.day ? 'day' : 'emptyDay'">{{cell.day ? cell.day : ''}}</div>
+        </div>
+    </div>
+</div>

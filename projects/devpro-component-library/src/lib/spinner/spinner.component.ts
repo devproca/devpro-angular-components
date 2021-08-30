@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 export class SpinnerComponent {
   @Input() size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';
   @Input() spinnerStyle: 'style1' | 'style2' | 'style3' = 'style1';
-  @Input() color: 'blue' | 'white' = 'blue';
+  @Input() color: 'blue' | 'white' | 'red' | 'black' = 'blue';
 }
