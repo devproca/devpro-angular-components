@@ -19,7 +19,5 @@ export { SvgComponent } from './lib/svg/svg.component';
 =======
 export { SpinnerComponent } from './lib/spinner/spinner.component';
 
-export { CalendarComponent } from './lib/calendar/calendar.component';
-
 export { DatePickerComponent } from './lib/date-picker/date-picker.component';
 >>>>>>> 8773b69... WIP on calendar/ datepicker

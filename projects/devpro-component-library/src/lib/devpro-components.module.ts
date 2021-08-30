@@ -40,10 +40,12 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     SvgComponent
 =======
     SpinnerComponent,
-    CalendarComponent,
     DatePickerComponent
+<<<<<<< HEAD
 
 >>>>>>> 8773b69... WIP on calendar/ datepicker
+=======
+>>>>>>> 3f4031d... Stuff
   ]
 })
 export class DevproComponentsModule { }

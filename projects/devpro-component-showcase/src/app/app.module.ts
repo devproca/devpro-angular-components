@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 =======
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
-import { CalendarDemoComponent } from './components/demos/calendar/calendar-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 >>>>>>> 8773b69... WIP on calendar/ datepicker
 
@@ -34,7 +33,6 @@ const DEMO_COMPONENTS = [
   IconDemoComponent
 =======
   SpinnerDemoComponent,
-  CalendarDemoComponent,
   DatePickerDemoComponent
 >>>>>>> 8773b69... WIP on calendar/ datepicker
 ];
