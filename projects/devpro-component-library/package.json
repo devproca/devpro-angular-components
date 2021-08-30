@@ -1,0 +1,17 @@
+{
+  "name": "@dev-pro/devpro-components",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@angular/localize": "^12.2.2",
+    "@popperjs/core": "^2.9.3",
+    "luxon": "^1.26.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1"
+  }
+}
