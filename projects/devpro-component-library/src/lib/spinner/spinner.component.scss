@@ -28,6 +28,22 @@
     }
   }
 
+  &.red {
+    border-color: rgb(239, 68, 68); // Red 500
+
+    &.style3 {
+      border-top-color: rgba(239, 68, 68, 1); // Red-500
+    }
+  }
+
+  &.black {
+    border-color: rgb(0, 0, 0); // Black
+
+    &.style3 {
+      border-top-color: rgb(0, 0, 0); // Black
+    }
+  }
+
   //// Sizes ////
   &.xs {
     height: 1.5rem;

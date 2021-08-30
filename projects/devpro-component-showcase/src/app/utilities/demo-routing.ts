@@ -10,6 +10,10 @@ export class DemoRouting {
         label: 'Form',
         links: [
           {
+            label: 'Date Picker',
+            link: 'date-picker'
+          },
+          {
             label: 'Input',
             link: 'input'
           },
@@ -30,6 +34,19 @@ export class DemoRouting {
             label: 'Card',
             link: 'card'
           }
+        ]
+      },
+      {
+        label: 'Miscellaneous',
+        links: [
+          {
+            label: 'Calendar',
+            link: 'calendar'
+          },
+          {
+            label: 'Spinner',
+            link: 'spinner'
+          },
         ]
       }
     ]

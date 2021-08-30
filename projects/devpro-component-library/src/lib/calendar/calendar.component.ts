@@ -1,67 +1,57 @@
-import {Component, EventEmitter, Inject, Input, LOCALE_ID, OnChanges, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, forwardRef, Inject, Injector, Input, LOCALE_ID, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {DateTime} from 'luxon';
 import {isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
 
 @Component({
   selector: 'dp-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+  styleUrls: ['./calendar.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CalendarComponent),
+      multi: true
+    }
+  ]
 })
-export class CalendarComponent implements OnInit, OnChanges {
+export class CalendarComponent implements OnInit, ControlValueAccessor {
 
-  @Output() change = new EventEmitter<string>();
-  @Output() calendarMonthChange = new EventEmitter<string>();
-  @Output() calendarYearChange = new EventEmitter<string>();
+  constructor(
+    @Inject(LOCALE_ID) private locale: string,
+    private injector: Injector
+    ) {
+  }
+
+  onChange: any = () => { }
+  onTouch: any = () => { }
+
   @Input() value: string;
-  @Input() minDate;
-  @Input() maxDate;
+  @Output() change = new EventEmitter<string>();
+  @Output() calendarMonthChange = new EventEmitter<DateTime>();
+  @Output() calendarYearChange = new EventEmitter<DateTime>();
+  @Input() minDate: string;
+  @Input() maxDate: string;
+  @Input() disabled: boolean;
+  @Input() error: boolean;
 
-  calendarCells: CellMetadata[] = [];
-  weekdayLabels: string[];
+  calendar: CellMetadata[] = [];
   navigationDate: DateTime;
 
-  constructor(@Inject(LOCALE_ID) private locale: string) {
-  }
+  weekdayLabels = [];
 
   ngOnInit(): void {
     this.initializeDaysOfWeek();
-    this.refreshNavigationDate();
   }
 
-  ngOnChanges(): void {
-    this.refreshNavigationDate();
-  }
-
-  changeMonth(num: number): void {
-    this.updateNavigationDate(this.navigationDate.plus({months: num}));
-    this.calendarMonthChange.emit(this.navigationDate);
-  }
-
-  changeYear(num: number): void {
-    this.updateNavigationDate(this.navigationDate.plus({years: num}));
-    this.calendarYearChange.emit(this.navigationDate);
-  }
-
-  selectDate(cell: CellMetadata): void {
-    if (!cell.disabled && cell.isoDate) {
-      this.value = cell.isoDate;
-      this.change.emit(this.value);
+  ngDoCheck(): void {
+    const ngControl = this.injector.get(NgControl, null);
+    if (ngControl) {
+      this.error = !!ngControl.errors;
     }
   }
 
-  get navigationYearLabel(): string {
-    return this.navigationDate.setLocale(this.locale).toFormat('yyyy');
-  }
-
-  get navigationMonthLabel(): string {
-    return this.navigationDate.setLocale(this.locale).toFormat('MMM');
-  }
-
-  private initializeDaysOfWeek(): void {
-    this.weekdayLabels = [0, 1, 2, 3, 4, 5, 6].map(i => DateTime.local().set({weekday: i}).setLocale(this.locale).toFormat('ccc'));
-  }
-
-  private refreshNavigationDate(): void {
+  writeValue(value: any) {
     const currentDate = DateTime.local();
     let nextNavigationDate = currentDate;
 
@@ -79,6 +69,36 @@ export class CalendarComponent implements OnInit, OnChanges {
       }
     }
     this.updateNavigationDate(nextNavigationDate);
+  }
+
+  registerOnChange(fn: any) {
+    this.onChange = fn
+  }
+
+  registerOnTouched(fn: any) {
+    this.onTouch = fn
+  }
+
+  changeMonth(num: number): void {
+    this.updateNavigationDate(this.navigationDate.plus({months: num}));
+    this.calendarMonthChange.emit(this.navigationDate);
+  }
+
+  changeYear(num: number): void {
+    this.updateNavigationDate(this.navigationDate.plus({years: num}));
+    this.calendarYearChange.emit(this.navigationDate);
+  }
+
+  selectDate(cell: CellMetadata): void {
+    if (!cell.disabled && cell.isoDate) {
+      this.value = cell.isoDate;
+      this.notifyChanges();
+    }
+  }
+
+  notifyChanges() {
+    this.onChange(this.value);
+    this.change.emit(this.value);
   }
 
   private updateNavigationDate(value: DateTime): void {
@@ -103,9 +123,9 @@ export class CalendarComponent implements OnInit, OnChanges {
         disabled: (this.maxDate && !isValidForMax(isoDate, this.maxDate)) ||
           (this.minDate && !isValidForMin(isoDate, this.minDate))
       } as CellMetadata;
-    });
+    }); 
 
-    this.calendarCells = this.createNEmptyCells(firstEmptyCells)
+    this.calendar = this.createNEmptyCells(firstEmptyCells)
       .concat(dayOfMonthCells)
       .concat(this.createNEmptyCells(lastEmptyCells));
   }
@@ -121,9 +141,22 @@ export class CalendarComponent implements OnInit, OnChanges {
       } as CellMetadata;
     });
   }
+
+  private initializeDaysOfWeek(): void {
+    this.weekdayLabels = [0, 1, 2, 3, 4, 5, 6].map(i => DateTime.local().set({weekday: i}).setLocale(this.locale).toFormat('ccc'));
+  }
+
+  get navigationMonthName(): string{
+    return this.navigationDate.setLocale(this.locale).toFormat("MMM");
+  }
+
+  get navigationYear(): string{
+    return this.navigationDate.setLocale(this.locale).toFormat("yyyy");
+  }
+
 }
 
-export class CellMetadata {
+class CellMetadata {
   isoDate: string;
   day: number;
   today: boolean;
