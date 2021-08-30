@@ -31,7 +31,7 @@ export class DemoRouting {
           },
           {
             label: 'Slide Toggle',
-            link: 'slide-toggle'
+            link: 'components/slide-toggle'
           },
         ]
       },
