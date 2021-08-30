@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonDemoComponent } from './components/demos/button/button-demo.component';
-import { CalendarDemoComponent } from './components/demos/calendar/calendar-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 import { DemosComponent } from './components/demos/demos.component';
 import { InputDemoComponent } from './components/demos/input/input-demo.component';
@@ -35,10 +34,6 @@ const routes: Routes = [
       {
         path: 'spinner',
         component: SpinnerDemoComponent
-      },
-      {
-        path: 'calendar',
-        component: CalendarDemoComponent
       },
       {
         path: 'date-picker',

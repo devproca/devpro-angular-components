@@ -1,13 +1,21 @@
-<dp-popper placement="bottom" [offset]="{x:0, y:4}">
-    <div class="dp-input px-4 h-10 flex items-center hover:bg-gray-50 duration-150 cursor-pointer" [class.disabled]="disabled" [class.error]="error">
-        <div class="flex-shrink-0"></div>
-        <div class="flex-grow">
-            this should be the date
-        </div>
-        <!-- TODO ADD CALENDAR ICON -->
-        <div class="flex-shrink-0">$&$&$</div>
-      </div>
-      <div>
-        <dp-calendar></dp-calendar>
-      </div>    
-</dp-popper>
+<div class="input-wrapper"
+     [class.tw-input]="true"
+     [class.tw-input-disabled]="disabled"
+     [class.tw-input-error]="error"
+     [class.tw-input-focus]="focused">
+  <input #ref
+         (focusin)="handleFocus()"
+         (focusout)="handleUnfocus()"
+         (input)="handleInput($event)"
+         [value]="value ? value : ''"
+         [placeholder]="placeholder ? placeholder : ''"
+         [disabled]="disabled">
+  <dp-popper>
+    <i></i>
+    <dp-svg name="calendar text-gray-400 cursor-pointer"></dp-svg>
+    <dp-calendar [value]="value"
+                 [minDate]="minDate"
+                 [maxDate]="maxDate"
+                 (change)="handleCalendarChange($event)"></dp-calendar>
+  </dp-popper>
+</div>

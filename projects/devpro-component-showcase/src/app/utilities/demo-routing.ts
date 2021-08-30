@@ -40,10 +40,6 @@ export class DemoRouting {
         label: 'Miscellaneous',
         links: [
           {
-            label: 'Calendar',
-            link: 'calendar'
-          },
-          {
             label: 'Spinner',
             link: 'spinner'
           },

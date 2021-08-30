@@ -29,9 +29,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     PopperComponent,
     SelectComponent,
     SpinnerComponent,
-    CalendarComponent,
     DatePickerComponent
-
   ]
 })
 export class DevproComponentsModule { }
