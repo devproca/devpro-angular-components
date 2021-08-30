@@ -58,10 +58,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/devpro-component-showcase/src/favicon.ico",
-              "projects/devpro-component-showcase/src/assets"
+              "projects/devpro-component-showcase/src/assets",
+              "projects/devpro-component-showcase/src/app"
             ],
             "styles": [
-              "projects/devpro-component-showcase/src/styles.scss"
+              "projects/devpro-component-showcase/src/styles.scss",
+              "projects/devpro-component-showcase/src/assets/prism-theme.css"
             ],
             "scripts": []
           },

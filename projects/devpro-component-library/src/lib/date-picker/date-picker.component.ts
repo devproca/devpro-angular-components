@@ -20,8 +20,8 @@ import {
   ValidationErrors,
   Validator
 } from '@angular/forms';
-import {PopperComponent} from '../../popper/popper.component';
-import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../../utils/date.util';
+import {PopperComponent} from '../popper/popper.component';
+import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
 
 @Component({
   selector: 'dp-date-picker',
@@ -42,9 +42,9 @@ import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../../utils
 })
 export class DatePickerComponent implements OnDestroy, ControlValueAccessor, Validator, DoCheck {
 
-  private readonly maxDateError = $localize`:@@dp.datePicker.maxDateError:The date is greater than the allowed maximum.`;
-  private readonly minDateError = $localize`:@@dp.datePicker.minDateError:The date is smaller than the allowed minimum.`;
-  private readonly invalidError = $localize`:@@dp.datePicker.invalidError:The date is invalid.`;
+  private readonly maxDateError = $localize`:@@tw.datePicker.maxDateError:The date is greater than the allowed maximum.`;
+  private readonly minDateError = $localize`:@@tw.datePicker.minDateError:The date is smaller than the allowed minimum.`;
+  private readonly invalidError = $localize`:@@tw.datePicker.invalidError:The date is invalid.`;
 
   @Input() disabled = false;
   @Input() placeholder: string;

@@ -1,0 +1,10 @@
+<dp-popper [offset]="{x:0, y:4}">
+  <div class="dp-input" [class.disabled]="disabled" [class.error]="error"
+    [class.focus]="focused">
+    <input #ref (focusin)="handleFocus()" (focusout)="handleUnfocus()" (input)="handleInput($event)"
+      [value]="value ? value : ''" [placeholder]="placeholder ? placeholder : ''" [disabled]="disabled">
+    <dp-svg name="calendar" class="calendar-icon"></dp-svg>
+  </div>
+  <dp-calendar [value]="value" [minDate]="minDate" [maxDate]="maxDate" (change)="handleCalendarChange($event)">
+  </dp-calendar>
+</dp-popper>

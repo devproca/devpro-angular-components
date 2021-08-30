@@ -7,15 +7,27 @@ export class DemoRouting {
   public static get groups(): DemoRouteGroup[] {
     return [
       {
+        links: [
+          {
+            label: 'Introduction',
+            link: ''
+          },
+        ]
+      },
+      {
         label: 'Form',
         links: [
           {
+            label: 'Date Picker',
+            link: 'components/date-picker'
+          },
+          {
             label: 'Input',
-            link: 'input'
+            link: 'components/input'
           },
           {
             label: 'Select',
-            link: 'select'
+            link: 'components/select'
           },
           {
             label: 'Slide Toggle',
@@ -28,12 +40,21 @@ export class DemoRouting {
         links: [
           {
             label: 'Button',
-            link: 'button'
+            link: 'components/button'
           },
           {
-            label: 'Card',
-            link: 'card'
+            label: 'Icons',
+            link: 'components/icons'
           }
+        ]
+      },
+      {
+        label: 'Miscellaneous',
+        links: [
+          {
+            label: 'Spinner',
+            link: 'spinner'
+          },
         ]
       }
     ]

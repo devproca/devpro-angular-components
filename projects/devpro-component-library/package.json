@@ -6,7 +6,8 @@
     "@angular/core": "^12.2.0",
     "@angular/localize": "^12.2.2",
     "@popperjs/core": "^2.9.3",
-    "luxon": "^1.26.0"
+    "luxon": "^1.26.0",
+    "raw-loader": "^4.0.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"

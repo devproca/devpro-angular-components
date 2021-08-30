@@ -16,6 +16,9 @@ import { PrismPipe } from './pipes/prism.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { InputDemoBasicComponent } from './components/demos/input/input-demo-basic.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
+import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
+import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 import { SlideToggleDemoComponent } from './components/demos/slide-toggle/slide-toggle-demo.component';
 
 const DEMO_COMPONENTS = [
@@ -23,7 +26,10 @@ const DEMO_COMPONENTS = [
   SelectDemoComponent,
   DemosComponent,
   ButtonDemoComponent,
-  InputDemoBasicComponent
+  InputDemoBasicComponent,
+  IconDemoComponent,
+  SpinnerDemoComponent,
+  DatePickerDemoComponent
 ];
 @NgModule({
   declarations: [
