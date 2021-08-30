@@ -9,11 +9,14 @@ import { SvgComponent } from './svg/svg.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
+
 @NgModule({
   declarations: [
     InputComponent,
     ButtonComponent,
     PopperComponent,
+    SlideToggleComponent,
     SelectComponent,
     SvgComponent,
     SpinnerComponent,
@@ -28,6 +31,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     InputComponent,
     ButtonComponent,
     PopperComponent,
+    SlideToggleComponent,
     SelectComponent,
     SvgComponent,
     SpinnerComponent,

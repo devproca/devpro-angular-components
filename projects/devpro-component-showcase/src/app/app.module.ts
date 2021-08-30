@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
+import { SlideToggleDemoComponent } from './components/demos/slide-toggle/slide-toggle-demo.component';
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
@@ -39,7 +40,8 @@ const DEMO_COMPONENTS = [
     TopNavComponent,
     FeaturePreviewComponent,
     PrismPipe,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    SlideToggleDemoComponent
   ],
   imports: [
     BrowserModule,

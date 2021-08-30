@@ -29,6 +29,10 @@ export class DemoRouting {
             label: 'Select',
             link: 'components/select'
           },
+          {
+            label: 'Slide Toggle',
+            link: 'components/slide-toggle'
+          },
         ]
       },
       {

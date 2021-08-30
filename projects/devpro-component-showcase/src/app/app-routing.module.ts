@@ -7,6 +7,7 @@ import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { InputDemoComponent } from './components/demos/input/input-demo.component';
 import { SelectDemoComponent } from './components/demos/select/select-demo.component';
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
+import { SlideToggleDemoComponent } from './components/demos/slide-toggle/slide-toggle-demo.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'button',
         component: ButtonDemoComponent
+      },
+      {
+        path: 'slide-toggle',
+        component: SlideToggleDemoComponent
       },
       {
         path: 'icons',
