@@ -1,13 +1,17 @@
-@import '../../../input.scss';
+@import '../../../assets/styles/input.scss';
 
-:host {
-  @apply block;
+.dp-input {
+  display: flex;
+  align-item:center;
+  padding-left: 0.75rem;
+  padding-right: 2.25rem;
+
+  .calendar-icon{
+    position:absolute;
+    top:50%;
+    right:0.75rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 }
 
-.input-wrapper {
-  @apply flex items-center;
-}
-
-input {
-  @apply outline-none text-gray-800 h-full w-full cursor-default;
-}

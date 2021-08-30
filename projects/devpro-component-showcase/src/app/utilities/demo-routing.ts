@@ -19,7 +19,7 @@ export class DemoRouting {
         links: [
           {
             label: 'Date Picker',
-            link: 'date-picker'
+            link: 'components/date-picker'
           },
           {
             label: 'Input',
@@ -44,8 +44,6 @@ export class DemoRouting {
           }
         ]
       },
-<<<<<<< HEAD
-=======
       {
         label: 'Miscellaneous',
         links: [
@@ -55,7 +53,6 @@ export class DemoRouting {
           },
         ]
       }
->>>>>>> 8773b69... WIP on calendar/ datepicker
     ]
   }
 

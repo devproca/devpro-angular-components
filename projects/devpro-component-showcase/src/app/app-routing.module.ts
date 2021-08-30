@@ -33,17 +33,16 @@ const routes: Routes = [
         component: ButtonDemoComponent
       },
       {
-<<<<<<< HEAD
         path: 'icons',
         component: IconDemoComponent
-=======
+      },
+      {
         path: 'spinner',
         component: SpinnerDemoComponent
       },
       {
         path: 'date-picker',
         component: DatePickerDemoComponent
->>>>>>> 8773b69... WIP on calendar/ datepicker
       },
     ]
   },

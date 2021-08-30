@@ -24,7 +24,7 @@ import {PopperComponent} from '../popper/popper.component';
 import {formatDate, isValidDate, isValidForMax, isValidForMin} from '../utils/date.util';
 
 @Component({
-  selector: 'tw-date-picker',
+  selector: 'dp-date-picker',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss'],
   providers: [
