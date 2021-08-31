@@ -1,19 +1,22 @@
-<app-feature-preview assetName="icon-demo-feature">
-    <app-icon-feature-demo></app-icon-feature-demo>
+
+<app-feature-preview assetName="icon-demo-basic" featureTitle="Basic usage" [center]="true">
+    <app-icon-demo-basic></app-icon-demo-basic>
+</app-feature-preview>
+
+<app-feature-preview assetName="icon-demo-sizes" featureTitle="Icons of different sizes" [center]="true"> 
+    <app-icon-demo-sizes></app-icon-demo-sizes>
 </app-feature-preview>
 
 
-<div class="font-semibold text-lg">
-    This library contains many reccommneded icons. Please reach out to the UI/UX team if you require an icon for a specific use.
-</div>
+<h2>Icon library</h2>
 <div class="mt-6 flex space-x-4">
-    <div class="border-4 rounded-lg container flex flex-wrap justify-center">
+    <div class="rounded-lg border bg-white flex flex-wrap justify-center p-4">
         <div
             *ngFor="let icon of iconList"
-            class="h-28 w-28 flex flex-col items-center justify-center col-span-1 cursor-pointer text-xl"
+            class="h-24 w-24 m-2 flex flex-col items-center justify-center col-span-1 cursor-pointer text-gray-700 text-sm hover:bg-gray-50 duration-150 rounded-lg"
             (click)="copyIcon(icon)">
-            <!-- <dp-svg [name]="icon"></dp-svg> -->
-            <span class="text-gray-500 pt-2">{{icon}}</span>
+            <dp-svg [name]="icon"></dp-svg>
+            <span class="text-gray-500 pt-2 text-sm">{{icon}}</span>
         </div>
     </div>
 </div>

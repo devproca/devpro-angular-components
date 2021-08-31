@@ -9,21 +9,26 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import {DP_SVG} from "@dev-pro/devpro-component-library/src/lib/svg/svg.token";
-import {SvgModel} from "@dev-pro/devpro-component-library/src/lib/svg/svg.model";
+import { DP_SVG } from "@dev-pro/devpro-component-library/src/lib/svg/svg.token";
+import { SvgModel } from "@dev-pro/devpro-component-library/src/lib/svg/svg.model";
 
 @Component({
   selector: 'dp-svg',
-  templateUrl: './svg.component.html'
+  templateUrl: './svg.component.html',
+  styles: [`
+  :host {
+    display:inline-block;
+  }
+  `]
 })
 export class SvgComponent implements OnChanges, AfterViewInit {
 
   @Input() name: string;
-  @ViewChild('ref', {read: ViewContainerRef}) viewContainerRef: ViewContainerRef;
+  @ViewChild('ref', { read: ViewContainerRef }) viewContainerRef: ViewContainerRef;
 
   constructor(@Inject(DP_SVG) @Optional() private svgs: SvgModel[],
-              private componentFactoryResolver: ComponentFactoryResolver,
-              private changeDetectorRef: ChangeDetectorRef) {
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private changeDetectorRef: ChangeDetectorRef) {
   }
 
   ngOnChanges(): void {

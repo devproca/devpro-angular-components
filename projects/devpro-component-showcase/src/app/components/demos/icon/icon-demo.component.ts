@@ -1,42 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import {copy}from '../../../utilities/copy.util'
-
-const ICONS = [
-  'angleDown',
-  'angle-right',
-  'angle-left',
-  'calendar',
-  'check',
-  'clone',
-  'code',
-  'ellipsisVertical',
-  'eye',
-  'times',
-  'info',
-  'exclamation',
-  'menu',
-  'github',
-  'linkedin',
-  'terminal',
-  'twitter'
-];
+import { Component } from '@angular/core';
+import { copy } from '../../../utilities/copy.util'
 
 @Component({
   selector: 'app-icon-demo',
   templateUrl: './icon-demo.component.html'
 })
-export class IconDemoComponent implements OnInit{
+export class IconDemoComponent {
 
-  iconList: string[];
+  iconList = [
+    'angle-down',
+    'angle-right',
+    'angle-left',
+    'calendar',
+    'check',
+    'clone',
+    'code',
+    'ellipsis-v',
+    'eye',
+    'times',
+    'info',
+    'exclamation',
+    'menu',
+    'github',
+    'linkedin',
+    'terminal',
+    'twitter'
+  ];
 
   constructor() { }
 
-  ngOnInit(){
-    this.iconList = ICONS;
-  }
-
-
-  copyIcon(icon: string){
+  copyIcon(icon: string) {
     let message = `<dp-svg name="${icon}"></dp-svg>`;
     copy(message);
   }

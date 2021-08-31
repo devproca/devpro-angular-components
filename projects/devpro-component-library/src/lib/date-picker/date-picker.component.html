@@ -3,7 +3,7 @@
     [class.focus]="focused">
     <input #ref (focusin)="handleFocus()" (focusout)="handleUnfocus()" (input)="handleInput($event)"
       [value]="value ? value : ''" [placeholder]="placeholder ? placeholder : ''" [disabled]="disabled">
-    <!-- <dp-svg name="calendar" class="calendar-icon"></dp-svg> -->
+    <dp-svg name="calendar" class="calendar-icon"></dp-svg>
   </div>
   <dp-calendar [value]="value" [minDate]="minDate" [maxDate]="maxDate" (change)="handleCalendarChange($event)">
   </dp-calendar>

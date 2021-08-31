@@ -6,8 +6,7 @@ import { TabComponent } from '../tab.component';
 @Component({
   selector: 'dp-tab-group',
   templateUrl: './tab-group.component.html',
-  styleUrls: ['./tab-group.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./tab-group.component.scss']
 })
 export class TabGroupComponent implements AfterContentInit {
   @Input() style: "default" = "default";

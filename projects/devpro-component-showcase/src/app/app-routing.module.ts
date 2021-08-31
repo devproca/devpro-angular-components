@@ -39,7 +39,7 @@ const routes: Routes = [
       {
         path: 'icons',
         component: IconDemoComponent,
-        data: { title: "Icon Library" }
+        data: { title: "Icons" }
       },
       {
         path: 'spinner',

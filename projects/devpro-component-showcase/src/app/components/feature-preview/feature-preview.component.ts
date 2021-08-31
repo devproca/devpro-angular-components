@@ -12,6 +12,7 @@ export class FeaturePreviewComponent implements OnChanges, OnDestroy {
   @Input() optionalAssetName: string;
   @Input() featureTitle: string;
   @Input() optionalLabel: string;
+  @Input() center: boolean;
 
   subscription = Subscription.EMPTY;
 

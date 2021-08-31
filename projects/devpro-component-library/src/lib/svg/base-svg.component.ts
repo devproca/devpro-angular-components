@@ -1,20 +1,21 @@
-import { AfterViewInit, Directive, ElementRef } from '@angular/core';
+import { AfterViewInit, Directive, DoCheck, ElementRef } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 
 @Directive()
-export abstract class BaseSvgComponent implements AfterViewInit {
+export abstract class BaseSvgComponent {
 
   svg: SafeHtml;
 
   constructor(private el: ElementRef) { }
 
-  ngAfterViewInit(): void {
-    const fontSize = window.getComputedStyle(this.el.nativeElement).fontSize;
-    console.log(fontSize);
+  ngAfterViewChecked(): void {
+    this.reload();
+  }
+
+  reload(){
     const svgElement = this.el.nativeElement.querySelector('svg');
-    console.log(svgElement);
-    console.log(this.el);
-    if (svgElement) {
+    const fontSize = window.getComputedStyle(svgElement).fontSize;
+    if (svgElement && fontSize) {
       svgElement.setAttribute('preserveAspectRatio', 'xMidYMid');
       svgElement.setAttribute('width', fontSize);
       svgElement.setAttribute('height', fontSize);

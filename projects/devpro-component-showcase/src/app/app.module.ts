@@ -19,13 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
-import { IconFeatureDemoComponent } from './components/demos/icon/icon-demo-feature.component';
+import { IconDemoSizesComponent } from './components/demos/icon/icon-demo-sizes.component';
 import { TabDemoComponent } from './components/demos/tab/tab-demo.component';
 import { TabDemoBasicComponent } from './components/demos/tab/tab-demo-basic.component';
 import { ButtonDemoStylesComponent } from './components/demos/button/button-demo-styles.component';
 import { SelectDemoBasicComponent } from './components/demos/select/select-demo-basic.component';
 import { DatePickerDemoBasicComponent } from './components/demos/date-picker/date-picker-demo-basic.component';
 import { SpinnerDemoBasicComponent } from './components/demos/spinner/spinner-demo-basic.component';
+import { IconDemoBasicComponent } from './components/demos/icon/icon-demo-basic.component';
 import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
 import { CheckboxDemoBasicComponent } from './components/demos/checkbox/checkbox-demo-basic.component';
 
@@ -38,6 +39,7 @@ const DEMO_COMPONENTS = [
   ButtonDemoStylesComponent,
   InputDemoBasicComponent,
   IconDemoComponent,
+  IconDemoBasicComponent,
   SpinnerDemoComponent,
   SpinnerDemoBasicComponent,
   DatePickerDemoComponent,
@@ -45,6 +47,7 @@ const DEMO_COMPONENTS = [
   TabDemoComponent,
   TabDemoBasicComponent,
   DatePickerDemoComponent,
+  IconDemoSizesComponent
   IconFeatureDemoComponent,
   CheckboxDemoComponent
 ];
