@@ -1,0 +1,5 @@
+@import "../../../../assets/styles/base.scss";
+
+.alerts > *:not(:first-of-type) {
+  margin-top: $m-4;
+}

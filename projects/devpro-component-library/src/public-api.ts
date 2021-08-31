@@ -26,3 +26,7 @@ export { TabGroupComponent} from './lib/tab/tab-group/tab-group.component';
 export { TabComponent} from './lib/tab/tab.component';
 
 export { CheckboxComponent } from './lib/checkbox/checkbox.component';
+
+export { AlertComponent } from './lib/alert/alert.component';
+
+export { AlertsComponent } from './lib/alert/alerts/alerts.component';

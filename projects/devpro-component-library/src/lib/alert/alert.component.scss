@@ -1,0 +1,90 @@
+@import "../../../assets/styles/base.scss";
+
+:host {
+  display: block;
+}
+
+:host[type='success'] .alert-wrapper {
+  border-color: $green-500; // Green 500
+  background-color: $green-100; // Green 100
+  color: $green-900; // Green 900
+}
+
+:host[type='info'] .alert-wrapper {
+  border-color: $blue-500; // Blue 500
+  background-color: $blue-100; // Blue 100
+  color: $blue-900; // Blue 900
+}
+
+:host[type='warning'] .alert-wrapper {
+  border-color: $yellow-500; // Yellow 500
+  background-color: $yellow-100; // Yellow 100
+  color: $yellow-900; // Yellow 900
+}
+
+:host[type='danger'] .alert-wrapper {
+  border-color: $red-500; // Red 500
+  background-color: $red-100; // Red 100
+  color: $red-900; // Red 900
+}
+
+.alert-wrapper {
+  display: flex;
+  align-items: center;
+  border-top-width: 4px;
+  border-radius: $rounded-sm;
+  box-shadow: $shadows-default;
+}
+
+.alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $p-4;
+}
+
+.alert-text {
+  flex-grow: 1;
+  padding-top: $p-3;
+  padding-bottom: $p-3;
+}
+
+.alert-message {
+  font-size: $text-sm;
+  line-height: $text-sm-line-height;
+  font-weight: 500;
+}
+
+.alert-details {
+  font-size: $text-xs;
+  line-height: $text-xs-line-height;
+  color: $gray-700;
+}
+
+.alert-dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-500;
+  cursor: pointer;
+  padding-left: $p-4;
+  padding-right: $p-4;
+}
+
+.check {
+  color: $green-500; // Green 500
+}
+
+.info {
+  color: $blue-500; // Blue 500
+}
+
+.warning {
+  color: $yellow-500; // Yellow 500
+}
+
+.danger {
+  color: $red-500; // Red 500
+  padding-left: $p-1;
+  padding-right: $p-2;
+}

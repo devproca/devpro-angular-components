@@ -12,6 +12,8 @@ import { TabComponent } from './tab/tab.component';
 import { TabGroupComponent } from './tab/tab-group/tab-group.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import {SvgModule} from "./svg/svg.module";
+import { AlertComponent } from './alert/alert.component';
+import { AlertsComponent } from './alert/alerts/alerts.component';
 @NgModule({
   declarations: [
     InputComponent,
@@ -23,7 +25,9 @@ import {SvgModule} from "./svg/svg.module";
     DatePickerComponent,
     TabComponent, 
     TabGroupComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    AlertComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import {SvgModule} from "./svg/svg.module";
     DatePickerComponent,
     TabComponent, 
     TabGroupComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    AlertComponent,
+    AlertsComponent
   ]
 })
 export class DevproComponentsModule {
