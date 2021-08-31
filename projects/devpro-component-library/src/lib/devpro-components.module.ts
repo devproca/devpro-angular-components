@@ -9,6 +9,8 @@ import { SvgComponent } from './svg/svg.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { TabComponent } from './tab/tab.component';
+import { TabGroupComponent } from './tab/tab-group/tab-group.component';
 @NgModule({
   declarations: [
     InputComponent,
@@ -18,7 +20,9 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     SvgComponent,
     SpinnerComponent,
     CalendarComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    TabComponent, 
+    TabGroupComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
     SelectComponent,
     SvgComponent,
     SpinnerComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    TabComponent, 
+    TabGroupComponent
   ]
 })
 export class DevproComponentsModule { }

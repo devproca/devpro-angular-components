@@ -1,6 +1,6 @@
 @import "../../../assets/styles/base.scss";
 
-button {
+.button {
     display: inline-flex;
     align-items: center;
     height: $input-height;
@@ -10,7 +10,10 @@ button {
     padding: 0 $p-4;
     overflow: hidden;
     border: 1px solid $gray-300;
-    transition: 0.15s all ease-in;
+
+    &:hover{
+        transition: 0.15s opacity ease-in;
+    }
 
     &.primary {
         border-color: $blue-500;

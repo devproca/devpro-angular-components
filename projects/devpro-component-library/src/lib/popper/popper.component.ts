@@ -1,4 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core';
 import { createPopper, Instance, Offsets, Placement } from '@popperjs/core';
 import { fromEvent, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -6,7 +6,8 @@ import { debounceTime } from 'rxjs/operators';
 @Component({
   selector: 'dp-popper',
   templateUrl: './popper.component.html',
-  styleUrls: ['./popper.component.scss']
+  styleUrls: ['./popper.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PopperComponent implements OnInit, OnDestroy, AfterViewInit {
 

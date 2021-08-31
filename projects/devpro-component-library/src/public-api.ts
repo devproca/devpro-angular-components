@@ -19,3 +19,7 @@ export { SvgComponent } from './lib/svg/svg.component';
 export { SpinnerComponent } from './lib/spinner/spinner.component';
 
 export { DatePickerComponent } from './lib/date-picker/date-picker.component';
+
+export { TabGroupComponent} from './lib/tab/tab-group/tab-group.component';
+
+export { TabComponent} from './lib/tab/tab.component';

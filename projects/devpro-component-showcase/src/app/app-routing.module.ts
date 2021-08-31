@@ -7,6 +7,7 @@ import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { InputDemoComponent } from './components/demos/input/input-demo.component';
 import { SelectDemoComponent } from './components/demos/select/select-demo.component';
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
+import { TabDemoComponent } from './components/demos/tab/tab-demo.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
@@ -48,6 +49,11 @@ const routes: Routes = [
         path: 'date-picker',
         component: DatePickerDemoComponent,
         data: { title: "Date Picker" }
+      },
+      {
+        path: 'tabs',
+        component: TabDemoComponent,
+        data: { title: "Tabs" }
       },
     ]
   },

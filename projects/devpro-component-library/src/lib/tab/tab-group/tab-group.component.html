@@ -1,0 +1,9 @@
+<ul class="tab-wrapper"
+[class.stretch]="stretch">
+  <li *ngFor="let tab of tabs" class="tab" 
+    (click)="selectTab(tab)" 
+    [class.selected]="tab.isSelected">
+    {{ tab.label }}
+  </li>
+</ul>
+<ng-content></ng-content>

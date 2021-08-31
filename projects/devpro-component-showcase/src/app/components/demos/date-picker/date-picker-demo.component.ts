@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-date-picker-demo',
-  templateUrl: './date-picker-demo.component.html',
-  styleUrls: ['./date-picker-demo.component.scss']
+  templateUrl: './date-picker-demo.component.html'
 })
 export class DatePickerDemoComponent implements OnInit {
 

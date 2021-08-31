@@ -42,14 +42,18 @@ export class SideNavComponent implements OnInit {
           link: 'components/button'
         },
         {
-          label: 'Icons',
-          link: 'components/icons'
+          label: 'Tabs',
+          link: 'components/tabs'
         }
       ]
     },
     {
       label: 'Miscellaneous',
       links: [
+        {
+          label: 'Icons',
+          link: 'components/icons'
+        },
         {
           label: 'Spinner',
           link: 'components/spinner'

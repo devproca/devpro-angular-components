@@ -1,13 +1,36 @@
-import { Component, Input } from '@angular/core';
-
-
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'dp-spinner',
   templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.scss']
+  styleUrls: ['./spinner.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SpinnerComponent {
-  @Input() size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';
-  @Input() spinnerStyle: 'style1' | 'style2' | 'style3' = 'style1';
-  @Input() color: 'blue' | 'white' | 'red' | 'black' = 'blue';
+
+  @Input() size: 'sm' | 'md' | 'lg' = 'md';
+  @Input() color: "blue" | "white" = "blue";
+
+  constructor() { }
+
+  get width() {
+    switch (this.size) {
+      case 'sm':
+        return '1.5rem';
+      case 'md':
+        return '2rem';
+      case 'lg':
+        return '2.5rem';
+      default:
+        return this.size;
+    }
+  }
+
+  get pathClasses() {
+    return {
+      "white": this.color == 'white',
+      "blue": this.color != 'white',
+      "path": true
+    }
+  }
+
 }
