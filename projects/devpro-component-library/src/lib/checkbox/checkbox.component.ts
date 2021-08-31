@@ -45,8 +45,9 @@ export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlVal
               @Optional() private injector: Injector) {
   }
 
-  onChange: any = () => { }
-  onTouch: any = () => { }
+  onChange: any = () => { };
+  onTouch: any = () => { };
+  focused: boolean;
 
   ngOnInit(): void {
     if (this.checkService) {
@@ -90,6 +91,14 @@ export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlVal
 
   setDisabledState(disabled: boolean): void {
     this.disabled = disabled;
+  }
+
+  handleFocus(): void {
+    this.focused = true;
+  }
+
+  handleUnfocus(): void {
+    this.focused = false;
   }
 
   private registerCheckChanges(): void {

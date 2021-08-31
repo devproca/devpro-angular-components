@@ -75,3 +75,8 @@ input[type="checkbox"] {
 input {
    cursor: pointer;
 }
+
+.checkbox-container.focused {
+  border-color: $blue-500;
+  box-shadow: $ring-1 $blue-500;
+}
