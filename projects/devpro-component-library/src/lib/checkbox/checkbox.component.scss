@@ -7,32 +7,37 @@ input[type="checkbox"] {
 
 :host[checked='true'] .checkbox-container {
   background-color: $blue-500; // Blue 500
-  border-color: $blue-300; // Blue 300
+  border-color: $blue-500; // Blue 300
 
   .checkbox-svg {
     opacity: 1;
   }
 }
 
-:host[disabled='true'] .checkbox-container {
-  background-color: $gray-400; // Gray 400
-  border-color: $gray-300; // Gray 300
+:host[disabled='true'] .checkbox-wrapper {
   pointer-events: none;
 }
 
-:host[disabled='true'] .checkbox-label {
-  background-color: $gray-200; // Gray 200
+:host[disabled='true'] .checkbox-container {
+  background-color: $gray-100; // Gray 400
 }
 
 :host[error='true'] .checkbox-container {
-  border-color: $red-300; // Red 300
+  border-color: $red-500; // Red 300
+  box-shadow: $ring-1 $red-500;
 }
 
 :host[error='true'][checked='true'] .checkbox-container {
   background-color: $red-500; // Red 500
 }
 
+:host[disabled='true'][checked='true'] .checkbox-container {
+  background-color: $blue-500;
+  opacity: 0.5;
+}
+
 .checkbox-wrapper {
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -61,5 +66,12 @@ input[type="checkbox"] {
 }
 
 .checkbox-label {
-  margin-left: $m-2;
+  color: $gray-700;
+  margin-left: $m-3;
+  font-size: $text-sm;
+  line-height: $text-sm-line-height;
+}
+
+input {
+   cursor: pointer;
 }

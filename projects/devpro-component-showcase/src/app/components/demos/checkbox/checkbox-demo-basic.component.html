@@ -1,8 +1,8 @@
 <dp-checkbox class="block w-48" [formControl]="formControl" label="Label"></dp-checkbox>
 
-<div class="flex space-x-3">
-    <dp-button [class.hidden]="!disabled" type="primary" (click)="enable()">Enable</dp-button>
-    <dp-button [class.hidden]="disabled" type="error" (click)="disable()">Disable</dp-button>
-    <dp-button [class.hidden]="!!error" (click)="setError()">Set Error</dp-button>
-    <dp-button [class.hidden]="!error" (click)="clearError()">Clear Error</dp-button>
+<div class="flex space-x-3 mt-6">
+    <dp-button *ngIf="disabled" type="primary" (click)="enable()">Enable</dp-button>
+    <dp-button *ngIf="!disabled" type="error" (click)="disable()">Disable</dp-button>
+    <dp-button *ngIf="!error" (click)="setError()">Set Error</dp-button>
+    <dp-button *ngIf="!!error" (click)="clearError()">Clear Error</dp-button>
 </div>
