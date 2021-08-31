@@ -3,8 +3,8 @@ import {copy}from '../../../utilities/copy.util'
 
 const ICONS = [
   'angleDown',
-  'angleRight',
-  'angleLeft',
+  'angle-right',
+  'angle-left',
   'calendar',
   'check',
   'clone',
