@@ -1,8 +1,10 @@
-<div class="h-full w-52 overflow-auto">
+<div class="h-full w-72">
     <div class="side-nav">
-        <div class="section" *ngFor="let section of nav">
-            <div *ngIf="section.label" class="section-label">{{section.label}}</div>
-            <a class="link" *ngFor="let link of section.links" [routerLink]="[link.link]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{link.label}}</a>
+        <div class="side-nav-inner">
+            <div class="section" *ngFor="let section of nav">
+                <div *ngIf="section.label" class="section-label">{{section.label}}</div>
+                <a class="link" *ngFor="let link of section.links" [routerLink]="[link.link]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{link.label}}</a>
+            </div>
         </div>
     </div>
 </div>

@@ -1,8 +1,15 @@
-.side-nav{
-    @apply mt-4 px-6 py-4;
+.side-nav {
+    @apply sticky;
+    top: 4rem;
 }
 
-.section-label{
+.side-nav-inner {
+    padding: 2rem 2rem 4rem;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+.section-label {
     @apply mb-2 text-xs text-gray-500 font-medium uppercase;
 }
 
@@ -10,7 +17,7 @@
     @apply mt-6;
 }
 
-.link{
+.link {
     @apply block py-1 mb-1 text-gray-700 cursor-pointer rounded font-medium text-sm hover:text-blue-500 duration-150;
 
     &.active {
