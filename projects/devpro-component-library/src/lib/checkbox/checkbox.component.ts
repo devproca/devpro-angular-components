@@ -22,22 +22,21 @@ import { CheckboxService } from './checkbox.service';
   selector: 'dp-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss'],
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => CheckboxComponent),
-    multi: true,
-  }]
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CheckboxComponent),
+      multi: true
+    }
+  ],
 })
 export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlValueAccessor {
   private subscriptions: Subscription[] = [];
-  private onChange: (_: string) => void;
-  private onTouched: () => void;
 
   @Input() label: string;
   @Input() value: any;
   @HostBinding('attr.disabled') @Input() disabled = false;
-  @Output() checked = new EventEmitter<void>();
-  @Output() unchecked = new EventEmitter<void>();
+  @Output() change = new EventEmitter<any>();
 
   @HostBinding('attr.checked') isChecked = false;
   @HostBinding('attr.error') error = false;
@@ -45,6 +44,9 @@ export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlVal
   constructor(@Optional() private checkService: CheckboxService,
               @Optional() private injector: Injector) {
   }
+
+  onChange: any = () => { }
+  onTouch: any = () => { }
 
   ngOnInit(): void {
     if (this.checkService) {
@@ -78,12 +80,12 @@ export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlVal
     this.isChecked = value === this.value;
   }
 
-  registerOnChange(onChange: (_: string) => void): void {
-    this.onChange = onChange;
+  registerOnChange(fn: any) {
+    this.onChange = fn
   }
 
-  registerOnTouched(onTouch: () => void): void {
-    this.onTouched = onTouch;
+  registerOnTouched(fn: any) {
+    this.onTouch = fn
   }
 
   setDisabledState(disabled: boolean): void {
@@ -114,17 +116,12 @@ export class CheckboxComponent implements OnInit, DoCheck, OnDestroy, ControlVal
   private notifyChanges(): void {
     if (this.isChecked) {
       this.checkService?.markChecked(this);
-      this.checked.emit();
+      this.onChange(this.isChecked);
+      this.change.emit(this.isChecked);
     } else {
       this.checkService?.markUnchecked(this);
-      this.unchecked.emit();
-    }
-
-    if (this.onChange) {
-      this.onChange(this.isChecked ? this.value : null);
-    }
-    if (this.onTouched) {
-      this.onTouched();
+      this.onChange(this.isChecked);
+      this.change.emit(this.isChecked);
     }
   }
 }

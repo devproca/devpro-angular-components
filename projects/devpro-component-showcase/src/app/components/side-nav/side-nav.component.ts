@@ -21,6 +21,10 @@ export class SideNavComponent implements OnInit {
       label: 'Form',
       links: [
         {
+          label: 'Checkbox',
+          link: 'components/checkbox'
+        },
+        {
           label: 'Input',
           link: 'components/input'
         },

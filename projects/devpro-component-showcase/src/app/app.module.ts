@@ -26,6 +26,8 @@ import { ButtonDemoStylesComponent } from './components/demos/button/button-demo
 import { SelectDemoBasicComponent } from './components/demos/select/select-demo-basic.component';
 import { DatePickerDemoBasicComponent } from './components/demos/date-picker/date-picker-demo-basic.component';
 import { SpinnerDemoBasicComponent } from './components/demos/spinner/spinner-demo-basic.component';
+import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
+import { CheckboxDemoBasicComponent } from './components/demos/checkbox/checkbox-demo-basic.component';
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
@@ -43,7 +45,8 @@ const DEMO_COMPONENTS = [
   TabDemoComponent,
   TabDemoBasicComponent,
   DatePickerDemoComponent,
-  IconFeatureDemoComponent
+  IconFeatureDemoComponent,
+  CheckboxDemoComponent
 ];
 @NgModule({
   declarations: [
@@ -54,7 +57,8 @@ const DEMO_COMPONENTS = [
     TopNavComponent,
     FeaturePreviewComponent,
     PrismPipe,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    CheckboxDemoBasicComponent
   ],
   imports: [
     BrowserModule,

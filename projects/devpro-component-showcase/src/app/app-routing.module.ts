@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonDemoComponent } from './components/demos/button/button-demo.component';
+import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 import { DemosComponent } from './components/demos/demos.component';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
@@ -54,6 +55,11 @@ const routes: Routes = [
         path: 'tabs',
         component: TabDemoComponent,
         data: { title: "Tabs" }
+      },
+      {
+        path: 'checkbox',
+        component: CheckboxDemoComponent,
+        data: { title: "Checkbox" }
       },
     ]
   },

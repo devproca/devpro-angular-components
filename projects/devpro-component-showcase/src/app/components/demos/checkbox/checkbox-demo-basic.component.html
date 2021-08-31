@@ -1,0 +1,13 @@
+<dp-checkbox class="block w-48" [formControl]="formControl"></dp-checkbox>
+
+<div class="flex flex-row">
+    <div class="mt-6 pr-5">
+        <dp-button [class.hidden]="!disabled" type="primary" (click)="enable()">Enable</dp-button>
+        <dp-button [class.hidden]="disabled" type="error" (click)="disable()">Disable</dp-button>
+    </div>
+
+    <div class="mt-6 px-5">
+        <dp-button [class.hidden]="!!error" type="primary" (click)="setError()">Set Error</dp-button>
+        <dp-button [class.hidden]="!error" type="error" (click)="clearError()">Clear Error</dp-button>
+    </div>
+</div>  

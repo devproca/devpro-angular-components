@@ -24,3 +24,5 @@ export { DatePickerComponent } from './lib/date-picker/date-picker.component';
 export { TabGroupComponent} from './lib/tab/tab-group/tab-group.component';
 
 export { TabComponent} from './lib/tab/tab.component';
+
+export { CheckboxComponent } from './lib/checkbox/checkbox.component';
