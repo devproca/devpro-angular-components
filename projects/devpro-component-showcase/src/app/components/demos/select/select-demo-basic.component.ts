@@ -7,19 +7,26 @@ import { FormControl } from '@angular/forms';
 })
 export class SelectDemoBasicComponent {
   
-  formControl = new FormControl('');
+  demoOptions = [
+    {
+      label: "Option 1",
+      value: 1,
+    },
+    {
+      label: "Option 2",
+      value: 2,
+    },
+    {
+      label: "Option 3",
+      value: 3,
+    }
+  ];
 
-  constructor() { }
+  formControl = new FormControl();
 
-  enable(){
-    this.formControl.enable();
-  }
-
-  disable(){
-    this.formControl.disable();
-  }
-
-  get disabled() {
-    return this.formControl.disabled;
-  }
+  constructor() {
+    this.formControl.valueChanges.subscribe(value => {
+      console.log(value);
+    });
+   }
 }

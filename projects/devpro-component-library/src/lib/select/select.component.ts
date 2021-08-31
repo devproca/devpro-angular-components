@@ -1,7 +1,8 @@
 import {
-  Component, DoCheck, EventEmitter, forwardRef, Injector, Input, Output, ViewEncapsulation
+  Component, DoCheck, EventEmitter, forwardRef, Injector, Input, Output, ViewChild, ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { PopperComponent } from '../popper/popper.component';
 
 @Component({
   selector: 'dp-select',
@@ -19,6 +20,8 @@ import { ControlValueAccessor, NgControl, NG_VALUE_ACCESSOR } from '@angular/for
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class SelectComponent implements ControlValueAccessor, DoCheck {
+
+  @ViewChild(PopperComponent) popper: PopperComponent;
 
   @Input() iconBefore: string;
   @Input() placeholder: string = "Select";
@@ -66,6 +69,7 @@ export class SelectComponent implements ControlValueAccessor, DoCheck {
   notifyChanges() {
     this.onChange(this.selectedOption.value);
     this.change.emit(this.selectedOption.value);
+    this.popper.hide();
   }
 
   setDisabledState(isDisabled: boolean) {

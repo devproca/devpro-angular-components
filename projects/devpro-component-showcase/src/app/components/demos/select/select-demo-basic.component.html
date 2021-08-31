@@ -1,5 +1,1 @@
-<dp-select class="block w-48" [formControl]="formControl"></dp-select>
-<div class="mt-6">
-    <dp-button [class.hidden]="!disabled" type="primary" (click)="enable()">Enable</dp-button>
-    <dp-button [class.hidden]="disabled" type="error" (click)="disable()">Disable</dp-button>
-</div>
+<dp-select class="block w-48" [options]="demoOptions" [formControl]="formControl"></dp-select>
