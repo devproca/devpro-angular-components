@@ -32,7 +32,7 @@ export class SvgComponent implements OnChanges, AfterViewInit {
   @ViewChild('ref') ref: ElementRef;
 
   @Input() name: string;
-  @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+  @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = null;
 
   svg: SafeHtml;
 
@@ -45,21 +45,44 @@ export class SvgComponent implements OnChanges, AfterViewInit {
       icon
         ? this.svg = this.sanitizer.bypassSecurityTrustHtml(icon.default.replace(/data:image\/svg\+xml;base64,/, ''))
         : this.invalidName();
+      this.setIconSize();
     }
   }
 
   ngAfterViewInit(): void {
-    const fontSize = window.getComputedStyle(this.el.nativeElement).fontSize;
-    const svgElement = this.ref.nativeElement.querySelector('svg');
-    if (svgElement) {
-      svgElement.setAttribute('preserveAspectRatio', 'xMidYMid');
-      svgElement.setAttribute('width', fontSize);
-      svgElement.setAttribute('height', fontSize);
+    this.setIconSize();
+  }
+
+  setIconSize(): void{
+    if(this.ref){
+      const fontSize = this.size ? this.computeFontSize(this.size) :  window.getComputedStyle(this.el.nativeElement).fontSize;
+      const svgElement = this.ref.nativeElement.querySelector('svg');
+      if (svgElement) {
+        svgElement.setAttribute('preserveAspectRatio', 'xMidYMid');
+        svgElement.setAttribute('width', fontSize);
+        svgElement.setAttribute('height', fontSize);
+      }
     }
   }
 
   private invalidName(){
     this.svg = null;
     console.warn(`Icon with name '${this.name}' does not exist for dp-svg.`)
+  }
+
+  private computeFontSize(size: string){
+    switch(size){
+      case 'xs':
+        return "12"
+      case 'sm':
+        return "14"
+      case 'md':
+        return "16"
+      case 'lg':
+        return "18"
+      case 'xl':
+        return "20"
+    }
+    return "16";
   }
 }

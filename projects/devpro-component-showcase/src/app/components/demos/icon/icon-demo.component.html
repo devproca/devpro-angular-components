@@ -1,3 +1,18 @@
+<app-feature-preview assetName="icon-demo-feature">
+    <app-icon-feature-demo></app-icon-feature-demo>
+</app-feature-preview>
+
+<div class="font-semibold text-lg">
+    This library contains many reccommneded icons. Please reach out to the UI/UX team if you require an icon for a specific use.
+</div>
 <div class="mt-6 flex space-x-4">
-    <dp-svg name="angleRight"></dp-svg>
+    <div class="border-4 rounded-lg container flex flex-wrap justify-center">
+        <div 
+            *ngFor="let icon of iconList"
+            class="h-28 w-28 flex flex-col items-center justify-center col-span-1 cursor-pointer text-xl" 
+            (click)="copyIcon(icon)">
+            <dp-svg [name]="icon"></dp-svg>
+            <span class="text-gray-500 pt-2">{{icon}}</span>
+        </div>
+    </div>
 </div>
