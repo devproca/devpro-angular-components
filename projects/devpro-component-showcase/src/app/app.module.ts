@@ -28,6 +28,11 @@ import { DatePickerDemoBasicComponent } from './components/demos/date-picker/dat
 import { SpinnerDemoBasicComponent } from './components/demos/spinner/spinner-demo-basic.component';
 import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
 import { CheckboxDemoBasicComponent } from './components/demos/checkbox/checkbox-demo-basic.component';
+import { AlertDemoComponent } from './components/demos/alert/alert-demo.component';
+import { AlertDemoSingleComponent } from './components/demos/alert/alert-demo-single.component';
+import { AlertsDemoMultipleComponent } from './components/demos/alerts/alerts-demo-multiple.component';
+import { AlertsDemoComponent } from './components/demos/alerts/alerts-demo.component';
+
 
 const DEMO_COMPONENTS = [
   InputDemoComponent,
@@ -46,7 +51,12 @@ const DEMO_COMPONENTS = [
   TabDemoBasicComponent,
   DatePickerDemoComponent,
   IconFeatureDemoComponent,
-  CheckboxDemoComponent
+  CheckboxDemoComponent,
+  CheckboxDemoBasicComponent,
+  AlertDemoComponent,
+  AlertDemoSingleComponent,
+  AlertsDemoComponent,
+  AlertsDemoMultipleComponent
 ];
 @NgModule({
   declarations: [
@@ -58,7 +68,6 @@ const DEMO_COMPONENTS = [
     FeaturePreviewComponent,
     PrismPipe,
     SafeHtmlPipe,
-    CheckboxDemoBasicComponent
   ],
   imports: [
     BrowserModule,
