@@ -31,15 +31,13 @@ import { PrismPipe } from './pipes/prism.pipe';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { AlertDemoComponent } from './components/demos/alert/alert-demo.component';
 import { AlertDemoSingleComponent } from './components/demos/alert/alert-demo-single.component';
-import { AlertsDemoMultipleComponent } from './components/demos/alerts/alerts-demo-multiple.component';
-import { AlertsDemoComponent } from './components/demos/alerts/alerts-demo.component';
-
+import { AlertDemoMultipleComponent } from './components/demos/alert/alert-demo-multiple.component';
 
 const DEMO_COMPONENTS = [
   AlertDemoComponent,
   AlertDemoSingleComponent,
-  AlertsDemoComponent,
-  AlertsDemoMultipleComponent,
+  AlertDemoComponent,
+  AlertDemoMultipleComponent,
   ButtonDemoComponent,
   ButtonDemoStylesComponent,
   CheckboxDemoComponent,

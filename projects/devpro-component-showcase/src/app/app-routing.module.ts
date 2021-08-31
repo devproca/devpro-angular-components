@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlertDemoComponent } from './components/demos/alert/alert-demo.component';
-import { AlertsDemoComponent } from './components/demos/alerts/alerts-demo.component';
 import { ButtonDemoComponent } from './components/demos/button/button-demo.component';
 import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
@@ -64,14 +63,9 @@ const routes: Routes = [
         data: { title: "Checkbox" }
       },
       {
-        path: 'alert',
-        component: AlertDemoComponent,
-        data: { title: "Single Alert" }
-      },
-      {
         path: 'alerts',
-        component: AlertsDemoComponent,
-        data: { title: "Multiple Alerts" }
+        component: AlertDemoComponent,
+        data: { title: "Alerts" }
       },
     ]
   },

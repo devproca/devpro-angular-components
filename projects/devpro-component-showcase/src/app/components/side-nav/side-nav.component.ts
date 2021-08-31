@@ -42,11 +42,7 @@ export class SideNavComponent implements OnInit {
       label: 'Layout',
       links: [
         {
-          label: 'Single Alert',
-          link: 'components/alert'
-        },
-        {
-          label: 'Multiple Alerts',
+          label: 'Alerts',
           link: 'components/alerts'
         },
         {

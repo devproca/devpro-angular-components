@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertService } from '@dev-pro/devpro-component-library/src/lib/alert/alert.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-alert-demo-single',
