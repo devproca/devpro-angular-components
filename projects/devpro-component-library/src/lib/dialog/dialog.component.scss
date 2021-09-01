@@ -17,23 +17,29 @@
 }
 
 .dialog {
+  margin: $m-10;
   box-shadow: $shadows-lg;
   background-color: $white;
   overflow: hidden;
+  border-radius: $rounded-lg;
 }
 
 .dialog.xs {
+  width: 20rem; 
   max-width: 20rem;
 }
 
 .dialog.sm {
+  width: 40rem; 
   max-width: 40rem;
 }
 
 .dialog.md {
+  width: 60rem; 
   max-width: 60rem;
 }
 
 .dialog.lg {
+  width: 80rem; 
   max-width: 80rem;
 }

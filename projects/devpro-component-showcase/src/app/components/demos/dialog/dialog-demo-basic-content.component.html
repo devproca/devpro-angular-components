@@ -1,3 +1,8 @@
-<dp-dialog-header>Title</dp-dialog-header>
-<dp-dialog-body>This is a body.</dp-dialog-body>
-<dp-dialog-footer>This is a footer</dp-dialog-footer>
+<dp-dialog-header><div class="font-semibold">Confirm</div></dp-dialog-header>
+<dp-dialog-body class="text-gray-600">Are you sure you want confirm?</dp-dialog-body>
+<dp-dialog-footer>
+    <div class="flex items-center justify-end space-x-4">
+        <dp-button (click)="close()">Cancel</dp-button>
+        <dp-button type="primary" (click)="close(true)">Confirm</dp-button>
+    </div>
+</dp-dialog-footer>

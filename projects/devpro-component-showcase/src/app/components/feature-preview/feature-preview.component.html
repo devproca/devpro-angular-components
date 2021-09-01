@@ -23,6 +23,16 @@
           <pre class="language-html"
             [ngStyle]="{margin: '0', borderRadius:'0'}"><code [innerHTML]="this.typescript | prism:'javascript'"></code></pre>
         </dp-tab>
+        <ng-container *ngIf="optionalAssetName">
+          <dp-tab [label]="optionalAssetName + '.html'" [padded]="false">
+            <pre class="language-html rounded-none"
+              [ngStyle]="{margin: '0', borderRadius:'0'}"><code [innerHTML]="this.optionalHtml | prism:'html' | safeHtml"></code></pre>
+          </dp-tab>
+          <dp-tab [label]="optionalAssetName + '.ts'" [padded]="false">
+            <pre class="language-html"
+              [ngStyle]="{margin: '0', borderRadius:'0'}"><code [innerHTML]="this.optionalTypescript | prism:'javascript'"></code></pre>
+          </dp-tab>
+        </ng-container>
       </dp-tab-group>
     </div>
   </ng-container>

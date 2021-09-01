@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogRef } from '@dev-pro/devpro-component-library/src/lib/dialog/dialog.ref';
 
 @Component({
   selector: 'app-dialog-demo-basic-content',
   templateUrl: './dialog-demo-basic-content.component.html'
 })
-export class DialogDemoBasicContentComponent implements OnInit {
+export class DialogDemoBasicContentComponent {
 
-  constructor() { }
+  constructor(private dialogRef: DialogRef) { }
 
-  ngOnInit(): void {
+  close(value?){
+    this.dialogRef.close(value);
   }
 
 }

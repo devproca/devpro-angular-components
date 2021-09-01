@@ -1,4 +1,4 @@
 export class DialogConfig {
-  data: any;
-  size: 'xs' | 'sm' | 'md' | 'lg';
+  data?: any;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
 }
