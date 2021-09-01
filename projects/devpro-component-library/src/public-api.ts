@@ -38,3 +38,11 @@ export { SvgButtonComponent } from './lib/svg-button/svg-button.component';
 export { RadioButtonComponent } from './lib/radio-button/radio-button.component';
 
 export { RadioGroupComponent } from './lib/radio-button/radio-group/radio-group.component';
+
+export { DialogComponent } from './lib/dialog/dialog.component';
+
+export { DialogBodyComponent } from './lib/dialog/dialog-body/dialog-body.component';
+
+export { DialogFooterComponent } from './lib/dialog/dialog-footer/dialog-footer.component';
+
+export { DialogHeaderComponent } from './lib/dialog/dialog-header/dialog-header.component';

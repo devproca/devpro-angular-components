@@ -6,6 +6,7 @@ import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo
 import { ChipDemoComponent } from './components/demos/chip/chip-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 import { DemosComponent } from './components/demos/demos.component';
+import { DialogDemoComponent } from './components/demos/dialog/dialog-demo.component';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { InputDemoComponent } from './components/demos/input/input-demo.component';
 import { RadioDemoComponent } from './components/demos/radio/radio-demo.component';
@@ -78,6 +79,11 @@ const routes: Routes = [
         path: 'radio',
         component: RadioDemoComponent,
         data: { title: "Radio Buttons" }
+      },
+      {
+        path: 'dialog',
+        component: DialogDemoComponent,
+        data: { title: "Dialog" }
       },
     ]
   },

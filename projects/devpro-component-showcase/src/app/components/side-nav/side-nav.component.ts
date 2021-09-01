@@ -54,6 +54,10 @@ export class SideNavComponent implements OnInit {
           link: 'components/button'
         },
         {
+          label: 'Dialog',
+          link: 'components/dialog'
+        },
+        {
           label: 'Tabs',
           link: 'components/tabs'
         }

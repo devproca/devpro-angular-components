@@ -36,6 +36,10 @@ import { ChipDemoComponent } from './components/demos/chip/chip-demo.component';
 import { ChipDemoBasicComponent } from './components/demos/chip/chip-demo-basic.component';
 import { RadioDemoComponent } from './components/demos/radio/radio-demo.component';
 import { RadioDemoBasicComponent } from './components/demos/radio/radio-demo-basic.component';
+import { DialogDemoComponent } from './components/demos/dialog/dialog-demo.component';
+import { DialogDemoBasicComponent } from './components/demos/dialog/dialog-demo-basic.component';
+import { DialogDemoBasicContentComponent } from './components/demos/dialog/dialog-demo-basic-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const DEMO_COMPONENTS = [
   AlertDemoComponent,
@@ -65,6 +69,9 @@ const DEMO_COMPONENTS = [
   ChipDemoBasicComponent,
   RadioDemoComponent,
   RadioDemoBasicComponent,
+  DialogDemoComponent,
+  DialogDemoBasicComponent,
+  DialogDemoBasicContentComponent,
 ];
 @NgModule({
   declarations: [
@@ -83,7 +90,8 @@ const DEMO_COMPONENTS = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    DevproComponentsModule
+    DevproComponentsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

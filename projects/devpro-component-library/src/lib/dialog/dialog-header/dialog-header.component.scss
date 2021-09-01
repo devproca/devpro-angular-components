@@ -1,7 +1,9 @@
+@import '../../../../assets/styles/base.scss';
+
 :host {
   display: block;
-  background-color: rgba(229, 231, 235, 1); // Gray 200
-  padding: 0.75rem 1rem;
+  background-color: $gray-200; // Gray 200
+  padding: $p-3 $p-4;
 }
 
 .dialog-header {
@@ -11,18 +13,18 @@
 
 .dismiss {
   margin-left: auto;
-  width: 2rem;
-  height: 2rem;
+  width: $w-8;
+  height: $w-8;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px;
-  color: rgba(55, 65, 81, 1); // Gray 700
+  border-radius: $rounded-full;
+  color: $gray-700; // Gray 700
   cursor: pointer;
 
   transition: background-color 150ms ease-in;
 }
 
 .dismiss:hover {
-  background-color: rgba(209, 213, 219, 1); // Gray 300
+  background-color: $gray-300; // Gray 300
 }

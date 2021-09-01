@@ -1,22 +1,24 @@
+@import '../../../assets/styles/base.scss';
+
 .overlay {
   z-index: 20;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(31, 41, 55, 1); // Gray 800
+  background-color: $gray-800; // Gray 800
   height: 100%;
   width: 100%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0,0,0, 0.3);
 }
 
 .dialog {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  background-color: white;
+  box-shadow: $shadows-lg;
+  background-color: $white;
   overflow: hidden;
 }
 
