@@ -10,6 +10,7 @@ export class OverflowMenuComponent implements OnDestroy, AfterViewInit {
 
   @Input() options: OverflowMenuModel[];
 
+
   @Input() template: TemplateRef<any>;
 
   @ViewChild(PopperComponent) popper: PopperComponent;
@@ -28,6 +29,7 @@ export class OverflowMenuComponent implements OnDestroy, AfterViewInit {
 
 
 export class OverflowMenuModel {
+  // icon: string; TODO add icon
   label: string;
   click: () => void;
 }

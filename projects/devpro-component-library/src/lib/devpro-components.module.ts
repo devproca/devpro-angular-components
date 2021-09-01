@@ -19,9 +19,6 @@ import { SvgButtonComponent } from './svg-button/svg-button.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { RadioGroupComponent } from './radio-button/radio-group/radio-group.component';
 import { DialogComponent } from './dialog/dialog.component';
-import { DialogBodyComponent } from './dialog/dialog-body/dialog-body.component';
-import { DialogFooterComponent } from './dialog/dialog-footer/dialog-footer.component';
-import { DialogHeaderComponent } from './dialog/dialog-header/dialog-header.component';
 @NgModule({
   declarations: [
     InputComponent,
@@ -40,10 +37,7 @@ import { DialogHeaderComponent } from './dialog/dialog-header/dialog-header.comp
     SvgButtonComponent,
     RadioButtonComponent,
     RadioGroupComponent,
-    DialogComponent,
-    DialogBodyComponent,
-    DialogFooterComponent,
-    DialogHeaderComponent
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +61,7 @@ import { DialogHeaderComponent } from './dialog/dialog-header/dialog-header.comp
     SvgButtonComponent,
     RadioButtonComponent,
     RadioGroupComponent,
-    DialogComponent,
-    DialogBodyComponent,
-    DialogFooterComponent,
-    DialogHeaderComponent
+    DialogComponent
   ]
 })
 export class DevproComponentsModule {

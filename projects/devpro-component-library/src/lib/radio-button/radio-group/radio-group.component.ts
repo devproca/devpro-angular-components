@@ -1,9 +1,9 @@
-import { Component, DoCheck, forwardRef, Injector, OnDestroy, OnInit } from '@angular/core';
+import { Component, DoCheck, forwardRef, Injector, Input, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
 
 import { Subscription } from 'rxjs';
 
-import { RadioButtonService } from '../radio-button.service';
+import { RadioGroupService } from '../radio-group.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { RadioButtonService } from '../radio-button.service';
   templateUrl: './radio-group.component.html',
   styleUrls: ['./radio-group.component.scss'],
   providers: [
-    RadioButtonService,
+    RadioGroupService,
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => RadioGroupComponent),
@@ -20,20 +20,24 @@ import { RadioButtonService } from '../radio-button.service';
   ]
 })
 export class RadioGroupComponent implements OnInit, DoCheck, OnDestroy, ControlValueAccessor {
+
+  @Input() renderDirection = RadioGroupDirection.Vertical;
+
   private subscriptions: Subscription[] = [];
   private onChangeCallback: (_: string) => void;
   private onTouchedCallback: () => void;
 
-  constructor(private radioService: RadioButtonService, private injector: Injector) { }
+  constructor(private radioGroupService: RadioGroupService, private injector: Injector) { }
 
   ngOnInit(): void {
     this.registerCheckedChanges();
+    this.radioGroupService.setRenderDirection(this.renderDirection);
   }
 
   ngDoCheck(): void {
     const ngControl = this.ngControl;
     if (ngControl) {
-      this.radioService.markAsErrored(!!ngControl.errors);
+      this.radioGroupService.markAsErrored(!!ngControl.errors);
     }
   }
 
@@ -42,7 +46,7 @@ export class RadioGroupComponent implements OnInit, DoCheck, OnDestroy, ControlV
   }
 
   writeValue(value: string): void {
-    this.radioService.markValueAsChecked(value);
+    this.radioGroupService.setValue(value);
   }
 
   registerOnChange(onChange: (_: string) => void): void {
@@ -54,11 +58,11 @@ export class RadioGroupComponent implements OnInit, DoCheck, OnDestroy, ControlV
   }
 
   setDisabledState(disabled: boolean): void {
-    this.radioService.markAsDisabled(disabled);
+    this.radioGroupService.markAsDisabled(disabled);
   }
 
   private registerCheckedChanges(): void {
-    this.subscriptions.push(this.radioService.checkedValue$.subscribe(value => {
+    this.subscriptions.push(this.radioGroupService.checkedValue$.subscribe(value => {
       if (this.onChangeCallback) {
         this.onChangeCallback(value);
       }
@@ -71,4 +75,9 @@ export class RadioGroupComponent implements OnInit, DoCheck, OnDestroy, ControlV
   private get ngControl(): NgControl {
     return this.injector.get(NgControl, null);
   }
+}
+
+export enum RadioGroupDirection {
+  Vertical = "VERTICAL",
+  Horizontal = "HORIZONTAL"
 }

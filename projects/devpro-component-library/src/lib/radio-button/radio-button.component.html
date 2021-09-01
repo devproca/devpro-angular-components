@@ -3,7 +3,10 @@
        [checked]="isChecked"
        [disabled]="disabled">
 
-<label class="radio-button-wrapper" (click)="onChecked()">
+<label class="radio-button-wrapper" 
+[class.horizontal]="renderDirection == 'HORIZONTAL'"
+[class.vertical]="renderDirection == 'VERTICAL'" 
+(click)="onChecked()">
   <span class="radio-button"></span>
   <span class="radio-button-label">{{ label }}</span>
 </label>
