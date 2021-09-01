@@ -30,3 +30,11 @@ export { CheckboxComponent } from './lib/checkbox/checkbox.component';
 export { AlertComponent } from './lib/alert/alert.component';
 
 export { AlertsComponent } from './lib/alert/alerts/alerts.component';
+
+export { ChipComponent } from './lib/chip/chip.component';
+
+export { SvgButtonComponent } from './lib/svg-button/svg-button.component';
+
+export { RadioButtonComponent } from './lib/radio-button/radio-button.component';
+
+export { RadioGroupComponent } from './lib/radio-button/radio-group/radio-group.component';

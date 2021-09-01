@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { RadioButtonComponent } from './radio-button.component';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class RadioButtonService {
 
   private components: RadioButtonComponent[] = [];

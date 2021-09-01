@@ -14,6 +14,10 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import {SvgModule} from "./svg/svg.module";
 import { AlertComponent } from './alert/alert.component';
 import { AlertsComponent } from './alert/alerts/alerts.component';
+import { ChipComponent } from './chip/chip.component';
+import { SvgButtonComponent } from './svg-button/svg-button.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { RadioGroupComponent } from './radio-button/radio-group/radio-group.component';
 @NgModule({
   declarations: [
     InputComponent,
@@ -27,7 +31,11 @@ import { AlertsComponent } from './alert/alerts/alerts.component';
     TabGroupComponent,
     CheckboxComponent,
     AlertComponent,
-    AlertsComponent
+    AlertsComponent,
+    ChipComponent,
+    SvgButtonComponent,
+    RadioButtonComponent,
+    RadioGroupComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,11 @@ import { AlertsComponent } from './alert/alerts/alerts.component';
     TabGroupComponent,
     CheckboxComponent,
     AlertComponent,
-    AlertsComponent
+    AlertsComponent,
+    ChipComponent,
+    SvgButtonComponent,
+    RadioButtonComponent,
+    RadioGroupComponent
   ]
 })
 export class DevproComponentsModule {

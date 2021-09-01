@@ -35,6 +35,10 @@ export class SideNavComponent implements OnInit {
         {
           label: 'Date Picker',
           link: 'components/date-picker'
+        },
+        {
+          label: 'Radio Buttons',
+          link: 'components/radio'
         }
       ]
     },
@@ -58,6 +62,10 @@ export class SideNavComponent implements OnInit {
     {
       label: 'Miscellaneous',
       links: [
+        {
+          label: 'Chip',
+          link: 'components/chip'
+        },
         {
           label: 'Icons',
           link: 'components/icons'

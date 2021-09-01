@@ -32,6 +32,10 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { AlertDemoComponent } from './components/demos/alert/alert-demo.component';
 import { AlertDemoSingleComponent } from './components/demos/alert/alert-demo-single.component';
 import { AlertDemoMultipleComponent } from './components/demos/alert/alert-demo-multiple.component';
+import { ChipDemoComponent } from './components/demos/chip/chip-demo.component';
+import { ChipDemoBasicComponent } from './components/demos/chip/chip-demo-basic.component';
+import { RadioDemoComponent } from './components/demos/radio/radio-demo.component';
+import { RadioDemoBasicComponent } from './components/demos/radio/radio-demo-basic.component';
 
 const DEMO_COMPONENTS = [
   AlertDemoComponent,
@@ -57,6 +61,10 @@ const DEMO_COMPONENTS = [
   SpinnerDemoComponent,
   TabDemoBasicComponent,
   TabDemoComponent,
+  ChipDemoComponent,
+  ChipDemoBasicComponent,
+  RadioDemoComponent,
+  RadioDemoBasicComponent,
 ];
 @NgModule({
   declarations: [

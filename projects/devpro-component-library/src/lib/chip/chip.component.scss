@@ -1,0 +1,26 @@
+@import '../../../assets/styles/base.scss';
+
+.chip-wrapper {
+  display: inline-flex;
+  border-radius: $rounded-full;
+  height: $h-6;
+  align-items: center;
+  background-color: $gray-200; // Gray 200
+}
+
+.chip-label {
+  color: $gray-700; // Gray 700
+  font-size: $text-sm;
+  line-height: $text-sm-line-height;
+  padding-left: $p-3;
+  padding-right: $p-1;
+}
+
+.chip-wrapper.disabled {
+  background-color: $gray-300; // Gray 300
+
+  > .chip-label {
+    padding-left: $p-3;
+    padding-right: $p-3;
+  }
+}

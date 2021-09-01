@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertDemoComponent } from './components/demos/alert/alert-demo.component';
 import { ButtonDemoComponent } from './components/demos/button/button-demo.component';
 import { CheckboxDemoComponent } from './components/demos/checkbox/checkbox-demo.component';
+import { ChipDemoComponent } from './components/demos/chip/chip-demo.component';
 import { DatePickerDemoComponent } from './components/demos/date-picker/date-picker-demo.component';
 import { DemosComponent } from './components/demos/demos.component';
 import { IconDemoComponent } from './components/demos/icon/icon-demo.component';
 import { InputDemoComponent } from './components/demos/input/input-demo.component';
+import { RadioDemoComponent } from './components/demos/radio/radio-demo.component';
 import { SelectDemoComponent } from './components/demos/select/select-demo.component';
 import { SpinnerDemoComponent } from './components/demos/spinner/spinner-demo.component';
 import { TabDemoComponent } from './components/demos/tab/tab-demo.component';
@@ -66,6 +68,16 @@ const routes: Routes = [
         path: 'alerts',
         component: AlertDemoComponent,
         data: { title: "Alerts" }
+      },
+      {
+        path: 'chip',
+        component: ChipDemoComponent,
+        data: { title: "Chip" }
+      },
+      {
+        path: 'radio',
+        component: RadioDemoComponent,
+        data: { title: "Radio Buttons" }
       },
     ]
   },
